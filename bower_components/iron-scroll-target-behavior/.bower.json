@@ -1,0 +1,59 @@
+{
+  "name": "iron-scroll-target-behavior",
+  "description": "Allows to define a scroller target",
+  "private": true,
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "main": "iron-scroll-target-behavior.html",
+  "authors": [
+    "The Polymer Authors"
+  ],
+  "keywords": [
+    "web-components",
+    "polymer",
+    "scroll"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/PolymerElements/iron-scroll-target-behavior.git"
+  },
+  "homepage": "https://github.com/PolymerElements/iron-scroll-target-behavior",
+  "ignore": [],
+  "dependencies": {
+    "polymer": "Polymer/polymer#2.0-preview"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#2.0-preview",
+    "iron-test-helpers": "polymerelements/iron-test-helpers#2.0-preview",
+    "test-fixture": "PolymerElements/test-fixture#^2.0.0",
+    "web-component-tester": "v6.0.0-prerelease.5",
+    "webcomponentsjs": "v1"
+  },
+  "variants": {
+    "1.x": {
+      "dependencies": {
+        "polymer": "Polymer/polymer#^1.1.0"
+      },
+      "devDependencies": {
+        "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+        "iron-test-helpers": "polymerelements/iron-test-helpers#^1.0.0",
+        "test-fixture": "PolymerElements/test-fixture#^1.0.0 ",
+        "web-component-tester": "^4.0.0",
+        "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+      }
+    }
+  },
+  "resolutions": {
+    "polymer": "2.0-preview",
+    "test-fixture": "^2.0.0",
+    "webcomponentsjs": "v1"
+  },
+  "_release": "b5c8bbb255",
+  "_resolution": {
+    "type": "branch",
+    "branch": "2.0-preview",
+    "commit": "b5c8bbb255967cd85f5f7b11778e9d73ed8818a4"
+  },
+  "_source": "https://github.com/PolymerElements/iron-scroll-target-behavior.git",
+  "_target": "2.0-preview",
+  "_originalSource": "PolymerElements/iron-scroll-target-behavior"
+}
