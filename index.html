@@ -2,9 +2,32 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
     <title>ThirstyHead</title>
+
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="bower_components/app-layout/app-toolbar/app-toolbar.html">
+
+    <style is="custom-style">
+      body {
+        /* No margin on body so toolbar can span the screen */
+        margin: 0;
+      }
+
+      app-toolbar {
+        background-color: black;
+      }
+
+      app-toolbar img {
+        max-width: 25%;
+        max-height: 100%;
+      }
+    </style>
+
   </head>
   <body>
-    <h1>ThirstyHead</h1>
+    <app-toolbar>
+      <div main-title><img src="img/thirstyhead-logo.png" alt="thirstyhead.com"></div>
+    </app-toolbar>
   </body>
 </html>
