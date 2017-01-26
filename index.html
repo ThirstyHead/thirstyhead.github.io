@@ -6,7 +6,9 @@
     <title>ThirstyHead</title>
 
     <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="bower_components/app-layout/app-header/app-header.html">
     <link rel="import" href="bower_components/app-layout/app-toolbar/app-toolbar.html">
+    <link rel="import" href="bower_components/iron-image/iron-image.html">
 
     <style is="custom-style">
       body {
@@ -17,17 +19,21 @@
       app-toolbar {
         background-color: black;
       }
-
-      app-toolbar img {
-        max-width: 25%;
-        max-height: 100%;
-      }
     </style>
 
   </head>
   <body>
-    <app-toolbar>
-      <div main-title><img src="img/thirstyhead-logo.png" alt="thirstyhead.com"></div>
-    </app-toolbar>
+    <app-header fixed>
+      <app-toolbar>
+        <div main-title>
+          <iron-image src="img/thirstyhead-logo.png"
+                      alt="thirstyhead.com"
+                      sizing="contain"
+                      width="200"
+                      height="100"
+                      position="left"></iron-image>
+        </div>
+      </app-toolbar>
+    </app-header>
   </body>
 </html>

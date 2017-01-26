@@ -10,6 +10,7 @@
   "private": true,
   "dependencies": {
     "polymer": "2.0-preview",
-    "app-layout": "PolymerElements/app-layout#2.0-preview"
+    "app-layout": "PolymerElements/app-layout#2.0-preview",
+    "iron-image": "PolymerElements/iron-image#2.0-preview"
   }
 }
