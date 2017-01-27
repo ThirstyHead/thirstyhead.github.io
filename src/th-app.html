@@ -84,9 +84,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <app-drawer slot="drawer">
         <app-toolbar>&nbsp;</app-toolbar>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-          <a name="view1" href="#/view1">View One</a>
-          <a name="view2" href="#/view2">View Two</a>
-          <a name="view3" href="#/view3">View Three</a>
+          <a name="read" href="#/read">Read</a>
+          <a name="watch" href="#/watch">Watch</a>
+          <a name="learn" href="#/learn">Learn</a>
         </iron-selector>
       </app-drawer>
 
@@ -110,11 +110,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <iron-pages
             selected="[[page]]"
             attr-for-selected="name"
-            fallback-selection="view404"
+            fallback-selection="read"
             role="main">
-          <th-view1 name="view1"></th-view1>
-          <th-view2 name="view2"></th-view2>
-          <th-view3 name="view3"></th-view3>
+          <th-read name="read"></th-read>
+          <th-watch name="watch"></th-watch>
+          <th-learn name="learn"></th-learn>
           <th-view404 name="view404"></th-view404>
         </iron-pages>
       </app-header-layout>
@@ -141,7 +141,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       _routePageChanged(page) {
-        this.page = page || 'view1';
+        this.page = page || 'read';
       }
 
       _pageChanged(page) {

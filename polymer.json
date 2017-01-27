@@ -2,9 +2,9 @@
   "entrypoint": "index.html",
   "shell": "src/th-app.html",
   "fragments": [
-    "src/th-view1.html",
-    "src/th-view2.html",
-    "src/th-view3.html",
+    "src/th-read.html",
+    "src/th-watch.html",
+    "src/th-learn.html",
     "src/th-view404.html"
   ],
   "sourceGlobs": [
