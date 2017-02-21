@@ -1,8 +1,12 @@
-article{
+a {
+  color: black;
+}
+
+article {
   background-color: #ccc;
 }
 
-body{
+body {
   background-color: black;
 }
 
@@ -10,38 +14,61 @@ nav ul {
   list-style: none;
 }
 
-nav ul li{
+nav ul li {
   font-family: 'Permanent Marker', serif;
   color: white;
   font-size: 1.5em;
 }
 
-nav ul li.selected{
+nav ul li.selected {
   text-decoration: underline;
   color: white;
 }
 
-nav ul li a{
+nav ul li a {
   text-decoration: none;
   color: white;
 }
 
-.container{
+.bio {
+  padding: 1em;
+}
+
+.bio-hr {
+  clear: both;
+}
+
+.bio-img {
+  float: left;
+  margin: 1em;
+  max-width: 35%;
+}
+
+.book-title {
+  text-decoration: underline;
+}
+
+.container {
   display: flex;
   flex-flow: column;
 }
 
-.identity{
+.content {
+  padding: 1em;
+}
+
+.identity {
   font-family: 'Permanent Marker', serif;
   color: white;
   font-size: 3em;
   text-decoration: none;
 }
 
-.book-title{
-  text-decoration: underline;
+.main {
+  display: flex;
+  flex-flow: row;
 }
 
-a {
-  color: black;
+.sidebar {
+  padding: 1em;
 }
