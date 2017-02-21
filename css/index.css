@@ -1,3 +1,7 @@
+article{
+  background-color: #ccc;
+}
+
 body{
   background-color: black;
 }
@@ -12,8 +16,13 @@ nav ul li{
   font-size: 1.5em;
 }
 
-li.selected{
+nav ul li.selected{
   text-decoration: underline;
+  color: white;
+}
+
+nav ul li a{
+  text-decoration: none;
   color: white;
 }
 
@@ -26,4 +35,5 @@ li.selected{
   font-family: 'Permanent Marker', serif;
   color: white;
   font-size: 3em;
+  text-decoration: none;
 }
