@@ -11,7 +11,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
 <link rel="import" href="shared-styles.html">
 
-<dom-module id="th-view1">
+<dom-module id="th-watch">
   <template>
     <style include="shared-styles">
       :host {
@@ -22,17 +22,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </style>
 
     <div class="card">
-      <div class="circle">1</div>
-      <h1>View One</h1>
-      <p>Ut labores minimum atomorum pro. Laudem tibique ut has.
-      <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p>
+      <h1>Watch</h1>
     </div>
   </template>
 
   <script>
-    class MyView1 extends Polymer.Element {
-      static get is() { return 'th-view1'; }
+    class ThWatch extends Polymer.Element {
+      static get is() { return 'th-watch'; }
     }
-    customElements.define(MyView1.is, MyView1);
+    customElements.define(ThWatch.is, ThWatch);
   </script>
 </dom-module>
