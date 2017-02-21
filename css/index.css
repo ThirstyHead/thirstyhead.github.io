@@ -2,12 +2,6 @@ body{
   background-color: black;
 }
 
-footer a{
-  color: white;
-  text-decoration: none;
-  align-self: flex-end;
-}
-
 nav ul {
   list-style: none;
 }
@@ -16,6 +10,11 @@ nav ul li{
   font-family: 'Permanent Marker', serif;
   color: white;
   font-size: 1.5em;
+}
+
+li.selected{
+  text-decoration: underline;
+  color: white;
 }
 
 .container{
