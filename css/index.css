@@ -37,3 +37,11 @@ nav ul li a{
   font-size: 3em;
   text-decoration: none;
 }
+
+.book-title{
+  text-decoration: underline;
+}
+
+a {
+  color: black;
+}
