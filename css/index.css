@@ -4,6 +4,7 @@ a {
 
 article {
   background-color: #ccc;
+  padding: 1em;
 }
 
 body {
@@ -55,6 +56,7 @@ nav ul li a {
 
 .content {
   padding: 1em;
+  flex-basis: 90%;
 }
 
 .identity {
@@ -71,4 +73,5 @@ nav ul li a {
 
 .sidebar {
   padding: 1em;
+  flex-basis: 10%;
 }
