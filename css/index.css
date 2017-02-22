@@ -5,6 +5,7 @@ a {
 article {
   background-color: #ccc;
   padding: 1em;
+  margin-bottom: 1em;
 }
 
 article h1 {
