@@ -85,3 +85,14 @@ nav ul li a {
   padding: 1em;
   flex-basis: 10%;
 }
+
+.watch iframe{
+  float: left;
+  margin: 1em;
+  max-width: 35%;
+}
+
+.watch-conference{
+  font-style: italic;
+  margin-top: -2em;
+}
