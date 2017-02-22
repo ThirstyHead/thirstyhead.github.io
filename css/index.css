@@ -7,6 +7,10 @@ article {
   padding: 1em;
 }
 
+article h1 {
+  font-size: 1.5em;
+}
+
 body {
   background-color: black;
 }
@@ -35,10 +39,6 @@ nav ul li a {
   padding: 1em;
 }
 
-.bio-hr {
-  clear: both;
-}
-
 .bio-img {
   float: left;
   margin: 1em;
@@ -47,6 +47,10 @@ nav ul li a {
 
 .book-title {
   text-decoration: underline;
+}
+
+.clear {
+  clear: both;
 }
 
 .container {
@@ -69,6 +73,12 @@ nav ul li a {
 .main {
   display: flex;
   flex-flow: row;
+}
+
+.presentation img{
+  float: left;
+  margin: 1em;
+  max-width: 35%;
 }
 
 .sidebar {
