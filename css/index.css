@@ -64,6 +64,12 @@ nav ul li a {
   flex-basis: 90%;
 }
 
+.dateline {
+  margin-bottom: -2em;
+  font-weight: bold;
+  font-style: italic;
+}
+
 .identity {
   font-family: 'Permanent Marker', serif;
   color: white;

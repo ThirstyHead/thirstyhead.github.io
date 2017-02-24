@@ -1,0 +1,52 @@
+= Meet the new ThirstyHead...
+
+...same as the old ThirstyHead.
+
+Sorta.
+
+See, here's the deal. It's still me -- Scott. Always has been. But a lot has changed since this URL first hit the web.
+
+== ThirstyHead, c. 2006
+
+ThirstyHead came to life in 2006, right around the release of my first book JBoss at Work. Of course, back then ThirstyHead was called Davisworld Consulting, Inc. -- perhaps the single most forgettable business name incorporated that year.
+
+It matched the single most forgettable hair cut of the year.
+
+I had just rolled off of two really meaty full-time gigs -- working on a pre-release version of Google Maps in 2005 with DigitalGlobe, and writing an integrated Open Source Software installer in Groovy for a startup called OpenLogic. I was speaking at software conferences around the US and around the world -- at least 20-30 weekends a year with No Fluff Just Stuff alone.
+
+I didn't know it at the time, but 2006 was a major inflection point in my life.
+
+Up until then, I'd been a fairly traditional J2EE web developer for nearly a decade. (I jumped into the Java stream at the 1.1 headwaters.) I'm certain that the first version of ThirstyHead.com (nee Davisworld.org) was deployed using that tech stack, but I can't prove it. I've searched my personal backups for minutes -- MINUTES, I tell you -- just for a glimpse of that glorious codebase, to no avail. So you'll just have to take my word for it -- it was a set of JSP pages, JSTL tags, and the occasional Servlet talking to a PostgreSQL database.
+
+Up until 2006, my website had been just that -- MY website. I had a Blojsom blog where I talked about my newborn kids, my cooking adventures, my friends -- me.
+
+After 2006, I developed a state-sponsored split personality. ThirstyHead.com was no longer me -- it was a brochureware website for this company I founded. In effect, ThirstyHead became a client of mine, and it didn't feel right talking about my kids on "their" corporate website.
+
+== ThirstyHead, c. 2009
+
+Flash forward a couple of years, and ThirstyHead is in full stride. I had already architected a new, fully F/OSS mapping website for TriMet -- the Portland, OR transit authority. They came to me and said, "We want Google Maps WITHOUT the Google Maps..." In other words, they wanted the Google Maps experience, but on their servers, with their data, at their own URL.
+
+This was right in my wheelhouse, having written GIS for Web Developers (possibly my favorite book and, sadly, out of print) as well as several books and articles on the Google Maps API. I was traveling the world giving talks like "Roll Your Own Google Maps" and "Adding Where to Your Applications".
+
+I was also neck-deep in the Groovy/Grails ecosystem at this point, and ThirstyHead.com was solidly a Grails app. I had one of the first public-facing Grails-based websites back in the version 0.3 days, and kept up with each new dot-release for years to follow.
+
+Groovy Recipes (also out of print -- do you see a pattern forming?) was the right book for the right time -- allowing Java developers to get up-to-speed quickly in this new paradigm-shifting language that offered full source code and run-time compatibility with Java. My talks "Groovy, The Blue Pill: Writing Next Generation Java Code in Groovy" and "Groovy, The Red Pill: Metaprogramming, the Groovy Way to Blow a Buttoned-Down Java Developer's Mind" won me a couple of JavaOne Rock Star awards. (My hair at the time had to help...)
+
+I had a voice -- I wrote several long-running article series for IBM developerWorks, including Practically Groovy and Mastering Grails -- but I was no longer writing about myself, for myself. Writing was work. Writing paid the bills.
+
+And around that time, this shiny new computer came out -- called the iPhone -- in 2007. I had already been writing websites for the mobile platform using WML (Wireless Markup Language) and WAP (Wireless Application Protocol). I was doing Palm Pilot development using J2ME -- fun stuff like capturing signatures as SVG, and then uploading them to Java Servlets that used Apache Batik to convert them to JPGs for web consumption.
+
+But the iPhone was a different beast entirely. It had a proper web browser, and it did what no other cell phone at the time was able to do -- it reunified the web into a single platform, killing the separate but equal "m-dot" websites with little regret. The web on the iPhone was the proper web -- albeit with a entirely new UX paradigm comprised of pinches and swipes -- and I dove in head first. When the App Store came around with the iPhone 2.0, I had no interest in catering to a single-platform solution like Objective C. I had been dipped in "Write Once, Run Anywhere" for too long to heed the siren's call of a one-trick pony, however attractive that pony was.
+
+This led to the next phase of ThirstyHead.
+
+== ThirstyHead, c. 2011
+
+2011 started the modern era of ThirstyHead. I co-founded the HTML5 Denver User Group that year. I was slinging HTML5 on smartphones and tablets, desktops and laptops, even SmartTVs -- I headed up a team that wrote the Samsung SmartTV interface for a major cable company, written entirely in HTML5.
+
+At this point, ThirstyHead.com was a NodeJS app with copious amounts of Twitter Bootstrap sprinkled over it for that extra tasty Responsive Web Design goodness.
+
+
+But it was around this time that I started feeling a general malaise about web development, but I couldn't quite put my finger on it.
+
+I learned BackboneJS and Bootstrap. jQuery mobile. Angular 1 and 2. ReactJS.
