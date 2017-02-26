@@ -38,7 +38,7 @@ Around that time, this shiny new computer came out -- called the iPhone -- in 20
 
 But the iPhone was a different beast entirely. It had a proper web browser, and it did what no other cell phone at the time was able to do -- it reunified the web into a single platform, killing off the separate but equal "m-dot" websites with little regret.
 
-The web on the iPhone was the proper web -- albeit with a entirely new UX paradigm comprised of pinches and swipes -- and I dove in head first. When the App Store came around with the iPhone 2.0, I had no interest in catering to a single-platform solution like Objective C. I had been dipped in "Write Once, Run Anywhere" for too long to heed the siren's call of a one-trick pony, however attractive that pony was.
+The web on the iPhone was the proper web -- albeit with an entirely new UX paradigm comprised of fingers and pinches and swipes -- and I dove in head first. When the App Store came around with the iPhone 2.0 (and remember -- HTML was the officially Apple-sanctioned way to do iPhone development up until then), I had no interest in catering to a single-platform solution like Objective C. I had been dipped in "Write Once, Run Anywhere" for too long to heed the siren's call of a one-trick pony, however attractive that pony was.
 
 This led to the next phase of ThirstyHead.
 
@@ -56,10 +56,28 @@ It was around this time that I started feeling a vague, general malaise about we
 
 I learned BackboneJS and Bootstrap. jQuery mobile. AngularJS. None of these are bad projects. I genuinely enjoyed my time working with each one of them.
 
-Many of the gigs I was being brought in to tackle at the time were more than simple "Can You Help Us Make Our Website More Mobile-Friendly?" projects -- they were, according to the client, full-on rescue projects. "We've had developers working on this for over 2 years, and we haven't shipped a single release yet."
+Many of the gigs I was being brought in to tackle at the time were more than simple "Can You Help Us Make Our Website More Mobile-Friendly?" projects. They were, according to the client, full-on rescue projects. "We've had developers working on this for over 2 years, and we haven't shipped a single release yet."
 
 One manager said, "We've been doing Flash/Flex development for almost a decade. I have no idea why my team can't get up to speed with mobile HTML5 techniques after a day or two of classroom training." I gently explained to him that, while Flash apps are run inside the browser, the Flash development process has almost nothing to do with core platform web development.
 
 His developers had no understanding of HTML, CSS, or JavaScript because they simply hadn't been using it -- for almost a decade. To add insult to injury, any meager platform experience his team DID have was hopelessly out-of-date -- by at least a decade. They were experts in Flash, but a Flash app is like flying a UFO into the browser -- you rarely interact with the natives, and when you do, it's with pity and contempt through the jaundiced eyes of an "advanced civilization".
 
-And believe me, at this point I was quite familiar with the contemptuous attitude most "real" developers had towards this "toy" programming language called JavaScript. Don't forget -- I spent the first 10 years of my programming career as a Java developer. Jeering at the diminutive junior cousin of a "real" language wasn't simply being petty or provincial -- it was baked into the official history and narrative of JavaScript from the start. No less an authority than Brendan Eich -- the creator of JavaScript -- characterized JavaScript as a language for "hobbyists", a stepping stone towards the more advanced, "real" language capabilities of Java.
+And believe me, at this point I was quite familiar with the contemptuous attitude most "real" developers had towards this "toy" programming language called JavaScript. Don't forget -- I spent the first 10 years of my programming career as a Java developer. That patronizing attitude was almost required of us.
+
+Jeering at the diminutive junior namesake of a "real" language wasn't simply being petty or provincial -- it was baked into the official history and narrative of JavaScript from the start. No less an authority than Brendan Eich -- the creator of JavaScript -- characterized JavaScript as a language for "hobbyists", a stepping stone towards the more advanced, "real" language capabilities of Java.
+
+Sibling rivalry is rarely the foundation of thoughtful, nuanced discussions -- especially when people aren't willing to acknowledge the familial history in the first place. It's a revelation to many of the seasoned Java developers I meet that Java and JavaScript were introduced to the public on the same day, in the same place -- a little web browser called Netscape Navigator 2.0 on May 23, 1995.
+
+Client-side Applets were supposed to be the future of Java, but server-side Servlets are where Java rose to prominence. Perhaps this is the root of the pervasive sour grapes attitude among many Java developers --  "Server-side is where all of the civilized action takes place; the web browser is a Mad Max-esque post-apocalyptic lawless desert wasteland".
+
+I'm even willing to admit that in the earliest days of JavaScript, perhaps those grapes were a bit tart. But they were not nearly as inedible as Java developers would have you believe, and in case nostalgia clouds your memories, allow me to remind you that Java was differently yet equally as immature as JavaScript was back in those primordial 1.0 days. It's folly to think that 20+ years of active development has added sophistication to one of the languages and left the other in its 1996 infant state.
+
+It amazes me that -- even today -- the web platform is often characterized as "impoverished" and "disjoint", and that UIs are better off generated from another (more powerful?) language than natively written. No company would dream of hiring a Java developer without Java experience (or a C# developer without C# experience; or a Ruby developer without Ruby experience), and yet "web developers" (air-quotes intentional) who have never had any formal training in core web platform technologies are commonplace.
+
+When the development team struggles to produce a viable web app, the culprit is almost always the current framework in use, and the solution is almost always finding another, newer, more improved framework. Improving the team's impoverished and disjoint core platform language skills is rarely considered when adding (and learning) Yet Another Layer of Abstraction can mask the symptoms for a little while longer instead of curing the disease.
+
+So, what does all of that have to do with the shiny new ThirstyHead.com in front of us, Mr. Ranty McRantsalot?
+
+== ThirstyHead, c. 2017
+
+Last year, I started a new project using the prerelease version of Angular 2. The initial learning curve was quite steep -- even (especially?) for a team of experienced Angular 1 developers. I initially chalked our struggles up to the new platform metaphors like ES6 classes, Web Components, and Reactive streams instead of Promises. 
