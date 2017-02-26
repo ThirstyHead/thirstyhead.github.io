@@ -72,7 +72,7 @@ Client-side Applets were supposed to be the future of Java, but server-side Serv
 
 I'm even willing to admit that in the earliest days of JavaScript, perhaps those grapes were a bit tart. But they were not nearly as inedible as Java developers would have you believe, and in case nostalgia clouds your memories, allow me to remind you that Java was differently yet equally as immature as JavaScript was back in those primordial 1.0 days. It's folly to think that 20+ years of active development has added sophistication to one of the languages and left the other in its 1996 infant state.
 
-It amazes me that -- even today -- the web platform is often characterized as "impoverished" and "disjoint", and that UIs are better off generated from another (more powerful?) language than natively written. No company would dream of hiring a Java developer without Java experience (or a C# developer without C# experience; or a Ruby developer without Ruby experience), and yet "web developers" (air-quotes intentional) who have never had any formal training in core web platform technologies are commonplace.
+It amazes me that -- even today -- the web platform is often characterized as "impoverished" and "disjoint", and that UIs are better off generated from another (more powerful?) language than natively written. No company would dream of hiring a Java developer without Java experience (or a C# developer without C# experience; or a Ruby developer without Ruby experience), and yet back-end "web developers" (air-quotes intentional) who have never had any formal training in core web platform technologies are commonplace.
 
 When the development team struggles to produce a viable web app, the culprit is almost always the current framework in use, and the solution is almost always finding another, newer, more improved framework. Improving the team's impoverished and disjoint core platform language skills is rarely considered when adding (and learning) Yet Another Layer of Abstraction can mask the symptoms for a little while longer instead of curing the disease.
 
@@ -80,4 +80,33 @@ So, what does all of that have to do with the shiny new ThirstyHead.com in front
 
 == ThirstyHead, c. 2017
 
-Last year, I started a new project using the prerelease version of Angular 2. The initial learning curve was quite steep -- even (especially?) for a team of experienced Angular 1 developers. I initially chalked our struggles up to the new platform metaphors like ES6 classes, Web Components, and Reactive streams instead of Promises. 
+Last year, I started a new project using a prerelease version of Angular 2. The early learning curve was quite steep -- even (especially?) for a team of experienced Angular 1 developers. I initially chalked our struggles up to the new platform metaphors like ES6 classes, Web Components, and Reactive Streams instead of Promises. But even after we internalized these new concepts (and learned them outside of the framework), Angular 2 felt more like an opaque abstraction layer than syntactic sugar.
+
+And don't even get me started on the tooling requirements. Angular 1's "Hello World" started with "Add this <script> tag to import the Angular library" and you had your first example up and running in seconds. Angular 2's "Hello World" was a 10-15 minute byzantine multi-step, multi-file process that required build scripts, module loaders, and an especially fragile coterie of import-order-specific library dependencies -- many of which were Angular-specific forks of independent projects.
+
+I spent more time writing Yeoman scripts to automate the complexity away than writing application features. I invested heavily in writing custom Gulp scripts, hoping to encapsulate and insulate the team from the high ceremony of the framework. Instead, I ended up spreading on Yet Another Layer of Abstraction that ultimately hindered our understanding of the framework instead of enhancing it.
+
+We avoided using TypeScript from the beginning, largely because I was concerned about the potential drag on our project's velocity due to bringing in 3rd party dependencies that didn't have the associated non-optional TypeScript artifacts. As it turns out, even bringing in plain old JavaScript libraries was unexpectedly, punishingly difficult. Few of the libraries utilized ES6 modules, so we were faced with the unsavory choice of either metaphor-shear (this one is global; that one must be imported) or fiddly polyfilling / retrofitting old stable libraries to satisfy our new module loader's demands.
+
+So, after nine months of development, we scuttled the codebase and started over. We had already been successfully using Polymer / Material Design for basic UI components (tabs, dialog boxes, form fields), so why not use it for the entire app?
+
+The team enjoyed the dramatically simplified development flow, and the Look and Feel far surpassed anything that we would've been able to come up with on our own. Management was initially concerned that we were chasing Yet Another Shiny New Framework (we weren't -- Polymer was stable at 1.6, with a 2.0 release around the corner). I reassured them that the core ideas we learned for Angular 2.0 (ES6 classes, Web Components, Reactive Streams) were in play here in Polymer as well, so this was more of a syntax change than a deep, semantic change of direction.
+
+So, what does all of this have to do with the new ThirstyHead.com, Sir Rantsalot?
+
+I like Polymer. I really do. But as I started to build out the new ThirstyHead.com in it, I finally came to grips with the general malaise I've been feeling all of these years.
+
+For all of the hundreds (if not thousands) of development hours I've invested in ThirstyHead.com, I have absolutely nothing to show for it.
+
+I have artifacts in Java, in Groovy, and in JavaScript, and yet I have no foundation to build this latest version of the website on. My content is all tied up in historical databases I no longer want to support, and my exoskeleton is implemented in artifacts that aren't reusable across languages and servers (JSPs, GSPs, etc.) Once again, I am pursuing the "del &#42;.&#42;" upgrade method (technically, "rm -rf &#42;", but a rose by any other name...).
+
+This speaks to a deeper, more uncomfortable issue. I don't get paid by this customer, ThirstyHead. In fact, I'm paying my customer with precious personal hours that could be otherwise spent with my wife, my kids, my guitar, etc. So I am highly motivated to minimize the cost and time spent on this project.
+
+And what have I historically invested my limited budget on? Languages and frameworks instead of content. Scaffolding instead of substance. Ephemera masquerading as foundation.
+
+UFOs.
+
+Meanwhile, the very first HTML page ever written by Tim Berners Lee is available and readable today, from any browser on the planet -- even (especially!) from browsers and platforms that didn't exist until decades after the page was originally written.
+
+== The Bespoke HTML Challenge
+Apparently, this is my cue to give a full-throated lofty manifesto.
