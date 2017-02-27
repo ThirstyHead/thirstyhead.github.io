@@ -68,13 +68,13 @@ Jeering at the diminutive junior namesake of a "real" language wasn't simply bei
 
 Sibling rivalry is rarely the foundation of thoughtful, nuanced discussions -- especially when people aren't willing to acknowledge the familial history in the first place. It's a revelation to many of the seasoned Java developers I meet that Java and JavaScript were introduced to the public on the same day, in the same place -- a little web browser called Netscape Navigator 2.0 on May 23, 1995.
 
-Client-side Applets were supposed to be the future of Java, but server-side Servlets are where Java rose to prominence. Perhaps this is the root of the pervasive sour grapes attitude common among many Java developers --  "Server-side is where all of the civilized action takes place; the web browser is a Mad Max-esque post-apocalyptic lawless desert wasteland".
+Client-side Applets were supposed to be the future of Java, but server-side Servlets are where Java rose to prominence. Perhaps this is the root of the pervasive sour grapes attitude common among many Java developers --  "Server-side is where all of the civilized action takes place; the web browser is a Mad Max-esque post-apocalyptic lawless desert wasteland."
 
-I'm even willing to admit that in the earliest days of JavaScript, perhaps those grapes were a bit tart. But they were not nearly as inedible as Java developers would have you believe, and in case nostalgia clouds your memories, allow me to remind you that Java was differently yet equally as immature as JavaScript was back in those primordial 1.0 days. It's folly to think that 20+ years of active development has added sophistication to one of the languages and left the other in its 1996 infant state.
+Even I'm willing to admit that in the earliest days of JavaScript, perhaps those grapes were a bit tart. But they were not nearly as inedible as contemporaneous Java developers would have you believe, and in case nostalgia clouds your memories, allow me to remind you that Java was differently yet similarly immature as JavaScript was back in those primordial 1.0 days. It's folly to think that 20+ years of active development has added sophistication to one of the languages and left the other in its 1996 infant state.
 
 It amazes me that -- even today -- the web platform is often characterized as "impoverished" and "disjoint", and that UIs are better off generated from another (more powerful?) language than natively written. No company would dream of hiring a Java developer without Java experience (or a C# developer without C# experience; or a Ruby developer without Ruby experience), and yet back-end "web developers" (air-quotes intentional) who have never had any formal training in core web platform technologies are commonplace.
 
-When the development team struggles to produce a viable web app, the culprit is almost always the current framework in use, and the solution is almost always finding another, newer, more improved framework. Improving the team's impoverished and disjoint core platform language skills is rarely considered when adding (and learning) Yet Another Layer of Abstraction can mask the symptoms for a little while longer instead of curing the disease.
+When the development team struggles to produce a viable web app, the culprit is almost always assumed to be the current framework in use, and the solution is almost always finding another, newer, more improved framework. Improving the team's impoverished and disjoint core platform language skills is rarely considered when adding (and learning) Yet Another Layer of Abstraction can mask the symptoms for a little while longer instead of curing the disease.
 
 So, what does all of that have to do with the shiny new ThirstyHead.com in front of us, Mr. Ranty McRantsalot?
 
@@ -86,23 +86,23 @@ And don't even get me started on the tooling requirements. Angular 1's "Hello Wo
 
 I spent more time writing Yeoman scripts to automate the complexity away than writing application features. I invested heavily in writing custom Gulp scripts, hoping to encapsulate and insulate the team from the high ceremony of the framework. Instead, I ended up spreading on Yet Another Layer of Abstraction that ultimately hindered our understanding of the framework instead of enhancing it.
 
-We avoided using TypeScript from the beginning, largely because I was concerned about the potential drag on our project's velocity due to bringing in 3rd party dependencies that didn't have the associated non-optional TypeScript artifacts. As it turns out, even bringing in plain old JavaScript libraries was unexpectedly, punishingly difficult. Few of the libraries utilized ES6 modules, so we were faced with the unsavory choice of either metaphor-shear (this one is global; that one must be imported) or fiddly polyfilling / retrofitting old stable libraries to satisfy our new module loader's demands.
+We avoided using TypeScript from the beginning, largely because I was concerned about the potential drag on our project's velocity as a result of bringing in 3rd party dependencies that didn't have the associated non-optional TypeScript artifacts. As it turns out, even bringing in plain old JavaScript libraries was unexpectedly, punishingly difficult. Few of the libraries utilized ES6 modules, so we were faced with the unsavory choice of either metaphor-shear (this one is global; that one must be imported) or fiddly retrofitting old stable libraries to satisfy our new module loader's demands.
 
 So, after nine months of development, we scuttled the codebase and started over. We had already been successfully using Polymer / Material Design for basic UI components (tabs, dialog boxes, form fields), so why not use it for the entire app?
 
-The team enjoyed the dramatically simplified development flow, and the Look and Feel far surpassed anything that we would've been able to come up with on our own. Management was initially concerned that we were chasing Yet Another Shiny New Framework (we weren't -- Polymer was stable at 1.6, with a 2.0 release around the corner). I reassured them that the core ideas we learned for Angular 2.0 (ES6 classes, Web Components) were in play here in Polymer as well, so this was more of a syntax change than a deep, semantic change of direction.
+The team enjoyed the dramatically simplified development process, and the Look and Feel far surpassed anything that we would've been able to come up with on our own. Management was initially concerned that we were chasing Yet Another Shiny New Framework (we weren't -- Polymer was stable at 1.6, with a 2.0 release around the corner). I reassured them that the core ideas we learned for Angular 2.0 (ES6 classes, Web Components) were at play here in Polymer as well, so this was more of a mild syntax change than a deep, semantic change of direction.
 
 So, what does all of this have to do with the new ThirstyHead.com, Sir Rantsalot?
 
-I like Polymer. I really do. But as I started to build out the new ThirstyHead.com in it, I finally came to grips with the general malaise I've been feeling all of these years.
+I like Polymer. I really do. (#useThePlatform, Yo!) But as I started to build out the new ThirstyHead.com in it, I finally came to grips with the general malaise I've been feeling all of these years.
 
-For all of the hundreds (if not thousands) of development hours I've invested in ThirstyHead.com over the years, I have absolutely nothing to show for it.
+For all of the hundreds (if not thousands) of development hours I've invested in ThirstyHead.com over the years, I have absolutely nothing to show for it. And here I was, about to do it again.
 
-I have artifacts in Java, in Groovy, and in JavaScript, and yet I have no foundation to build this latest version of the website on. My content is all tied up in historical databases I no longer want to support, and my exoskeleton is implemented in artifacts that aren't reusable across languages and servers (JSPs, GSPs, etc.) Once again, I am pursuing the "del &#42;.&#42;" upgrade method (technically, "rm -rf &#42;", but a rose by any other name...).
+I have full codebases in Java, in Groovy, and in JavaScript, and yet I have no foundation to build this latest version of the website on. My content is all tied up in legacy databases I no longer want to support, and my exoskeleton is implemented in artifacts that aren't reusable across languages and servers (JSPs, GSPs, etc.) Once again, I am pursuing the "del &#42;.&#42;" upgrade method (technically, "rm -rf &#42;", but a rose by any other name...).
 
-This speaks to a deeper, more uncomfortable issue. I don't get paid by this customer, ThirstyHead. In fact, I'm paying my customer with precious personal hours that could be otherwise spent with my wife, my kids, my guitar, my oven, etc. So I am highly motivated to minimize the cost and time spent on this project.
+This speaks to a deeper, more uncomfortable issue. I don't get paid by this customer, ThirstyHead, to develop their website. In fact, I'm paying my customer with precious personal hours that could be otherwise spent with my wife, my kids, my guitar, my oven, my grill, etc. So I am highly motivated to minimize the cost and time spent on this project.
 
-And what have I historically invested my limited budget on? Languages and frameworks instead of content. Scaffolding instead of substance. Ephemera masquerading as foundation.
+And what have I historically invested my limited development budget in? Languages and frameworks instead of content. Scaffolding instead of substance. Ephemera masquerading as foundation.
 
 UFOs.
 
@@ -111,7 +111,7 @@ Meanwhile, the very first HTML page ever written by Tim Berners Lee is available
 == The Bespoke HTML Challenge
 Apparently, this is my cue to give a lofty, full-throated manifesto. After all of the buildup, I'm afraid it might be a tad underwhelming.
 
-I'm gonna write this in HTML. And CSS. And JavaScript.
+I'm gonna write this website in HTML. And CSS. And JavaScript.
 
 (Not dramatic enough?)
 
@@ -127,12 +127,14 @@ Because this is what web development is. Don't allow anyone to convince you othe
 
 Your first attempt may look janky and warty and nothing at all like Bootstrap or Material Design or WordPress or Medium.  That's OK. If it bothers you enough, it won't stay that way for long. (And thanks for waiting a respectful amount of time before agreeing with the "janky" and "warty" parts as you gaze upon my first attempt...)
 
-I limited myself to only HTML and CSS for this first pass -- not a lick of JavaScript to be seen, and it made me more uncomfortable than I care to admit. I copy and pasted chunks of text around that would be better served by Web Components. I have a ton of duplication that is crying out for Templates and pagination. But for this first pass I wanted to feel that pain, and see what needed to be built up instead of fearfully relying on a YAGNI-laden library all full of someone else's pain-relief.
+I limited myself to only HTML and CSS for this first pass -- not a lick of JavaScript to be seen, and it made me more uncomfortable than I care to admit. I copy and pasted chunks of text around that would be better served by Web Components. I have a ton of duplication that is crying out for Templates and pagination. But for this first pass I wanted to feel that pain personally, and understand what needed to be built up instead of fearfully relying on a YAGNI-laden library all full of someone else's pain-relief.
 
-(In the spirit of full disclosure, I wrote the long-form text of this page using AsciiDoctor, but only to automate the mundane <p> and <h1> insertions. Everything else you see here was lovingly hand-crafted.)
+What you are witnessing here is a Minimum Viable Website. Interestingly, back in 1995, they were just called "websites".
 
-This is not a screed against web frameworks. I will certainly continue to use them professionally, write about them, and talk about them at a software conference near you. But what you read here at ThirstyHead.com will be unapologetically my voice once again, and what you see will be mine as well.
+(In the spirit of full disclosure, I wrote the long-form prose of this page using AsciiDoctor, but only to automate the mundane <p> and <h1> insertions. Everything else you see here was lovingly hand-crafted.)
 
-GitHub (and GitHub Pages) is a completely free place to host your website. (You can see the raw source for this website at https://github.com/ThirstyHead/thirstyhead.github.io) There are many other sites out there that offer similar functionality.
+This is not a screed against web frameworks or programming languages other than JavaScript. I will certainly continue to use them professionally, write about them, and talk about them at a software conference near you. But what you read here at ThirstyHead.com from now on will be unapologetically my voice once again, and what you see will be unapologetically my source code.
+
+GitHub (with GitHub Pages) is a completely free place to host your website. (You can see the raw source for this website at https://github.com/ThirstyHead/thirstyhead.github.io) There are many other sites out there that offer similar functionality.
 
 Your move.
