@@ -1,2 +1,3 @@
 # thirstyhead.github.io
-ThirstyHead public website
+
+Website for ThirstyHead.com

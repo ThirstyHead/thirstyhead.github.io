@@ -1,0 +1,15 @@
+{
+  "name": "thirstyhead.github.io",
+  "description": "ThirstyHead.com",
+  "version": "1.0.0",
+  "authors": [
+    "Scott Davis <scott@thirstyhead.com>"
+  ],
+  "homepage": "https://github.com/ThirstyHead/thirstyhead.github.io",
+  "main": "index.html",
+  "license": "CC-BY-4.0",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {},
+  "resolutions": {}
+}
