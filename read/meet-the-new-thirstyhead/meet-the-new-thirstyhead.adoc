@@ -1,4 +1,7 @@
 = Meet the new ThirstyHead...
+:toc: macro
+:imagesdir: /read/meet-the-new-thirstyhead/img
+:linkcss:
 
 ...same as the old ThirstyHead.
 
@@ -6,17 +9,21 @@ Sorta.
 
 See, here's the deal. It's still me -- Scott. Always has been. But a lot has changed since this URL first hit the web.
 
+toc::[]
+
 == ThirstyHead, c. 2006
 
-ThirstyHead came to life in 2006, right around the release of my first book JBoss at Work. Of course, back then ThirstyHead was called Davisworld Consulting, Inc. -- perhaps the single most forgettable business name incorporated that year.
+ThirstyHead came to life in 2006, right around the release of my first book http://shop.oreilly.com/product/9780596007348.do[JBoss at Work]. Of course, back then ThirstyHead was called Davisworld Consulting, Inc. -- perhaps the single most forgettable business name incorporated that year.
 
-It matched the single most forgettable hair cut of the year.
+image:scott-davis-2006.jpg[caption="Scott Davis, 2006", title="Scott Davis, 2006", alt="Scott Davis, 2006", float="left"]
+
+It matched the single most forgettable haircut of the year.
 
 I had just rolled off of two really meaty full-time gigs -- working on a pre-release version of Google Maps in 2005 with DigitalGlobe, and writing an integrated Open Source Software installer in Groovy for a startup called OpenLogic. I was speaking at software conferences around the US and around the world -- at least 20-30 weekends a year with No Fluff Just Stuff alone.
 
 I didn't realize it at the time, but 2006 was a major inflection point in my life.
 
-Up until then, I'd been a fairly traditional J2EE web developer for nearly a decade. (I jumped into the Java stream at the 1.1 headwaters.) I'm certain that the first version of ThirstyHead.com (nee Davisworld.org) was deployed using that tech stack, but I can't prove it. I've searched my personal backups for minutes -- MINUTES, I tell you -- just for a glimpse of that glorious codebase, to no avail. So you'll just have to take my word for it -- it was a set of JSP pages, JSTL tags, and the occasional Servlet talking to a PostgreSQL database.
+Up until then, I'd been a fairly traditional J2EE web developer for nearly a decade. (I jumped into the Java stream at the 1.1 headwaters.) I'm certain that the first version of ThirstyHead.com (n&eacute;e Davisworld.org) was deployed using that tech stack, but I can't prove it. I've searched my personal backups for minutes -- MINUTES, I tell you -- just for a glimpse of that glorious codebase, to no avail. So you'll just have to take my word for it -- it was a set of JSP pages, JSTL tags, and the occasional Servlet talking to a PostgreSQL database.
 
 Up until 2006, my website had been just that -- MY website. I had a Blojsom blog where I talked about MY newborn kids, MY cooking adventures, MY friends -- me.
 
@@ -24,17 +31,19 @@ After 2006, I developed a state-sponsored split personality. ThirstyHead.com was
 
 == ThirstyHead, c. 2009
 
-Flash forward a couple of years, and ThirstyHead is in full stride. I had already architected a new, fully F/OSS mapping website for TriMet -- the Portland, OR transit authority. They came to me and said, "We want Google Maps WITHOUT the Google Maps..." In other words, they wanted the Google Maps experience, but on their servers, with their data, at their own URL.
+Flash forward a couple of years, and ThirstyHead is in full stride. I had already architected a new, fully F/OSS mapping website for http://ride.trimet.org/#/[TriMet] -- the Portland, OR transit authority. They came to me and said, "We want Google Maps WITHOUT the Google Maps..." In other words, they wanted the Google Maps experience, but on their servers, with their data, at their own URL.
 
-This was right in my wheelhouse, having written GIS for Web Developers (possibly my favorite book and, sadly, out of print) as well as several books and articles on the Google Maps API. I was traveling the world teaching classes and giving talks like "Roll Your Own Google Maps" and "Adding Where to Your Applications".
+This was right in my wheelhouse, having written https://pragprog.com/book/sdgis/gis-for-web-developers[GIS for Web Developers] (possibly my favorite book and, sadly, out of print) as well as several books and articles on the Google Maps API. I was traveling the world teaching classes and giving talks like "Roll Your Own Google Maps" and "Adding Where to Your Applications".
 
 I was also neck-deep in the Groovy/Grails ecosystem at this point, and ThirstyHead.com was solidly a Grails app. I had one of the first public-facing Grails-based websites back in the version 0.3 days, and kept up with each new dot-release for years to follow.
 
-Groovy Recipes (also out of print -- do you see a pattern forming?) was the right book for the right time -- allowing Java developers to get up-to-speed quickly in this new paradigm-shifting language that offered full source code and run-time compatibility with Java. My talks "Groovy, The Blue Pill: Writing Next Generation Java Code in Groovy" and "Groovy, The Red Pill: Metaprogramming, the Groovy Way to Blow a Buttoned-Down Java Developer's Mind" won me a couple of JavaOne Rock Star awards. (My hair at the time had to help...)
+https://pragprog.com/book/sdgrvr/groovy-recipes[Groovy Recipes] (also out of print -- do you see a pattern forming?) was the right book for the right time -- allowing Java developers to get up-to-speed quickly in this new paradigm-shifting language that offered full source code and run-time compatibility with Java. My talks "Groovy, The Blue Pill: Writing Next Generation Java Code in Groovy" and "Groovy, The Red Pill: Metaprogramming, the Groovy Way to Blow a Buttoned-Down Java Developer's Mind" won me a couple of https://www.oracle.com/javaone/rock-star-wall-of-fame.html#sdavis[JavaOne Rock Star awards]. (My hair at the time had to help...)
 
-I had a voice -- I wrote several long-running article series for IBM developerWorks, including Practically Groovy and Mastering Grails -- but I was no longer writing about myself, for myself. Writing was work. Writing paid the bills. I was a professional author (for some value of the word "professional").
+image:scott-davis-2009.jpg[caption="Scott Davis, 2009", title="Scott Davis, 2009", alt="Scott Davis, 2009", float="left"]
 
-Around that time, this shiny new computer came out -- called the iPhone -- in 2007. I had already been writing websites for the mobile platform using WML (Wireless Markup Language) and WAP (Wireless Application Protocol). I was doing Palm Pilot development using J2ME -- fun stuff like capturing signatures as SVG, uploading them to Java Servlets, and then using Apache Batik to convert them to JPGs for web consumption.
+I had a voice -- I wrote several long-running article series for IBM developerWorks, including http://www.ibm.com/developerworks/java/library/j-pg02179/index.html[Practically Groovy] and https://www.ibm.com/developerworks/java/library/j-grails01158/index.html[Mastering Grails] -- but I was no longer writing about myself, for myself. Writing was work. Writing paid the bills. I was a professional author (for some value of the word "professional").
+
+Around that time, this shiny new computer came out -- called https://thenextweb.com/apple/2015/09/09/genius-annotated-with-genius/[the iPhone] -- in 2007. I had already been writing websites for the mobile platform using WML (Wireless Markup Language) and WAP (Wireless Application Protocol). I was doing Palm Pilot development using J2ME -- fun stuff like capturing signatures as SVG, uploading them to Java Servlets, and then using Apache Batik to convert them to JPGs for web consumption.
 
 But the iPhone was a different beast entirely. It had a proper web browser, and it did what no other cell phone at the time was able to do -- it reunified the web into a single platform, killing off the separate but equal "m-dot" websites with little regret.
 
@@ -44,13 +53,15 @@ This led to the next phase of ThirstyHead.
 
 == ThirstyHead, c. 2011
 
-2011 started the modern era of ThirstyHead. I co-founded the HTML5 Denver User Group that year. I was slinging HTML5 on smartphones and tablets, desktops and laptops, even SmartTVs.
+2011 started the modern era of ThirstyHead. I co-founded the https://www.meetup.com/HTML5-Denver-Users-Group/[HTML5 Denver User Group] that year. I was slinging HTML5 on smartphones and tablets, desktops and laptops, even SmartTVs.
+
+image:scott-standing.png[caption="Scott Davis, 2011", title="Scott Davis, 2011", alt="Scott Davis, 2011", float="left"]
 
 I headed up a team that designed and implemented the Samsung SmartTV interface for a major cable company, written entirely in HTML5. For another project, we wrote a mobile web app for the Colorado Department of Transportation that helped disseminate information about ongoing construction projects -- lane changes, exit closures, and a traffic "thermometer" that included live camera views at key intersections atop a Google map.
 
-2011 was the year that smartphones first outsold laptops. We're now living in an era where mobile internet usage outweighs "legacy" desktop usage, and that tiny handheld 4-inch slab of glass is, in many cases, a person's sole portal into the World Wide Web.
+2011 was the year that http://www.businessinsider.com/for-the-first-time-ever-smartphones-are-outselling-pcs-2012-2[smartphones first outsold laptops]. We're now living in an era where https://techcrunch.com/2016/11/01/mobile-internet-use-passes-desktop-for-the-first-time-study-finds/[mobile internet usage surpasses "legacy" desktop usage], and that tiny handheld 4-inch slab of glass is, in many cases, https://www.comscore.com/ita/Insights/Blog/Number-of-Mobile-Only-Internet-Users-Now-Exceeds-Desktop-Only-in-the-U.S[a person's sole portal into the World Wide Web].
 
-At this point, the ThirstyHead.com website was a NodeJS app with copious amounts of Twitter Bootstrap sprinkled over it for that extra tasty Responsive Web Design goodness.
+At this point, the ThirstyHead.com website was a NodeJS app with copious amounts of Twitter Bootstrap sprinkled over it for that extra tasty https://alistapart.com/article/responsive-web-design[Responsive Web Design] goodness.
 
 It was around this time that I started feeling a vague, general malaise about web development, but I couldn't quite put my finger on it. Not about the Information Superhighway itself, but moreso the vehicles we were building to hit the onramp.
 
@@ -64,11 +75,11 @@ His developers had no understanding of HTML, CSS, or JavaScript because they sim
 
 And believe me, at this point I was quite familiar with the contemptuous attitude most "real" developers had towards this "toy" programming language called JavaScript. Don't forget -- I spent the first 10 years of my programming career as a Java developer. That patronizing attitude was almost required of us.
 
-Jeering at the diminutive junior namesake of a "real" language wasn't simply being petty or provincial -- it was baked into the official history and narrative of JavaScript from the start. No less an authority than Brendan Eich -- the creator of JavaScript -- characterized JavaScript as a language for "hobbyists", a stepping stone towards the more advanced, "real" language capabilities of Java.
+Jeering at the diminutive junior namesake of a "real" language wasn't simply being petty or provincial -- it was baked into the official history and narrative of JavaScript from the start. No less an authority than Brendan Eich -- the creator of JavaScript -- characterized JavaScript as a http://www.computerworld.com.au/article/255293/a-z_programming_languages_javascript/[language for "hobbyists"], a stepping stone towards the more advanced, "real" language capabilities of Java.
 
-Sibling rivalry is rarely the foundation of thoughtful, nuanced discussions -- especially when people aren't willing to acknowledge the familial history in the first place. It's a revelation to many of the seasoned Java developers I meet that Java and JavaScript were introduced to the public on the same day, in the same place -- a little web browser called Netscape Navigator 2.0 on May 23, 1995.
+Sibling rivalry is rarely the foundation of thoughtful, nuanced discussions -- especially when people aren't willing to acknowledge the familial history in the first place. It's a revelation to many of the seasoned Java developers I meet that Java and JavaScript were introduced to the public on the same day, in the same place -- a little web browser called https://en.wikipedia.org/wiki/Netscape_Navigator_2[Netscape Navigator 2.0] on May 23, 1995.
 
-Client-side Applets were supposed to be the future of Java, but server-side Servlets are where Java rose to prominence. Perhaps this is the root of the pervasive sour grapes attitude common among many Java developers --  "Server-side is where all of the civilized action takes place; the web browser is a Mad Max-esque post-apocalyptic lawless desert wasteland."
+Client-side https://en.wikipedia.org/wiki/Java_applet[Applets] were supposed to be the future of Java, but server-side https://en.wikipedia.org/wiki/Java_servlet[Servlets] are where Java rose to prominence. Perhaps this is the root of the pervasive sour grapes attitude common among many Java developers --  "Server-side is where all of the civilized action takes place; the web browser is a Mad Max-esque post-apocalyptic lawless desert wasteland."
 
 Even I'm willing to admit that in the earliest days of JavaScript, perhaps those grapes were a bit tart. But they were not nearly as inedible as contemporaneous Java developers would have you believe, and in case nostalgia clouds your memories, allow me to remind you that Java was differently yet similarly immature as JavaScript was back in those primordial 1.0 days. It's folly to think that 20+ years of active development has added sophistication to one of the languages and left the other in its 1996 infant state.
 
@@ -82,19 +93,19 @@ So, what does all of that have to do with the shiny new ThirstyHead.com in front
 
 Last year, I started a new project using a prerelease version of Angular 2. The early learning curve was quite steep -- even (especially?) for a team of experienced Angular 1 developers. I initially chalked our struggles up to the new platform metaphors like ES6 classes, Web Components, and Reactive Streams. But even after we internalized these new concepts (by learning them outside of the framework), Angular 2 felt more like an opaque abstraction layer than syntactic sugar.
 
-And don't even get me started on the tooling requirements. Angular 1's "Hello World" started with "Add this <script> tag to import the Angular library" and you had your first example up and running in seconds. Angular 2's "Hello World" was a 10-15 minute byzantine multi-step, multi-file process that required build scripts, module loaders, and an especially fragile coterie of import-order-specific library dependencies -- many of which were Angular-specific forks of independent projects.
+And don't even get me started on the tooling requirements. Angular 1's https://angularjs.org/["Hello World"] started with "Add this <script> tag to import the Angular library" and you had your first example up and running in seconds. Angular 2's https://angular.io/docs/ts/latest/tutorial/["Hello World"] was a 10-15 minute byzantine multi-step, multi-file process that required build scripts, module loaders, and an especially fragile coterie of import-order-specific library dependencies -- many of which were Angular-specific forks of independent projects.
 
 I spent more time writing Yeoman scripts to automate the complexity away than writing application features. I invested heavily in writing custom Gulp scripts, hoping to encapsulate and insulate the team from the high ceremony of the framework. Instead, I ended up spreading on Yet Another Layer of Abstraction that ultimately hindered our understanding of the framework instead of enhancing it.
 
 We avoided using TypeScript from the beginning, largely because I was concerned about the potential drag on our project's velocity as a result of bringing in 3rd party dependencies that didn't have the associated non-optional TypeScript artifacts. As it turns out, even bringing in plain old JavaScript libraries was unexpectedly, punishingly difficult. Few of the libraries utilized ES6 modules, so we were faced with the unsavory choice of either metaphor-shear (this one is global; that one must be imported) or fiddly retrofitting old stable libraries to satisfy our new module loader's demands.
 
-So, after nine months of development, we scuttled the codebase and started over. We had already been successfully using Polymer / Material Design for basic UI components (tabs, dialog boxes, form fields), so why not use it for the entire app?
+So, after nine months of development, we scuttled the codebase and started over. We had already been successfully using https://www.polymer-project.org/1.0/[Polymer] / https://en.wikipedia.org/wiki/Material_Design[Material Design] for basic UI components (tabs, dialog boxes, form fields), so why not use it for the entire app?
 
 The team enjoyed the dramatically simplified development process, and the Look and Feel far surpassed anything that we would've been able to come up with on our own. Management was initially concerned that we were chasing Yet Another Shiny New Framework (we weren't -- Polymer was stable at 1.6, with a 2.0 release around the corner). I reassured them that the core ideas we learned for Angular 2.0 (ES6 classes, Web Components) were at play here in Polymer as well, so this was more of a mild syntax change than a deep, semantic change of direction.
 
 So, what does all of this have to do with the new ThirstyHead.com, Sir Rantsalot?
 
-I like Polymer. I really do. (#useThePlatform, Yo!) But as I started to build out the new ThirstyHead.com in it, I finally came to grips with the general malaise I've been feeling all of these years.
+I like Polymer. I really do. (https://www.polymer-project.org/1.0/about[#useThePlatform], Yo!) But as I started to build out the new ThirstyHead.com in it, I finally came to grips with the general malaise I've been feeling all of these years.
 
 For all of the hundreds (if not thousands) of development hours I've invested in ThirstyHead.com over the years, I have absolutely nothing to show for it. And here I was, about to do it again.
 
@@ -106,7 +117,7 @@ And what have I historically invested my limited development budget in? Language
 
 UFOs.
 
-Meanwhile, the very first HTML page ever written by Tim Berners Lee is available and readable today, from any browser on the planet -- even (especially!) from browsers and platforms that didn't exist until decades long after the page was originally written.
+Meanwhile, http://info.cern.ch/[the very first website ever written] by Tim Berners Lee is available and readable today, from any browser on the planet -- even (especially!) from browsers and platforms that didn't exist until decades long after the page was originally written.
 
 == The Bespoke HTML Challenge
 Apparently, this is my cue to give a lofty, full-throated manifesto. After all of the buildup, I'm afraid it might be a tad underwhelming.
