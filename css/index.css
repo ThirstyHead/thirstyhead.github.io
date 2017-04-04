@@ -123,3 +123,14 @@ nav ul li a {
   font-style: italic;
   margin-top: -2em;
 }
+
+@media(orientation: portrait){
+  .main{
+    flex-flow: column;
+  }
+
+  nav ul li {
+    display: inline-block;
+    padding-right: 1em;
+  }
+}
