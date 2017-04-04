@@ -27,6 +27,10 @@ nav ul li {
   font-size: 1.5em;
 }
 
+nav ul li:last-child {
+  padding-top: 1em;
+}
+
 nav ul li.selected {
   text-decoration: underline;
   color: white;
@@ -80,7 +84,13 @@ nav ul li a {
 
 .image {
   padding: 1em;
+  max-width: 100%;
 }
+
+.image img{
+  max-width: 100%;
+}
+
 .main {
   display: flex;
   flex-flow: row;
@@ -116,4 +126,20 @@ nav ul li a {
 .watch-conference{
   font-style: italic;
   margin-top: -2em;
+}
+
+@media(orientation: portrait){
+  .main{
+    flex-flow: column;
+  }
+
+  nav ul li {
+    display: inline-block;
+    padding-right: 1em;
+  }
+
+  nav ul li:last-child {
+    padding-top: 0;
+  }
+
 }
