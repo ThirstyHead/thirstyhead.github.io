@@ -27,6 +27,10 @@ nav ul li {
   font-size: 1.5em;
 }
 
+nav ul li:last-child {
+  padding-top: 1em;
+}
+
 nav ul li.selected {
   text-decoration: underline;
   color: white;
@@ -133,4 +137,9 @@ nav ul li a {
     display: inline-block;
     padding-right: 1em;
   }
+
+  nav ul li:last-child {
+    padding-top: 0;
+  }
+
 }
