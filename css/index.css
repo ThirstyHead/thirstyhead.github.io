@@ -80,7 +80,13 @@ nav ul li a {
 
 .image {
   padding: 1em;
+  max-width: 100%;
 }
+
+.image img{
+  max-width: 100%;
+}
+
 .main {
   display: flex;
   flex-flow: row;
