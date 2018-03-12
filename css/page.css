@@ -1,0 +1,24 @@
+.th-layout, .th-body{
+  display: flex;
+  flex-direction: column;
+}
+
+.th-sidebar-left{
+  order: -1;
+}
+
+/* Desktop */
+@media(min-width: 768px){
+  .th-body{
+    flex-direction: row;
+    flex: 1;
+  }
+
+  main{
+    flex: 1;
+  }
+
+  .th-sidebar-left, aside{
+    flex: 0 0 12em;
+  }
+}
