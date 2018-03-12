@@ -22,7 +22,7 @@ window.customElements.define('th-footer',
       let bodyBlock = document.createElement('footer');
       bodyBlock.innerHTML = `
         <p>&copy; 2005 - 2018, ThirstyHead</p>
-        <p><a href="contact">Contact</a></p>
+        <p><a href="contact.html">Contact</a></p>
       `;
       return bodyBlock;
     }
