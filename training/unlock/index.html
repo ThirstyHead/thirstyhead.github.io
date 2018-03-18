@@ -24,7 +24,7 @@
         <h2 hidden aria-hidden="false">Unlock</h2>
         <figure>
           <div class="banner">
-            <h1>Unlock</h1>
+            <h1>#Unlock</h1>
             <h2>A Browser-Native Approach to Web Development</h2>
             <div class="banner-bio">
               Scott Davis <br>
@@ -53,6 +53,10 @@
                 <td>Previous, Next slide</td>
               </tr>
 
+              <!-- <tr>
+                <td scope="row"><span class="highlight">a</span></td>
+                <td>Toggles <span class="highlight">annotations (your notes)</span> on / off</td>
+              </tr> -->
 
               <tr>
                 <td scope="row"><span class="highlight">f</span></td>
@@ -109,12 +113,18 @@
 
 
 
+
+
+
+
+
+
       <section class="section-title">
         <h2>What to <span class="highlight">Expect</span> Today</h2>
       </section>
 
       <section>
-        <h2>Browser-Native Web Development</h2>
+        <h2>Browser-Native<br>Web Development</h2>
         <figure>
           <p>If you've been doing web development at any point during the past 20 years, you almost certainly have taken a <span class="highlight">framework-first</span> approach.</p>
 
@@ -122,7 +132,9 @@
 
 
           <figcaption>
-            <p>By "framework-first", I mean the first thing you decide is which framework you'll use. </p>
+            <p>By "framework-first", I mean the first thing you decide for any new project is which framework you'll use.</p>
+
+            <p>Browser-native technologies are purpose-built for web development -- they are baked into the brower, requiring no additional downloads or configuration.</p>
           </figcaption>
         </figure>
       </section>
@@ -137,13 +149,15 @@
             <li>Elm</li>
           </ul>
           <figcaption>
-            <p>Which technical books have you purchased recently? Which topics drew you to this software conference today? </p>
+            <p>Which technical books have you purchased recently? Which video screencasts have you watched on YouTube? Which topics drew you to this software conference today?</p>
+
+            <p>If any of the technologies you mention are native to the browser, I'll be pleasantly surprised.</p>
           </figcaption>
         </figure>
       </section>
 
       <section>
-        <h2>General-Purpose Languages (Not Surprisingly)<br> Require Frameworks</h2>
+        <h2>General-Purpose Languages (Not Surprisingly)<br>Require Frameworks</h2>
         <figure>
           <table>
             <caption>Programming languages and their frameworks</caption>
@@ -178,7 +192,11 @@
             </tbody>
           </table>
           <figcaption>
-            <p></p>
+            <p>By "general purpose", I mean "not web-specific". Logically, if your programming language wasn't built for the web, you have to bring the web to your programming language in the form of libraries, packages, or frameworks.</p>
+
+            <p>Quick question: have you ever used Java for non-web purposes? Ruby? C#?</p>
+
+            <p>Difficult question: are these languages best suited for web development if they require additional external resources?</p>
           </figcaption>
         </figure>
       </section>
@@ -187,17 +205,240 @@
         <h2>Purpose-built Web Languages</h2>
         <figure>
           <ul>
-            <li>HTML ~ <span class="highlight">Semantics</span></li>
-            <li>CSS ~ <span class="highlight">Layout</span></li>
-            <li>JavaScript ~ <span class="highlight">Behavior</span></li>
+            <li>HTML<br><span class="highlight">(Semantics)</span></li>
+            <li>CSS<br><span class="highlight">(Declarative Layout)</span></li>
+            <li>JavaScript<br><span class="highlight">(Event-Driven Behavior)</span></li>
           </ul>
 
           <figcaption>
-            <p>By "framework-first", I mean the first thing you decide is which framework you'll use. </p>
+            <p>It amazes me that these languages were intentially, specifically built for web development, yet they are not first on the list of technologies that web developers reach for when they need to do some web development.</p>
+
+            <p>I recently worked with an incredibly sharp devops specialist. He was able to set up a private GitLab installation, complete with VPN and private authentication. He struggled setting up a simple web server.</p>
           </figcaption>
         </figure>
       </section>
 
+      <section>
+        <h2>So, Why Frameworks?</h2>
+        <figure>
+          <ul>
+            <li>Habit<br><span class="highlight">(Indoctrination)</span></li>
+            <li>"Web Development is Hard"<br><span class="highlight">(Lack of training)</span></li>
+            <li>"Most Web Browsers are totally incompatible"<br><span class="highlight">(FUD)</span></li>
+          </ul>
+
+          <figcaption>
+            <p>Backend developers seem to be among the most offended by these observations. No one says, "I'm studying monads in Erlang, but there's no way I'll ever be able smart enough to understand CSS."</p>
+
+            <p>No one would ever say, "Scala? That's easy. You should be able to pick it up without any training. You can learn it as you go." Now swap out "Scala" or "Closure" for "CSS", "JavaScript", or even "HTML"...</p>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Advertising Companies Promote Frameworks</h2>
+        <figure>
+          <table>
+            <caption>Advertising Companies and Their Frameworks</caption>
+            <thead>
+              <tr>
+                <th scope="col">Company</th>
+                <th scope="col">Framework(s)</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td scope="row">Google</td>
+                <td>Angular, Polymer, Material Design</td>
+              </tr>
+
+              <tr>
+                <td scope="row">Facebook</td>
+                <td>PHP, React</td>
+              </tr>
+
+              <tr>
+                <td scope="row">Twitter</td>
+                <td>Bootstrap</td>
+
+            </tbody>
+          </table>
+          <figcaption>
+            <p>Wait: Google, Facebook, and Twitter are advertising companies? I thought that they were "technology" companies, or "social media" companies.</p>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Google Financials</h2>
+        <figure>
+          <img src="" alt="Google Financials">
+
+          <figcaption>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Facebook Financials</h2>
+        <figure>
+          <img src="" alt="Facebook Financials">
+
+          <figcaption>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Twitter Financials</h2>
+        <figure>
+          <img src="" alt="Twitter Financials">
+
+          <figcaption>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Amazon Financials</h2>
+        <figure>
+          <img src="" alt="Amazon Financials">
+
+          <figcaption>
+            <p>I used to think that Amazon was an online bookstore, or general online retailer more lately. Turns out they get more revenue from their online cloud offerings than retail offerings.</p>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Attention Economy</h2>
+        <figure>
+          <img src="" alt="Attention Economy">
+
+          <figcaption>
+            <p>It's easy to think that these companies are interested in extracting money from us directly. (That's SO 20th Century thinking...)</p>
+
+            <p>In fact, they are experts in exploiting the Attention Economy, which is more valuable than charging you directly for your time.</p>
+        </figure>
+      </section>
+
+      <section>
+        <h2>First web page</h2>
+        <figure>
+          <img src="" alt="first web page">
+
+          <figcaption>
+            <p>Here is the first web page ever written. It is still viewable in every web browser on the planet today.</p>
+
+            <p>Can you say that about your first web site? Sadly, I can't... (ASP, JSP, Struts, JSTL, Prototype, Grails, jQuery, BackboneJS, Angular 1)</p>
+        </figure>
+      </section>
+
+      <section>
+        <h2>WWW 29th Birthday</h2>
+        <figure>
+          <img src="" alt="www 29th birthday">
+
+          <figcaption>
+            <p></p>
+        </figure>
+      </section>
+
+
+
+
+
+
+      <section>
+        &nbsp;
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+      <section class="section-title">
+        <h2><span class="highlight">Learning Styles</span></h2>
+      </section>
+
+      <section>
+        <h2>Learning Styles</h2>
+        <figure>
+          <img src="" alt="Learning Styles">
+
+          <figcaption>
+            <p>Aural, Visual, Kinesthetic</p>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Conferences Optimize for Visual and Aural</h2>
+        <figure>
+          <img src="" alt="Visual">
+
+          <figcaption>
+            <p>The problem with Visual and Aural is that they are passive. You are the recipient, rather than an engaged participant.</p>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Active Participant!</h2>
+        <figure>
+          <img src="" alt="Active">
+
+          <figcaption>
+            <p>I'm going to do everything I can to make you an active participant in the learning process. Not as a gimmic, but to fully engage you and hopefully dramatically improve your retention of the material.</p>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Each section starts with a discussion</h2>
+        <figure>
+          <img src="" alt="Discussion">
+
+          <figcaption>
+            <p>Take a moment to identify no less than 3, no more than 5 groupmates for the rest of the day.</p>
+
+            <p>Some folks immediately look for their workmates. There's some value in that. Others seek out strangers. There might be more value in that. Your choice.</p>
+
+            <p>These discussions are not to exchange facts. They are to uncover your feelings and impressions. There are no wrong answers. This is not a test.</p>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Next, Lecture and Live Coding</h2>
+        <figure>
+          <img src="" alt="Learning Styles">
+
+          <figcaption>
+            <p>I'm going to discuss some things that lend themselves to traditional slides. But any chance I have to "prove it in code" by live coding, I will. I hope that you'll be inspired to do the same -- one test is worth a thousand opinions.</p>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Finally, Notes and Labs</h2>
+        <figure>
+          <img src="" alt="Notes and Labs">
+
+          <figcaption>
+            <p>To wrap up each section, I'll give you a brief moment to revisit the original discussion topic and write down any personal notes you have. </p>
+
+            <p>You'll also have a few coding exercises to help reinforce the concepts you learned.</p>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Ready to <span class="highlight">get started</span>?</h2>
+        <p><a href="state-of-the-web/">The State of the Web</a></p>
+      </section>
 
 
 
