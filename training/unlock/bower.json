@@ -1,0 +1,21 @@
+{
+  "name": "unlock",
+  "homepage": "https://github.com/ThirstyHead/unlock",
+  "authors": [
+    "Scott Davis <scott@thirstyhead.com>"
+  ],
+  "description": "[TRAINING] Unlock",
+  "version": "0.1.0",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "talk-o-vision": "thirstyhead/talk-o-vision#^0.5.0"
+  }
+}
