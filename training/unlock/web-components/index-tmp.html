@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>It's Time for Web Components</title>
+    <link rel="stylesheet" href="bower_components/talk-o-vision/talk-o-vision.css">
+    <style>
+      .title-slide{
+        background: url('slides/title/img/cogs.jpg') no-repeat center center;
+        background-size: contain;
+      }
+
+      .global-background {
+        background: url('slides/global/img/global.jpg') no-repeat center center;
+        background-size: contain;
+      }
+
+      .shh-background {
+        background: url('slides/shh/img/shh.jpg') no-repeat center center;
+        background-size: contain;
+      }
+
+      .skinny-header {
+        padding-left: 2em;
+        padding-right: 2em;
+      }
+
+    </style>
+
+    <!-- Live Code Demo ("tinker") -->
+    <style type="text/css">
+        textarea {
+          width: 75%;
+          height: 45vh;
+          font-size: 1rem;
+        }
+        .output iframe {
+          border: solid 1px white;
+          width: 75%;
+          height: 45vh;
+          font-size: 1rem;
+        }
+
+        .outputFrame {
+          font-size: 1rem;
+        }
+      </style>
+
+      <script>
+        function tinkerInit() {
+          //add keyup listeners to textareas
+          var html = document.querySelector("#html")
+          html.addEventListener("keyup", keystrokeListener, false)
+        }
+        function keystrokeListener(){
+          if ( this.getAttribute('id') === 'html') {
+            var iframe = document.querySelector("#outputFrame");
+            var doc = iframe.contentWindow.document;
+            doc.body.innerHTML = this.value
+          }
+        }
+
+        window.addEventListener('load', tinkerInit);
+      </script>
+    <!-- Live Code Demo ("tinker") -->
+
+
+
+  </head>
+  <body>
+    <ol class="slideshow">
+      <li class="title-slide">
+          <div class="banner">
+            <div class="banner-title">
+              <h1>It's Time for Web Components</h1>
+            </div>
+            <div class="banner-bio">
+              Scott Davis <br>
+              <a href="mailto:sdavis@thoughtworks.com">sdavis@thoughtworks.com</a> <br>
+              <a href="https://twitter.com/scottdavis99?lang=en">@scottdavis99</a>
+            </div>
+          </div>
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/bio/img/scott-davis-bio.png"
+             alt=""
+             class="full-height">
+      </li>
+
+      <li>
+        <img src="slides/angular/img/angular-home.png"
+             alt=""
+             class="full-width"
+             data-original="http://angular.io">
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/angular/img/angular-component.png"
+             alt=""
+             class="full-height"
+             data-original="https://angular.io/docs/ts/latest/quickstart.html">
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/angular/img/angular-component-2.png"
+             alt=""
+             class="full-width"
+             data-original="https://angular.io/docs/ts/latest/quickstart.html">
+      </li>
+
+
+      <li>
+        <img src="slides/react/img/react-home.png"
+             alt=""
+             class="full-height">
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/react/img/react-component.png"
+             alt=""
+             class="full-width">
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/ember/img/ember-home.png"
+             alt=""
+             class="full-width">
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/ember/img/ember-component.png"
+             alt=""
+             class="full-width">
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/ember/img/ember-component-2.png"
+             alt=""
+             class="full-width">
+      </li>
+
+      <li>
+        <img src="slides/polymer/img/polymer-home.png"
+             alt=""
+             class="full-width">
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/polymer/img/polymer-platform-centric.png"
+             alt=""
+             class="full-width">
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/polymer/img/polymer-use-the-platform.png"
+             alt=""
+             class="full-width">
+      </li>
+
+      <li>
+        <h2>What have we <span class="highlight">learned</span>?</h2>
+
+        <ul style="width:70%;">
+          <li>Component === Custom HTML Element</li>
+          <li>Template + Behavior</li>
+          <li>Declarative</li>
+          <li>Encapsulated</li>
+          <li>Either "organic" (standards-based) or "synthetic"</li>
+        </ul>
+      </li>
+
+      <li>
+        &nbsp;
+      </li>
+
+
+
+
+
+
+
+
+
+
+
+      <li>
+        <h2 class="section-title">Web Components ===<br> <span class="highlight">Semantics</span></h2>
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/html5/img/html5-spec.png"
+             alt=""
+             class="full-height">
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/html5/img/html5-spec-intro.png"
+             alt=""
+             class="full-height">
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/semantics/img/semantics.png"
+             alt=""
+             class="full-width">
+      </li>
+
+
+      <li>
+        <div>
+            <form>
+              <textarea id="html">
+                Waffles of Insane Greatness
+
+                Ingredients:
+                3/4 cup all-purpose flour
+                1/4 cup cornstarch
+                1/2 teaspoon baking powder
+
+                Directions:
+                In a medium bowl, combine dry ingredients.
+                Add in wet ingredients.
+                Let the batter sit for 30 minutes.
+              </textarea>
+            </form>
+          </div>
+
+          <div class="output">
+            <iframe name="outputFrame"
+                    id="outputFrame"
+                    sandbox="allow-same-origin allow-forms allow-scripts"></iframe>
+          </div>
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/dive-into-html5/img/dive-into-html5-semantics.png"
+             alt=""
+             class="full-height">
+      </li>
+
+
+      <li>
+        <h2>HTML offers a fixed set of elements</h2>
+        <p>What if you need <span class="highlight">a new semantic element</span>?</p>
+        <ul>
+          <li>CSS <b class="highlight">id</b> and <b class="highlight">class</b> allows you to define new semantic styles</li>
+          <li>HTML <b class="highlight">div</b> and <b class="highlight">span</b> allows you to group semantically-related content together</li>
+        </ul>
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/mdn-div/img/mdn-div.png"
+             alt=""
+             class="full-width">
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/mdn-div/img/mdn-span.png"
+             alt=""
+             class="full-width">
+      </li>
+
+      <li>
+        <h2>#protip</h2>
+        <p>Anywhere you are using a <b class="highlight">&lt;div&gt;</b>,
+          <b class="highlight">&lt;span&gt;</b>, <b class="highlight">class</b>,
+          or <b class="highlight">id</b> is a likely candidate for a new
+          <span class="highlight">Web Component</span>.
+        </p>
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/xml/img/xml-wiki.png"
+             alt=""
+             class="full-height">
+      </li>
+
+
+      <li class="bg-white">
+        <img src="slides/webcomponents/img/webcomponents-wiki.png"
+             alt=""
+             class="full-width">
+      </li>
+
+      <li>
+        &nbsp;
+      </li>
+
+
+
+
+
+
+
+
+
+
+
+
+      <li>
+        <h2 class="section-title">Web Components ===<br><span class="highlight">Encapsulation</span></h2>
+      </li>
+
+      <li class="bg-white global-background">
+        <h2 class="skinny-header">Historically, web development has been <i>pathologically global</i><br>
+          (or more charitably,<br> <i>page-centric</i>):</h2>
+
+        <ul>
+          <li>One flat level of HTML elements</li>
+          <li>CSS is a global DOM query language</li>
+          <li>All JavaScript is loaded into the global namespace</li>
+        </ul>
+      </li>
+
+      <li class="shh-background">
+        <h2 style="color:black;" class="skinny-header">Modern Web Development is now leaning towards privacy</h2>
+
+        <section class="banner">
+          <ul style="width:85%;">
+            <li>HTML offers Shadow DOM</li>
+            <li>JavaScript <b>let</b> variables are lexically scoped</li>
+            <li>JavaScript modules are private by default (<b>export</b>, <b>import</b>)</li>
+          </ul>
+        </section>
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/encapsulation/img/encapsulation-wiki.png"
+             alt=""
+             class="full-width">
+      </li>
+
+
+      <li class="bg-white">
+        <img src="slides/google-maps-api/img/google-maps-api.png"
+             alt=""
+             class="full-width">
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/google-maps-api/img/google-maps-api-2.png"
+             alt=""
+             class="full-width">
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/webcomponents-org/img/webcomponents-org-home.png"
+             alt=""
+             class="full-height">
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/webcomponents-org/img/webcomponents-org-google-maps.png"
+             alt=""
+             class="full-height">
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/webcomponents-org/img/webcomponents-org-google-maps-example.png"
+             alt=""
+             class="full-height">
+      </li>
+
+      <li>
+        <img src="slides/spa/img/spa-3-a.png"
+             alt=""
+             class="full-height">
+      </li>
+
+      <li>
+        <img src="slides/spa/img/spa-3-b.png"
+             alt=""
+             class="full-height">
+      </li>
+
+      <li>
+        <img src="slides/spa/img/spa-3-c.png"
+             alt=""
+             class="full-height">
+      </li>
+
+      <li>
+        <img src="slides/spa/img/spa-3-d.png"
+             alt=""
+             class="full-height">
+      </li>
+
+      <li>
+        <img src="slides/spa/img/spa-3-e.png"
+             alt=""
+             class="full-height">
+      </li>
+
+
+
+
+      <li>
+        &nbsp;
+      </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <li>
+        <h2 class="section-title">Web Components ===<br><span class="highlight">Standards</span></h2>
+      </li>
+
+      <li>
+        <h2>Here's the deal:</h2>
+        <p>Web Components have been in <br>all modern HTML5 browsers <span class="highlight">since 2009</span></p>
+        <p>&nbsp;</p>
+        <p>...you just haven't been able to create <span class="highlight">YOUR OWN</span> until now.</p>
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/input/img/input-chrome-without-shadowdom.png"
+             alt=""
+             class="full-height">
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/input/img/input-date-screenshot.png"
+             alt=""
+             class="full-height">
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/input/img/chrome-show-shadow-dom.png"
+             alt=""
+             class="full-height">
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/input/img/input-date.png"
+             alt=""
+             class="full-height">
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/input/img/input-number.png"
+             alt=""
+             class="full-height">
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/input/img/input-range.png"
+             alt=""
+             class="full-height">
+      </li>
+
+      <li>
+        &nbsp;
+      </li>
+
+
+
+
+
+
+
+
+
+
+
+
+      <li>
+        <h2 class="section-title">Conclusion</h2>
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/angular/img/angular-component.png"
+             alt=""
+             class="full-height"
+             data-original="https://angular.io/docs/ts/latest/quickstart.html">
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/react/img/react-component.png"
+             alt=""
+             class="full-width">
+      </li>
+
+      <li class="bg-white">
+        <img src="slides/ember/img/ember-component.png"
+             alt=""
+             class="full-width">
+      </li>
+
+      <li>
+        <img src="slides/polymer/img/polymer-home.png"
+             alt=""
+             class="full-width">
+      </li>
+
+      <li>
+        <h2>What have we <span class="highlight">learned</span>?</h2>
+
+        <ul style="width:70%;">
+          <li>Component === Custom HTML Element</li>
+          <li>Template + Behavior</li>
+          <li>Declarative</li>
+          <li>Encapsulated</li>
+          <li>Either "organic" (standards-based) or "synthetic"</li>
+        </ul>
+      </li>
+
+
+      <li class="title-slide">
+          <div class="banner">
+            <div class="banner-title">
+              <h1>It's Time for Web Components</h1>
+            </div>
+            <div class="banner-bio">
+              Scott Davis <br>
+              <a href="mailto:sdavis@thoughtworks.com">sdavis@thoughtworks.com</a> <br>
+              <a href="https://twitter.com/scottdavis99?lang=en">@scottdavis99</a>
+            </div>
+          </div>
+      </li>
+
+    </ol>
+
+
+    <script src="bower_components/talk-o-vision/talk-o-vision.js"></script>
+  </body>
+</html>
