@@ -1,0 +1,63 @@
+/**************************
+  Box-sizing
+  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+***************************/
+html {
+  box-sizing: border-box;
+  background-color: var(--theme-background-color);
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/**************************
+  Grid layout
+***************************/
+#nameplate{
+  grid-area: nameplate;
+}
+
+main{
+  grid-area: main;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 100vw;
+}
+
+#sidebar{
+  grid-area: sidebar;
+}
+
+body{
+  display: grid;
+  grid-template-areas:
+    "nameplate"
+    "main"
+    "sidebar";
+}
+
+@media(min-width: 800px){
+  body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "nameplate nameplate nameplate"
+      "main      main      sidebar";
+  }
+
+  main{
+    grid-area: main;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+  }
+}
+
+/* have article span two columns */
+.wide{
+  grid-column-end: span 2;
+}
+

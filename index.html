@@ -1,140 +1,135 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
-    <meta name="description" content="ThirstyHead: Learning Done Right.">
     <title>ThirstyHead</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Scott Davis <scott@thirstyhead.com>">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent+Marker">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/elements.css">
+    <script src="/component/nameplate/index.mjs" type="module"></script>
+    <script src="/component/colophon/index.mjs" type="module"></script>
+
+
   </head>
+
   <body>
-    <section class="container">
-      <header>
-        <a class="identity"
-           href="/">thirstyhead</a>
-      </header>
+    <th-nameplate id="nameplate"></th-nameplate>    
 
-      <section class="main">
-        <section class="sidebar">
-          <nav>
-            <ul>
-              <li><a href="read">Read</a></li>
-              <li><a href="watch">Watch</a></li>
-              <li><a href="learn">Learn</a></li>
-              <li><a href="contact.html">About</a></li>
-            </ul>
-          </nav>
-        </section>
+    <main>
 
-        <section class="content">
-
-          <article class="presentation">
-            <p class="dateline">Tuesday, April 4, 2017<br><br><br></p>
-
-            <a href="http://thirstyhead.com/mean-architecture-2.0/">
-              <img src="learn/img/mean-architecture-2.0.png"
-                   alt="MEAN Architecture 2.0"
-                   title="MEAN Architecture 2.0">
-            </a>
-
-            <h1><a href="http://thirstyhead.com/mean-architecture-2.0/">MEAN Architecture 2.0</a></h1>
-
-            <p>The phrase "MEAN Stack" -- short for MongoDB, Express, Angular,
-              and Node -- is only a few years old. In that time, it has quickly
-              become convenient shorthand to describe a modern web technology
-              stack that features a NoSQL database and pervasive JavaScript
-              across all tiers of the app. "MEAN" is also a way to contrast
-              your tech stack with the older, more traditional "LAMP Stack"
-              that includes Linux, Apache, MySQL, and Perl/Python/PHP.</p>
-
-            <p>While expressive, MEAN may not be expressive enough to fully
-              describe the architectural patterns in play in your application:</p>
-
-            <ul>
-              <li>Is your app fully server-side, fully client-side (the
-                fashionable Serverless pattern), or does it split the
-                responsibilities between the client and the server?</li>
-              <li>Is your app a Single Page App (SPA), or a more traditional
-                multi-page app?</li>
-              <li>Does it offer equivalent functionality when both online and
-                offline?</li>
-              <li>Can it replicate the user experience of native mobile apps
-                written in Objective-C, Swift, or Java with only HTML, CSS,
-                and JavaScript? This recently introduced architecture --
-                popularly called a Progressive Web App (PWA) -- features the
-                PRPL Pattern (Push, Render, Pre-cache, and Lazy Load), Service
-                Workers, and a preference for HTTP/2.</li>
-            </ul>
-
-            <p>And how about your data lifecycle?</p>
-
-            <ul>
-              <li>Is your dataset so large and frequently updated that it must
-                live solely in the Cloud?</li>
-              <li>Can it be cached on the client side for occasional offline
-                use, or even better -- fully synchronized between the client
-                and the Cloud so that your user has a comparable experience
-                both in and out of Airplane Mode?</li>
-            </ul>
-
-            <p>In this workshop, Scott Davis (author/presenter of O'Reilly
-              videos <a href="http://shop.oreilly.com/product/0636920039495.do">Architecture of the MEAN Stack</a>,
-              <a href="http://shop.oreilly.com/product/0636920045656.do">Responsive Mobile Architecture: Refactoring into Mobile HTML5</a>,
-              and <a href="http://shop.oreilly.com/category/learning-path/on-the-road-to-angular-2.do">On the Road to Angular 2</a>)
-              presents several
-              common web architectures for MEAN apps and the corresponding
-              production-ready libraries and frameworks that will help you
-              implement them. You will leave this workshop with a better
-              understanding of what is possible within the broad definition of
-              the MEAN stack, and how you can most quickly reach your goals
-              with popular standards-based, open source solutions.</p>
-
-            <hr class="clear">
-
-            <p>
-              <a href="http://thirstyhead.com/mean-architecture-2.0/">Slides</a><br>
-              <a href="https://github.com/ThirstyHead/mean-architecture-2.0/">Source</a>
-            </p>
-          </article>
-
-
-          <article>
-            <p class="dateline">Wednesday, February 23, 2017 <a href="https://youtu.be/g3sf2JUgze4">[Watch on YouTube]</a></p>
-            <div id="header">
-            <h1><a href="read/meet-the-new-thirstyhead/">Meet the new ThirstyHead&#8230;&#8203;</a></h1>
-            </div>
-            <div id="content">
-            <div id="preamble">
-            <div class="sectionbody">
-            <div class="paragraph">
-            <p>&#8230;&#8203;same as the old ThirstyHead.</p>
-            </div>
-            <div class="paragraph">
-            <p>Sorta.</p>
-            </div>
-            <div class="paragraph">
-            <p>See, here&#8217;s the deal. It&#8217;s still me&#8201;&#8212;&#8201;Scott. Always has been. But a lot has changed since this URL first hit the web.</p>
-            </div>
-
-            <div class="paragraph">
-            <p><a href="read/meet-the-new-thirstyhead/">[Continue reading]</a></p>
-            </div>
-          </article>
-        </section>
-      </section>
-
-      <!-- <footer>
-        <a rel="license"
-           href="http://creativecommons.org/licenses/by/4.0/"
-           alt="This work is licensed under a Creative Commons Attribution 4.0 International License."
-           title="This work is licensed under a Creative Commons Attribution 4.0 International License.">
-          <img alt="Creative Commons License"
-               style="border-width:0"
-               src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+      <article class="wide">
+        <a href="https://thirstyhead.com/its-spelled-accessibility"
+           class="sneaky">
+        <h1>It's Spelled 'Accessibility', not 'Disability'</h1>
+        <img src="https://thirstyhead.com/its-spelled-accessibility/keyboard-a11y.jpg" 
+             alt="Keyboard with Accessibility key"
+             class="contain">
         </a>
-      </footer> -->
-    </section>
-  </body>
+        <p>If your mobile phone is in silent/vibrate mode right now, would you say that you're using an accessibility feature, or just a feature of your phone? If you've ever adjusted the size of onscreen content by pinching or stretching, do you feel like you have a disability, or are you simply using your phone as it was meant to be used? <a href="https://thirstyhead.com/its-spelled-accessibility">[Learn more...]</a></p>
+      </article>
+
+       <article>
+        <a href="https://thirstyhead.com/the-wrong-kind-of-fast"
+           class="sneaky">
+         <div class="img-wrapper">
+           <img src="fast.jpg" 
+                alt="Man running in a suit"
+                class="contain">
+         </div>
+         <h1>The Wrong Kind of Fast: Embracing Evidence-Based Architecture</h1>
+        </a>
+        <p>Of course we want software to be fast, but we should want it to be the right kind of fast. In this keynote, Scott Davis (Principal Engineer and Web Architect, ThoughtWorks) debunks common software tropes with empirical, quantifiable, measurable facts -- what he calls "Evidence-Based Architecture". <a href="https://thirstyhead.com/the-wrong-kind-of-fast">[Learn more...]</a></p>
+      </article>
+
+      <article>
+        <a href="https://thirstyhead.com/browser-native-web-development"
+           class="sneaky">
+       <div class="img-wrapper">
+         <img src="bread.jpg"
+              alt="Crusty Homemade Bread"
+              class="contain">
+       </div>
+        <h1>The Framework-Free Web: Browser-Native Web Development</h1>
+        </a>
+        <p>Netflix saw a 50% performance improvement when they removed React from their landing page. Moving to Google's Accelerated Mobile Pages (AMP) project lead publishers like Gizmodo and the Times of India to see 300% performance improvements. Their secret? Removing client-side JavaScript. <a href="https://thirstyhead.com/browser-native-web-development">[Learn more...]</a></p>
+      </article>
+
+
+
+
+
+     <article>
+       <a href="https://thirstyhead.com/introducing-gauge"
+           class="sneaky">
+       <div class="img-wrapper tall">
+         <img src="https://thirstyhead.com/introducing-gauge/gauge.png"
+              alt="Gauge"
+              class="contain">
+       </div>
+       <h1>Introducing Gauge: A Framework for User Journey Testing</h1>
+        </a>
+        <p>In this talk, Scott Davis (Web Architect and Principal Engineer, ThoughtWorks) introduces a wholly different kind of testing -- User Journey testing. User Journey tests are written in the language of the user, not the developer. ("I'd like to add tomatoes to my shopping cart", not "I'd like to add the UPC string of the selected item to that array of Strings over there in that CartComponent.") Gauge and Taiko -- both free and open source -- allow you to level up your testing skills and start thinking like a user. Are you up to the challenge?<a href="https://thirstyhead.com/introducing-gauge">[Learn more...]</a></p>
+
+      </article>
+
+     <article>
+       <a href="https://thirstyhead.com/introducing-taiko"
+           class="sneaky">
+       <div class="img-wrapper tall">
+         <img src="https://thirstyhead.com/introducing-taiko/taiko-drummer.jpg"
+              alt="Taiko"
+              class="contain">
+       </div>
+       <h1>Introducing Taiko: Driving Your Web Browser Programmatically</h1>
+        </a>
+        <p>As a web programmer, I've always wanted to drive my web browser programmatically -- open this page, fill in that field, click on that button over there; all driven by JavaScript instead of a pesky human. Past solutions were flaky at best, because they were third-party, aftermarket attempts to add functionality to a browser that didn't support it natively. Modern browsers now offer this level of programmatic instrumentation baked-in. All we have to do is start using it.<a href="https://thirstyhead.com/introducing-taiko">[Learn more...]</a></p>
+
+      </article>
+
+
+
+
+
+     <article>
+       <a href="https://thirstyhead.com/introducing-mountebank"
+           class="sneaky">
+       <div class="img-wrapper">
+         <img src="https://thirstyhead.com/introducing-mountebank/snake-oil.jpg"
+              alt="Mountebank"
+              class="contain">
+       </div>
+       <h1>Introducing Mountebank: Testing and Mocking Microservices</h1>
+        </a>
+        <p>Web services are an indispensable part of the modern web technology stack. Testing these crucial services should be equally indispensable. Creating mocks and stubs for your microservices in an automated, programmatic way is exactly what Mountebank offers.<a href="https://thirstyhead.com/introducing-mountebank">[Learn more...]</a></p>
+
+      </article>
+
+     <article>
+       <a href="https://thirstyhead.com/deconstructing-the-web-browser"
+           class="sneaky">
+       <div class="img-wrapper">
+         <img src="https://thirstyhead.com/deconstructing-the-web-browser/milk-and-butter.jpg"
+              alt="Milk and butter"
+              class="contain">
+       </div>
+       <h1>Deconstructing the Modern Web Browser</h1>
+        </a>
+        <p>In this talk, Scott Davis (Web Architect and Principal Engineer, ThoughtWorks) will take you on a guided tour of the inner mechanisms of a web browser. You'll learn about the HTML Rendering Engine (like Blink, Gecko, and WebKit). You'll learn about the Scripting Engine (like V8, SpiderMonkey, and Nitro). With those two pieces of knowledge in hand, we'll discuss running headless browsers (for testing in your CI/CD pipeline) and headless JavaScript engines (perhaps you've heard of NodeJS?). And then the fun really begins, digging into developer consoles, Lighthouse audits for a11y and performance, and automated ways to drive the browser remotely using the Chrome DevTools Protocol, Puppeteer, ThoughtWorks' Gauge and Taiko, and more. <a href="https://thirstyhead.com/deconstructing-the-web-browser">[Learn more...]</a></p>
+
+
+      </article>
+
+
+
+
+
+    </main>
+
+    <th-colophon id="sidebar"></th-colophon>
+ </body>
 </html>
