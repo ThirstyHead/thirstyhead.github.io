@@ -1,3 +1,2 @@
-# thirstyhead.github.io
-
-Website for ThirstyHead.com
+# thirstyhead
+[WEBSITE] Thirstyhead.com
