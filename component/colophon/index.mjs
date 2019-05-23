@@ -13,16 +13,9 @@ class ThColophon extends HTMLElement{
    * Returns the URL (minus the filename) of this component
    */
   get baseUrl(){
-    // http://localhost:8000/components/nameplate/index.mjs
     let thisUrl = new URL(import.meta.url);
-
-    // /components/nameplate/index.mjs
     let parts = thisUrl.pathname.split('/');
-
-    // index.mjs
     parts.pop();
-
-    // http://localhost:8000/components/nameplate/
     return thisUrl.origin + parts.join('/') + '/';
   }
 
@@ -38,7 +31,7 @@ class ThColophon extends HTMLElement{
         display: inline-block;
         max-width: 60%;
         object-fit: contain;
-        margin: 0 20% 0 20%;
+        margin: 1em 20% 0 20%;
       }
 
       section{
@@ -49,6 +42,12 @@ class ThColophon extends HTMLElement{
 
       .bio{
         margin: 0 20% 0 20%;
+      }
+
+      @media(min-width: 800px){
+        img{
+          margin: 0 20% 0 20%;
+        }
       }
     `;
 

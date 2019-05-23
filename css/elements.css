@@ -1,11 +1,6 @@
 /**************************
   Elements
 ***************************/
-article{
-  display: flex;
-  flex-direction: column;
-}
-
 body{
   background-color: var(--theme-background-color);
   color: var(--theme-foreground-color);
@@ -16,21 +11,7 @@ body{
   font-family: var(--theme-font-family-body);
 }
 
-.contain{
-  max-width: 100%;
-  object-fit: contain;
-}
-
-.img-wrapper{
-  background-color: var(--theme-foreground-color);
-  height: 14em;
-}
-
 a.sneaky{
   text-decoration: none;
   color: var(--theme-foreground-color);
-}
-
-.tall{
-  height: 20em;
 }

@@ -40,13 +40,18 @@ class ThNameplate extends HTMLElement{
         display: inline-block;
         height: 5em;
         object-fit: contain;
-        margin-bottom: -1.8em;
       }
 
       .brand{
         font-size: 4em;
         font-weight: bold;
         margin-bottom: 0;
+      }
+
+      @media(min-width: 800px){
+        img{
+          margin-bottom: -1.8em;
+        }
       }
     `;
 
