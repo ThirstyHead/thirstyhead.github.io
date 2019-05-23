@@ -14,29 +14,29 @@ html {
 }
 
 /**************************
-  Grid layout
+  Page layout
 ***************************/
-#nameplate{
-  grid-area: nameplate;
-}
-
-main{
-  grid-area: main;
-  padding: 1em;
-  display: grid;
-  grid-template-columns: 100vw;
-}
-
-#sidebar{
-  grid-area: sidebar;
-}
-
 body{
   display: grid;
   grid-template-areas:
     "nameplate"
     "main"
     "sidebar";
+}
+
+main{
+  grid-area: main;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 95vw;
+}
+
+#nameplate{
+  grid-area: nameplate;
+}
+
+#sidebar{
+  grid-area: sidebar;
 }
 
 @media(min-width: 800px){
@@ -49,15 +49,27 @@ body{
   }
 
   main{
-    grid-area: main;
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
   }
+
+  /* have article span two columns */
+  .wide{
+    grid-column-end: span 2;
+  }
 }
 
-/* have article span two columns */
-.wide{
-  grid-column-end: span 2;
+
+/**************************
+  Article layout
+***************************/
+article{
+  display: flex;
+  flex-direction: column;
 }
 
+.contain{
+  max-width: 100%;
+  object-fit: contain;
+}
