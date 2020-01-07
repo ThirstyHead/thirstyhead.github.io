@@ -1,2 +1,0 @@
-# thirstyhead
-[WEBSITE] Thirstyhead.com

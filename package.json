@@ -1,32 +1,24 @@
 {
-  "name": "thirstyhead",
-  "version": "0.4.0",
-  "description": "ThirstyHead.com website",
-  "author": "Scott Davis <scott@thirstyhead.com>",
-  "license": "CC-BY-4.0",
-  "main": "server.js",
+  "name": "thirstyhead.github.io",
+  "version": "1.2.0",
+  "description": "thirstyhead.com",
+  "main": "index.html",
   "scripts": {
-    "test": "lab -v **/*.test.js" 
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ThirstyHead/thirstyhead.git"
+    "url": "git+https://github.com/ThirstyHead/thirstyhead.github.io.git"
   },
   "keywords": [
-    "thirstyhead",
-    "scott",
-    "davis"
+    "ThirstyHead",
+    "Scott",
+    "Davis"
   ],
+  "author": "Scott Davis <scott.davis@thoughtworks.com>",
+  "license": "CC-BY-4.0",
   "bugs": {
-    "url": "https://github.com/ThirstyHead/thirstyhead/issues"
+    "url": "https://github.com/ThirstyHead/thirstyhead.github.io/issues"
   },
-  "homepage": "https://github.com/ThirstyHead/thirstyhead#readme",
-  "dependencies": {
-    "@hapi/hapi": "^18.3.1",
-    "@hapi/inert": "^5.2.0"
-  },
-  "devDependencies": {
-    "@hapi/code": "^5.3.1",
-    "@hapi/lab": "^18.1.2"
-  }
+  "homepage": "https://github.com/ThirstyHead/thirstyhead.github.io#readme"
 }
