@@ -1,0 +1,24 @@
+{
+  "name": "thirstyhead.github.io",
+  "version": "1.2.0",
+  "description": "thirstyhead.com",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThirstyHead/thirstyhead.github.io.git"
+  },
+  "keywords": [
+    "ThirstyHead",
+    "Scott",
+    "Davis"
+  ],
+  "author": "Scott Davis <scott.davis@thoughtworks.com>",
+  "license": "CC-BY-4.0",
+  "bugs": {
+    "url": "https://github.com/ThirstyHead/thirstyhead.github.io/issues"
+  },
+  "homepage": "https://github.com/ThirstyHead/thirstyhead.github.io#readme"
+}
