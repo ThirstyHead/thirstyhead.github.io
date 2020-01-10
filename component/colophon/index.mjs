@@ -57,8 +57,11 @@ class ThColophon extends HTMLElement{
   get bodyBlock(){
     let bodyBlock = document.createElement('section');
     let imgUrl = this.baseUrl + 'scott-davis.jpg';
+    let fullResImgUrl = this.baseUrl + 'scott-davis-full-res.jpg';
     bodyBlock.innerHTML = `
-      <img src="${imgUrl}">
+      <a href="${fullResImgUrl}">
+        <img src="${imgUrl}">
+      </a>
       <div class="bio">
       <p>
         Scott Davis is a Web Architect and Principal Engineer with <a href="https://www.thoughtworks.com/">ThoughtWorks</a>, where he focuses on
