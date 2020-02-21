@@ -62,7 +62,7 @@ class ThNameplate extends HTMLElement{
     let bodyBlock = document.createElement('header');
     let imgUrl = this.baseUrl + 'candle.jpg';
     bodyBlock.innerHTML = `
-      <img src="${imgUrl}">
+      <img src="${imgUrl}" alt="">
       <span class="brand">ThirstyHead</span>
     `;
 

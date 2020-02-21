@@ -60,7 +60,7 @@ class ThColophon extends HTMLElement{
     let fullResImgUrl = this.baseUrl + 'scott-davis-full-res.jpg';
     bodyBlock.innerHTML = `
       <a href="${fullResImgUrl}">
-        <img src="${imgUrl}">
+        <img src="${imgUrl}" alt="Scott Davis">
       </a>
       <div class="bio">
       <p>
