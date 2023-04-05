@@ -64,18 +64,14 @@ class ThColophon extends HTMLElement{
       </a>
       <div class="bio">
       <p>
-        Scott Davis is a Web Architect and Principal Engineer with <a href="https://www.thoughtworks.com/">ThoughtWorks</a>, where he focuses on
-        leading-edge / innovative / emerging / non-traditional aspects of web development.
-        This includes serverless web apps, mobile web apps (Responsive PWAs), HTML5-based
-        SmartTV apps, Conversational UIs (like Siri and Alexa), and using web technologies
-        to build IoT solutions.
+        Scott Davis is a Web Architect and Digital Accessibility Advocate, focusing on the multisensory aspects of web development. In a world where half of all Google searches are done by voice, and 80% of all social media videos are watched with the sound off and closed captions on, accessibility is a springboard for innovation.  
       </p>
 
       <hr class="clear">
 
       <p>
         Email: <a href="mailto:scott@thirstyhead.com">scott@thirstyhead.com</a><br>
-        Twitter: <a href="https://twitter.com/scottdavis99">@scottdavis99</a>
+        Mastodon: <a href="https://mastodon.social/@scottdavis99">@scottdavis99@mastodon.social</a>
       </p>
 
       </div>
