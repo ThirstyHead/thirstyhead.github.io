@@ -1,0 +1,69 @@
+Mastering Grails
+Originally published on IBM developerWorks
+
+Reconstruction of Installments and Archival PDF Locations
+Series Number
+Article Title
+Publication Date
+Library ID
+Archival PDF URL (IBM DHE)
+
+Part 1
+Introduction to Grails / Creating the Trip Planner
+January 2008
+j-grails01158
+(https://public.dhe.ibm.com/software/dw/java/j-grails01158-pdf.pdf)
+
+Part 2
+Domain Models and the Secrets of GORM
+February 2008
+j-grails02128
+(https://public.dhe.ibm.com/software/dw/java/j-grails02128-pdf.pdf)
+
+Part 3
+Changing the View with Groovy
+March 11, 2008
+j-grails03118
+(https://public.dhe.ibm.com/software/dw/java/j-grails03118-pdf.pdf)
+
+Part 4
+Grails and the Mobile Web
+June 2008 (Ref)
+j-grails06178
+(https://public.dhe.ibm.com/software/dw/java/j-grails06178-pdf.pdf)
+
+Part 5
+Validation and Error Handling
+2008
+j-grailsXXXXX
+
+Part 6
+Advanced Relationships and GORM
+2008
+j-grailsXXXXX
+
+Part 7
+Controllers and Request Handling
+2008
+j-grailsXXXXX
+
+Part 8
+Grails Services and Business Logic
+2008
+j-grailsXXXXX
+
+Part 9
+Ajax and RIA (Rich Internet Applications)
+2008
+j-grailsXXXXX
+
+Part 10
+Grails Plugin Architecture
+2008
+j-grailsXXXXX
+
+Part 11
+Grails in the Enterprise
+December 16, 2008
+j-grails12168
+(https://public.dhe.ibm.com/software/dw/java/j-grails12168-pdf.pdf)
