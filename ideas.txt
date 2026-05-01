@@ -1,0 +1,5 @@
+Welcome to a space for thoughtful conversation about the modern web. I'm Scott Davis, an author, public speaker, and Web Architect specializing in digital accessibility and evidence-based architecture. This site is a living exploration of the framework-free web, semantic standards, and the cognitive benefits of visual simplicity. Join me as we explore how to build digital spaces that are faster, more inclusive, and deeply resilient.
+
+ThirstyHead provides a space for thoughtful conversation about the modern web. Driven by the work of Web Architect and author Scott Davis, the site explores digital accessibility, evidence-based architecture, and the cognitive benefits of visual simplicity—challenging the industry to build digital spaces that are faster, more inclusive, and deeply resilient.
+
+ThirstyHead is a space for thoughtful conversation about the modern web. Driven by the work of Web Architect and author Scott Davis, this site is grounded in the philosophy that digital accessibility is sight, sound, and touch. It serves as a blueprint for building digital spaces that are faster, more inclusive, and deeply resilient.
