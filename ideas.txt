@@ -3,3 +3,43 @@ Welcome to a space for thoughtful conversation about the modern web. I'm Scott D
 ThirstyHead provides a space for thoughtful conversation about the modern web. Driven by the work of Web Architect and author Scott Davis, the site explores digital accessibility, evidence-based architecture, and the cognitive benefits of visual simplicity—challenging the industry to build digital spaces that are faster, more inclusive, and deeply resilient.
 
 ThirstyHead is a space for thoughtful conversation about the modern web. Driven by the work of Web Architect and author Scott Davis, this site is grounded in the philosophy that digital accessibility is sight, sound, and touch. It serves as a blueprint for building digital spaces that are faster, more inclusive, and deeply resilient.
+
+======
+
+My IBM developerWorks series "Mastering MEAN" is no longer available. However, I found a PDF version of one of the articles here: https://public.dhe.ibm.com/software/dw/java/j-grails12168-pdf.pdf
+
+Based on that URL, can you find all of the other articles in the series as PDFs? Can you please provide a list of all articles in this series, included URLs to download the PDF versions of the articles?
+
+Mastering MEAN 
+A 6-part article series by Scott Davis, originally published by IBM developerWorks. 
+
+Part 1
+Introducing the MEAN stack
+Introduction to V8, Node.js, and the shift from LAMP to MEAN.
+
+Part 2
+The Node and Express Backend
+Deep dive into the server-side runtime and minimalist web framework.
+
+Part 3
+Persistence with MongoDB
+Transitioning from relational SQL to document-oriented NoSQL strategies.
+
+Part 4
+Client-side MVC with AngularJS
+Mastering Single-Page Applications and two-way data binding.
+
+Part 5
+Tooling and Scaffolding
+Utilizing Yeoman, Grunt, and Bower for modern development workflows.
+
+Part 6
+Testing and Quality Assurance
+Implementing Mocha, Jasmine, Karma, and Protractor for end-to-end reliability.
+
+
+
+
+
+
+

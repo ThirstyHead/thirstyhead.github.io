@@ -1,0 +1,27 @@
+
+Mastering MEAN 
+A 6-part article series by Scott Davis, originally published by IBM developerWorks. 
+
+Part 1
+Introducing the MEAN stack
+Introduction to V8, Node.js, and the shift from LAMP to MEAN.
+
+Part 2
+The Node and Express Backend
+Deep dive into the server-side runtime and minimalist web framework.
+
+Part 3
+Persistence with MongoDB
+Transitioning from relational SQL to document-oriented NoSQL strategies.
+
+Part 4
+Client-side MVC with AngularJS
+Mastering Single-Page Applications and two-way data binding.
+
+Part 5
+Tooling and Scaffolding
+Utilizing Yeoman, Grunt, and Bower for modern development workflows.
+
+Part 6
+Testing and Quality Assurance
+Implementing Mocha, Jasmine, Karma, and Protractor for end-to-end reliability.
