@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<!-- 
+  A11Y LESSON: Always declare the language of the document. 
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing & Publications | Scott Davis | ThirstyHead</title>
+  
+  <meta name="description" content="The complete bibliography of Scott Davis, including published books from O'Reilly and Pragmatic Bookshelf, video courses, and digital accessibility articles.">
+
+  <style>
+    /* ==========================================================================
+       SMACSS Architecture: Base, Layout, Module, State, Theme
+       ========================================================================== */
+
+    :root {
+      --color-bg: #fdfbf7; /* Warm Ivory */
+      --color-text: #1a1a1a;
+      --color-text-muted: #555555;
+      
+      --color-primary: #005C63; /* Deep Teal */
+      --color-accent: #e2e8f0; 
+
+      --color-header-bg: #1a1a19; 
+      --color-header-text: #fdfbf7;
+      --color-header-link: #4fd1c5; 
+      
+      --color-surface: transparent; 
+      --color-border: transparent; 
+
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+      
+      --spacing-base: 1.25rem; 
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --color-bg: #1a1a19; 
+        --color-text: #f2f0eb;
+        --color-text-muted: #a09e99;
+        --color-primary: #4fd1c5; 
+        --color-accent: #2d3748; 
+      }
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-serif);
+      line-height: 1.7; 
+      font-size: 1.125rem; 
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-sans);
+      line-height: 1.2;
+      margin-top: 0;
+      color: var(--color-text);
+    }
+
+    a {
+      color: var(--color-primary);
+      text-decoration-thickness: 0.1em;
+      text-underline-offset: 0.2em;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--color-primary);
+      outline-offset: 3px;
+      border-radius: 4px; 
+    }
+
+    /* ==========================================================================
+       2. LAYOUT
+       ========================================================================== */
+    .l-container {
+      max-width: 56rem; 
+      margin: 0 auto;
+      padding: 0 calc(var(--spacing-base) * 1.5);
+    }
+
+    .l-header {
+      background-color: var(--color-header-bg);
+      color: var(--color-header-text);
+      padding: calc(var(--spacing-base) * 1) 0;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .l-header__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    @media (min-width: 768px) {
+      .l-header__inner {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .l-main {
+      padding: 0; 
+      min-height: 70vh; 
+    }
+
+    .l-footer {
+      padding: calc(var(--spacing-base) * 4) 0;
+      margin-top: 0; 
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      background-color: var(--color-header-bg);
+      color: #a09e99;
+    }
+    .l-footer strong { color: var(--color-header-text); }
+    .l-footer a { color: var(--color-header-link); }
+
+    .l-section {
+      margin-bottom: calc(var(--spacing-base) * 6); 
+    }
+    .l-section:last-child {
+      margin-bottom: 0; 
+    }
+
+    /* ==========================================================================
+       3. MODULES
+       ========================================================================== */
+    
+    .m-skip-link {
+      position: absolute;
+      top: -auto;
+      left: -10000px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      background-color: var(--color-primary);
+      color: var(--color-bg);
+      padding: 1rem;
+      font-family: var(--font-sans);
+      font-weight: bold;
+      z-index: 100;
+      border-radius: 4px;
+    }
+    .m-skip-link:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      display: inline-block;
+      margin: 1rem;
+    }
+
+    .m-brand {
+      display: flex;
+      flex-direction: row; /* Align icon and text horizontally */
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+    .m-brand__icon {
+      color: var(--color-header-link);
+      margin-right: 0.6rem;
+      flex-shrink: 0;
+    }
+    .m-brand__title {
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin: 0;
+      letter-spacing: -0.02em;
+      color: var(--color-header-link); /* High contrast teal for the main brand */
+    }
+
+    .m-nav__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: calc(var(--spacing-base) * 1.5);
+      font-family: var(--font-sans);
+      font-weight: 600;
+    }
+    .m-nav__link {
+      color: #a09e99;
+      text-decoration: none;
+      padding: 0.25rem;
+      transition: color 0.2s ease;
+    }
+    .m-nav__link:hover, .m-nav__link.is-active {
+      color: var(--color-header-link);
+    }
+    .m-nav__link.is-active {
+      border-bottom: 3px solid var(--color-header-link);
+    }
+
+    /* Full-Bleed Grid for Hero */
+    .m-hero {
+      display: grid;
+      grid-template-columns: 1fr; 
+      margin-top: 0; 
+    }
+    @media (min-width: 768px) {
+      .m-hero {
+        grid-template-columns: minmax(1.5rem, 1fr) minmax(0, 18.67rem) minmax(0, 37.33rem) minmax(1.5rem, 1fr);
+      }
+    }
+    .m-hero__primary {
+      background-color: var(--color-primary);
+      min-height: 12rem; 
+    }
+    @media (min-width: 768px) {
+      .m-hero__primary {
+        grid-column: 1 / 3; 
+      }
+    }
+    .m-hero__secondary {
+      background-color: transparent;
+      padding: calc(var(--spacing-base) * 3) calc(var(--spacing-base) * 1.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    @media (min-width: 768px) {
+      .m-hero__secondary {
+        grid-column: 3 / 4; 
+        /* Added left padding to give the text breathing room from the teal block */
+        padding: calc(var(--spacing-base) * 4) 0 calc(var(--spacing-base) * 4) calc(var(--spacing-base) * 2);
+      }
+    }
+    .m-hero__heading {
+      font-size: clamp(2.5rem, 5vw, 3.5rem); 
+      margin-bottom: 0;
+      letter-spacing: -0.02em;
+    }
+    .m-hero__subtext {
+      font-size: 1.25rem;
+      color: var(--color-text-muted);
+      max-width: 45ch; 
+      margin: 1rem 0 0 0;
+    }
+
+    /* List Items for Bibliography */
+    .m-list-item {
+      padding: calc(var(--spacing-base) * 1.5) 0;
+      border-bottom: none; 
+    }
+    .m-list-item__title {
+      font-size: 1.5rem;
+      margin: 0 0 0.5rem 0;
+    }
+    .m-list-item__meta {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      display: inline-block;
+      background-color: transparent; 
+      padding: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Grouping Headers */
+    .m-group-header {
+      font-family: var(--font-sans);
+      font-size: 2rem;
+      margin-top: calc(var(--spacing-base) * 4);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--color-accent);
+      color: var(--color-text);
+    }
+    .m-group-header:first-of-type {
+      margin-top: calc(var(--spacing-base) * 2);
+    }
+
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="m-skip-link">Skip to main content</a>
+
+  <header class="l-header">
+    <div class="l-container l-header__inner">
+      <a href="index.html" class="m-brand" aria-label="ThirstyHead Home">
+        <!-- Minimalist SVG Candle Icon -->
+        <svg class="m-brand__icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 2c-1.5 2-2.5 3.5-2.5 5a2.5 2.5 0 0 0 5 0C14.5 5.5 13.5 4 12 2z"/>
+          <path d="M12 10v2"/>
+          <rect x="9" y="12" width="6" height="10" rx="1"/>
+        </svg>
+        <h1 class="m-brand__title">ThirstyHead</h1>
+      </a>
+      <nav class="m-nav" aria-label="Main Navigation">
+        <ul class="m-nav__list">
+          <li><a href="index.html#essays" class="m-nav__link">Essays</a></li>
+          <li><a href="index.html#speaking" class="m-nav__link">Speaking</a></li>
+          <li><a href="writing.html" class="m-nav__link is-active" aria-current="page">Writing</a></li>
+          <li><a href="index.html#projects" class="m-nav__link">Projects</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="l-main" tabindex="-1">
+    
+    <!-- WRITING HERO SECTION -->
+    <section class="l-section m-hero" aria-labelledby="writing-heading">
+      <div class="m-hero__primary" aria-hidden="true"></div>
+      <div class="m-hero__secondary">
+        <h1 id="writing-heading" class="m-hero__heading">Writing & Publications</h1>
+        <p class="m-hero__subtext">
+          A comprehensive bibliography spanning my work on digital accessibility, enterprise architecture, and the framework-free web.
+        </p>
+      </div>
+    </section>
+
+    <!-- BIBLIOGRAPHY LISTS -->
+    <section class="l-section l-container">
+
+      <h2 class="m-group-header">Selected Articles & Series</h2>
+
+      <article class="m-list-item">
+        <div class="m-list-item__meta">Web Almanac • 2025</div>
+        <h3 class="m-list-item__title">
+          <a href="https://almanac.httparchive.org/en/2025/accessibility">Accessibility Chapter</a>
+        </h3>
+        <p style="margin-top: 0.5rem;">Served as the Technical Reviewer for the annual state of the web report's chapter on digital accessibility.</p>
+      </article>
+
+      <article class="m-list-item">
+        <div class="m-list-item__meta">Web Almanac • 2022</div>
+        <h3 class="m-list-item__title">
+          <a href="https://almanac.httparchive.org/en/2022/accessibility">Accessibility Chapter</a>
+        </h3>
+        <p style="margin-top: 0.5rem;">Co-authored the comprehensive annual report detailing the state of accessibility metrics and trends across millions of websites.</p>
+      </article>
+
+      <article class="m-list-item">
+        <div class="m-list-item__meta">Web Almanac • 2021</div>
+        <h3 class="m-list-item__title">
+          <a href="https://almanac.httparchive.org/en/2021/accessibility">Accessibility Chapter</a>
+        </h3>
+        <p style="margin-top: 0.5rem;">Co-authored the Web Almanac's chapter analyzing real-world accessibility data and the framework-free web.</p>
+      </article>
+
+      <article class="m-list-item">
+        <div class="m-list-item__meta">Thoughtworks • 2020</div>
+        <h3 class="m-list-item__title">
+          <a href="https://www.thoughtworks.com/en-ca/insights/blog/developer-advocacy-turning-passion-talking-about-tech-career">Developer Advocacy: Turning a passion for talking about tech into a career</a>
+        </h3>
+        <p style="margin-top: 0.5rem;">Exploring the path of developer advocacy and turning a passion for technical communication into a fulfilling career.</p>
+      </article>
+
+      <article class="m-list-item">
+        <div class="m-list-item__meta">Thoughtworks • 2020</div>
+        <h3 class="m-list-item__title">
+          <a href="https://www.thoughtworks.com/insights/blog/why-test-user-journey">Why test the user journey?</a>
+        </h3>
+        <p style="margin-top: 0.5rem;">An introduction to User Journey testing, demonstrating how to write tests in the language of the user rather than the developer.</p>
+      </article>
+
+      <article class="m-list-item">
+        <div class="m-list-item__meta">IBM developerWorks • 2015</div>
+        <h3 class="m-list-item__title">
+          <a href="#">Mastering MEAN</a>
+        </h3>
+        <p style="margin-top: 0.5rem;">A comprehensive article series exploring the MEAN stack (MongoDB, Express, AngularJS, and Node.js).</p>
+      </article>
+
+      <article class="m-list-item">
+        <div class="m-list-item__meta">IBM developerWorks • 2008</div>
+        <h3 class="m-list-item__title">
+          <a href="#">Mastering Grails</a>
+        </h3>
+        <p style="margin-top: 0.5rem;">A comprehensive, multi-part technical series authored for IBM exploring the Grails ecosystem.</p>
+      </article>
+
+      <article class="m-list-item">
+        <div class="m-list-item__meta">IBM developerWorks • 2006</div>
+        <h3 class="m-list-item__title">
+          <a href="#">Practically Groovy</a>
+        </h3>
+        <p style="margin-top: 0.5rem;">A foundational series advocating for Groovy and dynamic languages on the JVM.</p>
+      </article>
+
+      <h2 class="m-group-header">Published Books</h2>
+      
+      <article class="m-list-item">
+        <div class="m-list-item__meta">InfoQ • 2010</div>
+        <h3 class="m-list-item__title">
+          <a href="#">Getting Started with Grails</a>
+        </h3>
+        <p style="margin-top: 0.5rem;">A foundational text focused on streamlining the development lifecycle and reducing traditional Java complexity.</p>
+      </article>
+
+      <article class="m-list-item">
+        <div class="m-list-item__meta">Pragmatic Bookshelf • 2008</div>
+        <h3 class="m-list-item__title">
+          <a href="#">Groovy Recipes: Greasing the Wheels of Java</a>
+        </h3>
+        <p style="margin-top: 0.5rem;">Focuses on reducing the "boilerplate" associated with traditional Java, acting as a primary advocate for Groovy as the future of Java development.</p>
+      </article>
+
+      <article class="m-list-item">
+        <div class="m-list-item__meta">Pragmatic Bookshelf • 2007</div>
+        <h3 class="m-list-item__title">
+          <a href="#">GIS for Web Developers: Adding 'Where' to Your Web Applications</a>
+        </h3>
+        <p style="margin-top: 0.5rem;">Pioneering the use of GIS and mapping APIs for web developers, bridging the gap between traditional geography-centric GIS and developer-centric web services.</p>
+      </article>
+
+      <article class="m-list-item">
+        <div class="m-list-item__meta">O'Reilly Media • Oct 2005</div>
+        <h3 class="m-list-item__title">
+          <a href="#">JBoss at Work: A Practical Guide</a>
+        </h3>
+        <p style="margin-top: 0.5rem;">Co-authored with Tom Marrs. A practical framework for deploying complex J2EE applications on open-source servers.</p>
+      </article>
+
+      <article class="m-list-item">
+        <div class="m-list-item__meta">Pragmatic Bookshelf • 2005</div>
+        <h3 class="m-list-item__title">
+          <a href="#">The Google Maps API: Adding Where to Your Web Applications</a>
+        </h3>
+        <p style="margin-top: 0.5rem;">A companion technical deep-dive into geospatial web integration and mapping APIs for developers.</p>
+      </article>
+
+      <h2 class="m-group-header">Collaborative Wisdom & Anthologies</h2>
+
+      <article class="m-list-item">
+        <div class="m-list-item__meta">Packt Publishing • 2023</div>
+        <h3 class="m-list-item__title">
+          <a href="https://www.packtpub.com/en-us/product/developer-advocate-9781789130300">Developer, Advocate!</a>
+        </h3>
+        <p style="margin-top: 0.5rem;">Insights and interviews contributing to the collective wisdom of developer relations and advocacy.</p>
+      </article>
+
+      <article class="m-list-item">
+        <div class="m-list-item__meta">O'Reilly Media • 2009</div>
+        <h3 class="m-list-item__title">
+          <a href="#">97 Things Every Project Manager Should Know</a>
+        </h3>
+        <p style="margin-top: 0.5rem;">Contributions to collective wisdom focused on project management, agile development, and team leadership.</p>
+      </article>
+
+      <article class="m-list-item">
+        <div class="m-list-item__meta">Pragmatic Bookshelf • 2006, 2007</div>
+        <h3 class="m-list-item__title">
+          <a href="#">No Fluff, Just Stuff Anthology</a>
+        </h3>
+        <p style="margin-top: 0.5rem;">Contributing to collective industry knowledge on software craftsmanship across multiple annual editions.</p>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="l-footer">
+    <div class="l-container">
+      <p>
+        <strong>Scott Davis</strong><br>
+        Web Architect & Digital Accessibility Advocate
+      </p>
+      <p style="margin-top: 1rem;">
+        Contact: <a href="mailto:scott@thirstyhead.com">scott@thirstyhead.com</a> | 
+        Mastodon: <a href="https://mastodon.social/@scottdavis99">@scottdavis99</a>
+      </p>
+      <p style="margin-top: 2rem;">
+        &copy; 2026 ThirstyHead. All rights reserved. Built with 
+        <span class="m-skip-link" style="position: absolute;">accessibility in mind and</span> 
+        Browser-Native principles.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

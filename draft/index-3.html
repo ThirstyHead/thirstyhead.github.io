@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<!-- 
+  A11Y LESSON: Always declare the language of the document. 
+  This allows screen readers to load the correct pronunciation rules. 
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scott Davis | ThirstyHead | Web Architect & Digital Accessibility</title>
+  
+  <!-- 
+    A11Y LESSON: A descriptive meta description is often read by screen readers 
+    when a user encounters the site in search results.
+  -->
+  <meta name="description" content="Scott Davis is a Web Architect and Digital Accessibility Advocate focusing on the multisensory aspects of web development.">
+
+  <style>
+    /* ==========================================================================
+       SMACSS Architecture
+       Categories: Base, Layout, Module, State, Theme
+       ========================================================================== */
+
+    /* ==========================================================================
+       1. BASE & THEME
+       Setting up CSS Variables, resets, and default element styling.
+       ========================================================================== */
+    :root {
+      /* A11Y LESSON: Contrast Ratios
+        WCAG AAA requires a 7:1 contrast ratio for normal text.
+        Our light mode primary text (#1a1a1a) on background (#fdfdfd) is 17:1.
+      */
+      --color-bg: #fdfdfd;
+      --color-text: #1a1a1a;
+      --color-text-muted: #555555;
+      --color-primary: #0056b3; 
+      --color-border: transparent; /* Removing hard borders for a floating aesthetic */
+      --color-surface: #ffffff;
+      --color-shadow: rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+      
+      /* A11Y LESSON: Whitespace & Cognitive Load
+         Increasing the base spacing unit directly increases negative space,
+         reducing cognitive load for the reader. */
+      --spacing-base: 1.25rem; 
+    }
+
+    /* A11Y LESSON: Respecting User Preferences
+      Automatically switch to a dark theme if the user's OS requests it, 
+      reducing eye strain and light sensitivity triggers.
+    */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --color-bg: #121212;
+        --color-text: #f0f0f0;
+        --color-text-muted: #aaaaaa;
+        --color-primary: #66b2ff; 
+        --color-border: transparent;
+        --color-surface: #1e1e1e;
+        --color-shadow: rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    /* Box sizing reset for easier layout math */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-serif);
+      /* A11Y LESSON: Line height of 1.5 is recommended by WCAG for readability */
+      line-height: 1.7; /* Increased for better breathability */
+      font-size: 1.125rem; 
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-sans);
+      line-height: 1.2;
+      margin-top: 0;
+      color: var(--color-text);
+    }
+
+    a {
+      color: var(--color-primary);
+      text-decoration-thickness: 0.1em;
+      text-underline-offset: 0.2em;
+    }
+
+    /* A11Y LESSON: Focus Visibility
+      NEVER use `outline: none` without providing an alternative. 
+      Keyboard users rely entirely on the focus ring to navigate.
+      We use `:focus-visible` to show strong rings for keyboard, but hide for mouse clicks.
+    */
+    :focus-visible {
+      outline: 3px solid var(--color-primary);
+      outline-offset: 3px;
+      border-radius: 4px; /* Organic curve */
+    }
+
+    /* ==========================================================================
+       2. LAYOUT
+       Major structural areas of the page (Header, Main, Footer, Grids).
+       ========================================================================== */
+    .l-container {
+      max-width: 56rem; /* Narrowed slightly for optimal reading width (~80ch) */
+      margin: 0 auto;
+      padding: 0 calc(var(--spacing-base) * 1.5);
+    }
+
+    .l-header {
+      /* Replaced border with a soft, floating shadow */
+      background-color: var(--color-surface);
+      box-shadow: 0 4px 20px var(--color-shadow);
+      padding: calc(var(--spacing-base) * 1.5) 0;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .l-main {
+      padding: calc(var(--spacing-base) * 5) 0; /* Massive top/bottom whitespace */
+    }
+
+    .l-footer {
+      padding: calc(var(--spacing-base) * 4) 0;
+      margin-top: calc(var(--spacing-base) * 4);
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      background-color: var(--color-surface);
+      box-shadow: 0 -4px 20px var(--color-shadow);
+    }
+
+    .l-grid-2 {
+      display: grid;
+      gap: calc(var(--spacing-base) * 3); /* Increased gap for floating elements */
+    }
+    @media (min-width: 768px) {
+      .l-grid-2 { grid-template-columns: 1fr 1fr; }
+    }
+
+    .l-section {
+      margin-bottom: calc(var(--spacing-base) * 6); /* Deep separation between thoughts */
+    }
+
+    /* ==========================================================================
+       3. MODULES
+       Reusable, distinct UI components.
+       ========================================================================== */
+    
+    /* Module: Skip Link */
+    /* A11Y LESSON: The Skip Link */
+    .m-skip-link {
+      position: absolute;
+      top: -auto;
+      left: -10000px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      background-color: var(--color-primary);
+      color: #ffffff;
+      padding: 1rem;
+      font-family: var(--font-sans);
+      font-weight: bold;
+      z-index: 100;
+      border-radius: 8px;
+    }
+    .m-skip-link:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      display: inline-block;
+      margin: 1rem;
+    }
+
+    /* Module: Site Brand */
+    .m-brand {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+    }
+    .m-brand__title {
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin: 0;
+      letter-spacing: -0.02em;
+    }
+    .m-brand__tagline {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+
+    /* Module: Navigation */
+    .m-nav {
+      margin-top: calc(var(--spacing-base) * 1.5);
+    }
+    .m-nav__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: calc(var(--spacing-base) * 2);
+      font-family: var(--font-sans);
+      font-weight: 500;
+    }
+    .m-nav__link {
+      color: var(--color-text-muted);
+      text-decoration: none;
+      padding: 0.5rem 0.25rem;
+      transition: color 0.2s ease;
+    }
+    .m-nav__link:hover {
+      color: var(--color-text);
+    }
+
+    /* Module: Hero */
+    .m-hero__heading {
+      font-size: clamp(2.5rem, 6vw, 4rem); 
+      margin-bottom: var(--spacing-base);
+      letter-spacing: -0.02em;
+    }
+    .m-hero__subtext {
+      font-size: 1.35rem;
+      color: var(--color-text-muted);
+      max-width: 70ch; 
+    }
+
+    /* Module: Content Card (Floating Aesthetic) */
+    .m-card {
+      background-color: var(--color-surface);
+      border-radius: 16px; /* Softer, organic corners */
+      padding: calc(var(--spacing-base) * 2.5);
+      box-shadow: 0 10px 30px var(--color-shadow); /* The float */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    /* A11Y LESSON: Avoid hover-only content, but subtle hover transforms 
+       are great for indicating interactivity as long as contrast is maintained. */
+    .m-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    }
+    @media (prefers-color-scheme: dark) {
+       .m-card:hover { box-shadow: 0 15px 35px rgba(0,0,0, 0.6); }
+    }
+
+    .m-card__meta {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-primary);
+      margin-bottom: 1rem;
+    }
+    .m-card__title {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+    .m-card__link {
+      text-decoration: none;
+      color: inherit;
+    }
+    .m-card__link:hover {
+      text-decoration: underline;
+      text-decoration-color: var(--color-primary);
+    }
+
+    /* Module: List Item (Whitespace instead of borders) */
+    .m-list-item {
+      padding: calc(var(--spacing-base) * 2) 0;
+      /* Removed bottom border, relying purely on negative space to separate items */
+    }
+    .m-list-item__title {
+      font-size: 1.5rem;
+      margin: 0 0 0.5rem 0;
+    }
+    .m-list-item__meta {
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--color-text-muted);
+      display: inline-block;
+      background-color: var(--color-surface);
+      padding: 0.25rem 0.85rem;
+      border-radius: 99px; /* Pill shape for organic feel */
+      box-shadow: 0 2px 8px var(--color-shadow);
+    }
+
+    /* Module: Section Header */
+    .m-section-header {
+      margin-bottom: calc(var(--spacing-base) * 2);
+    }
+    .m-section-header__title {
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+    }
+    /* A playful, floating accent behind the header text */
+    .m-section-header__title::after {
+      content: "";
+      position: absolute;
+      bottom: 4px;
+      left: -4px;
+      right: -4px;
+      height: 12px;
+      background-color: var(--color-primary);
+      opacity: 0.15;
+      z-index: -1;
+      border-radius: 4px;
+    }
+
+    /* ==========================================================================
+       4. STATE
+       ========================================================================== */
+    .m-nav__link.is-active {
+      color: var(--color-text);
+      position: relative;
+    }
+    .m-nav__link.is-active::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: var(--color-primary);
+      border-radius: 3px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- 
+    A11Y LESSON: The Skip Link must be the very first focusable element in the DOM. 
+  -->
+  <a href="#main-content" class="m-skip-link">Skip to main content</a>
+
+  <!-- 
+    A11Y LESSON: Landmark Roles
+    Using `<header>`, `<main>`, `<nav>`, and `<footer>` provides semantic landmarks 
+    that screen reader users use to jump around the page quickly.
+  -->
+  <header class="l-header">
+    <div class="l-container">
+      
+      <!-- Logo / Brand -->
+      <a href="/" class="m-brand" aria-label="ThirstyHead Home">
+        <h1 class="m-brand__title">ThirstyHead</h1>
+        <p class="m-brand__tagline">Scott Davis</p>
+      </a>
+
+      <!-- 
+        A11Y LESSON: The `<nav>` element automatically creates a navigation landmark.
+        We add an aria-label in case there are multiple <nav> elements on the page.
+      -->
+      <nav class="m-nav" aria-label="Main Navigation">
+        <ul class="m-nav__list">
+          <li><a href="#essays" class="m-nav__link is-active" aria-current="page">Essays</a></li>
+          <li><a href="#speaking" class="m-nav__link">Speaking</a></li>
+          <li><a href="#writing" class="m-nav__link">Writing</a></li>
+          <li><a href="#projects" class="m-nav__link">Projects</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- 
+    A11Y LESSON: tabindex="-1"
+    Adding tabindex="-1" to the main element allows the "Skip to content" link 
+    to programmatically set focus to it via JavaScript or anchor links, 
+    without putting the `<main>` element into the normal user Tab order.
+  -->
+  <main id="main-content" class="l-main l-container" tabindex="-1">
+
+    <!-- HERO SECTION -->
+    <section class="l-section m-hero" aria-labelledby="hero-heading">
+      <h2 id="hero-heading" class="m-hero__heading">
+        Web Architect & Digital Accessibility Advocate.
+      </h2>
+      <!-- 
+        A11Y LESSON: The Easter Egg
+        This paragraph uses the same accessible hiding technique as our skip link. 
+        Sighted users won't see it, but screen reader users get a special greeting!
+      -->
+      <p class="m-skip-link" style="position: absolute;">
+        Psst! Hello there, screen reader user. Thanks for exploring the accessibility of this site. You are experiencing the web in high-definition audio. High five!
+      </p>
+      <p class="m-hero__subtext">
+        Focusing on the multisensory aspects of web development. In a world where half of all Google searches are done by voice, and 80% of all social media videos are watched with the sound off, accessibility is a springboard for innovation.
+      </p>
+    </section>
+
+    <!-- ESSAYS SECTION (The new central feature) -->
+    <!-- 
+      A11Y LESSON: Heading Hierarchy
+      Notice how we drop from an H2 (Hero/Sections) down to H3 for the cards. 
+      Screen readers construct outlines based on heading tags. Never skip a heading level (e.g., H2 straight to H4).
+    -->
+    <section id="essays" class="l-section" aria-labelledby="essays-heading">
+      <header class="m-section-header">
+        <h2 id="essays-heading" class="m-section-header__title">Essays & Thoughts</h2>
+        <p class="m-hero__subtext" style="margin-top: 1rem;">A place for thoughtful conversation about technology.</p>
+      </header>
+
+      <div class="l-grid-2">
+        <article class="m-card">
+          <div class="m-card__meta">April 2026 • 8 Min Read</div>
+          <h3 class="m-card__title">
+            <a href="#" class="m-card__link">Searching for Truth in the Age of Maybe</a>
+          </h3>
+          <p>As AI permeates our development stacks and daily lives, the binary concepts of 'true' and 'false' are being replaced by probability and hallucination. How do we architect for a web that is increasingly guessing?</p>
+        </article>
+
+        <article class="m-card">
+          <div class="m-card__meta">April 2026 • 6 Min Read</div>
+          <h3 class="m-card__title">
+            <a href="#" class="m-card__link">How to Build a Completely Inaccessible Website</a>
+          </h3>
+          <p>A tongue-in-cheek masterclass on all the specific ways developers inadvertently break the web for users with disabilities, and how to unlearn those bad habits.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SPEAKING SECTION -->
+    <section id="speaking" class="l-section" aria-labelledby="speaking-heading">
+      <header class="m-section-header">
+        <h2 id="speaking-heading" class="m-section-header__title">Speaking & Conferences</h2>
+      </header>
+      
+      <article class="m-list-item">
+        <h3 class="m-list-item__title">
+          <a href="#">How to Build a Completely Inaccessible Website</a>
+        </h3>
+        <div class="m-list-item__meta">GIDS 2026 • FrontEnd Technical Session</div>
+        <p style="margin-top: 0.5rem;">A tongue-in-cheek masterclass on all the specific ways developers inadvertently break the web for users with disabilities, and how to unlearn those bad habits.</p>
+      </article>
+
+      <article class="m-list-item">
+        <h3 class="m-list-item__title">
+          <a href="#">Bridging the Digital Divide: Empowering Accessibility Through AI Innovations</a>
+        </h3>
+        <div class="m-list-item__meta">GIDS 2025 • Technical Session</div>
+      </article>
+
+      <article class="m-list-item">
+        <h3 class="m-list-item__title">
+          <a href="#">Continuous Accessibility: Adding Lighthouse to Your CI/CD Pipeline</a>
+        </h3>
+        <div class="m-list-item__meta">GIDS 2024 • Technical Session</div>
+      </article>
+
+      <article class="m-list-item">
+        <h3 class="m-list-item__title">
+          <!-- 
+            A11Y LESSON: Contextual Links
+            Instead of "Click Here" or "Watch Video", wrap the actual title of the event 
+            in the anchor tag so screen reader users know exactly what the link is for 
+            if they are reading a list of links out of context.
+          -->
+          <a href="https://www.youtube.com/watch?reload=9&v=pE2O-zAXa7w">
+            Fireside Chat: Future of the Web (w/ John Bruce)
+          </a>
+        </h3>
+        <div class="m-list-item__meta">GIDS 2019 • YouTube Panel</div>
+        <p style="margin-top: 0.5rem;">Watch these two brilliant minds in a free-wheeling conversation at GIDS 2019 as they discuss and debate the future of the Web.</p>
+      </article>
+    </section>
+
+    <!-- WRITING / ARTICLES SECTION -->
+    <section id="writing" class="l-section" aria-labelledby="writing-heading">
+      <header class="m-section-header">
+        <h2 id="writing-heading" class="m-section-header__title">Books & Articles</h2>
+      </header>
+      
+      <article class="m-list-item">
+        <h3 class="m-list-item__title">
+          <a href="https://thirstyhead.com/the-revolution-will-be-spoken">The Revolution will be Spoken</a>
+        </h3>
+        <div class="m-list-item__meta">Published on ThirstyHead</div>
+        <p style="margin-top: 0.5rem;">Gartner estimates that roughly 25% of our computer interactions these days happen with our voice. 4 out of its "5 Digital Technology Trends" hinge their success on voice interaction.</p>
+      </article>
+
+      <article class="m-list-item">
+        <h3 class="m-list-item__title">
+          <a href="https://thirstyhead.com/its-spelled-accessibility">It's Spelled 'Accessibility', not 'Disability'</a>
+        </h3>
+        <div class="m-list-item__meta">Published on ThirstyHead</div>
+        <p style="margin-top: 0.5rem;">If your mobile phone is in silent/vibrate mode right now, would you say that you're using an accessibility feature, or just a feature of your phone?</p>
+      </article>
+
+      <article class="m-list-item">
+        <h3 class="m-list-item__title">
+          <a href="https://thirstyhead.com/deconstructing-the-web-browser">Deconstructing the Modern Web Browser</a>
+        </h3>
+        <div class="m-list-item__meta">Published on ThirstyHead</div>
+        <p style="margin-top: 0.5rem;">A guided tour of the inner mechanisms of a web browser, from the HTML Rendering Engine (Blink, Gecko, WebKit) to the Scripting Engine (V8, SpiderMonkey).</p>
+      </article>
+    </section>
+
+    <!-- PROJECTS / COMPANION WEBSITES -->
+    <section id="projects" class="l-section" aria-labelledby="projects-heading">
+      <header class="m-section-header">
+        <h2 id="projects-heading" class="m-section-header__title">Companion Websites</h2>
+      </header>
+      <div class="l-grid-2" style="margin-top: 1rem;">
+        
+        <div class="m-card">
+          <h3 class="m-list-item__title"><a href="#">Browser-Native Demos</a></h3>
+          <p style="margin-top: 0.5rem; font-size: 1rem;">A collection of vanilla HTML/JS/CSS demonstrations highlighting the power of the framework-free web.</p>
+        </div>
+
+        <div class="m-card">
+          <h3 class="m-list-item__title"><a href="#">A11y Testing Playground</a></h3>
+          <p style="margin-top: 0.5rem; font-size: 1rem;">Live examples from "How to Build a Completely Inaccessible Website" to test with screen readers.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="l-footer">
+    <div class="l-container">
+      <p>
+        <strong>Scott Davis</strong><br>
+        Web Architect & Digital Accessibility Advocate
+      </p>
+      <p style="margin-top: 1rem;">
+        Contact: <a href="mailto:scott@thirstyhead.com">scott@thirstyhead.com</a> | 
+        Mastodon: <a href="https://mastodon.social/@scottdavis99">@scottdavis99</a>
+      </p>
+      <p style="margin-top: 2rem;">
+        &copy; 2026 ThirstyHead. All rights reserved. Built with 
+        <!-- 
+          A11Y LESSON: sr-only text
+          The phrase "accessibility in mind" is hidden visually but spoken by screen readers,
+          adding a little hidden delight for users using assistive technologies.
+        -->
+        <span class="m-skip-link" style="position: absolute;">accessibility in mind and</span> 
+        Browser-Native principles.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

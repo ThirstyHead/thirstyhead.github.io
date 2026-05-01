@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ThirstyHead</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Scott Davis <scott@thirstyhead.com>">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/elements.css">
+    <script src="/component/nameplate/index.mjs" type="module"></script>
+    <script src="/component/colophon/index.mjs" type="module"></script>
+
+
+  </head>
+
+  <body>
+    <th-nameplate id="nameplate"></th-nameplate>    
+
+    <main>
+      <article class="wide">
+        <a href="https://thirstyhead.com/the-revolution-will-be-spoken"
+           class="sneaky">
+          <h1>The Revolution will be Spoken</h1>
+        <img src="microphone.jpg" 
+             alt="A microphone in front of a computer tablet"
+             class="contain">
+        </a>
+        <p>Gartner estimates that roughly 25% of our computer interactions these days happen with our voice. ("Siri, can you confirm that statistic?") 4 out of its "5 Digital Technology Trends for 2020" -- from Multiexperience Across Devices to Interfaceless Machines to Agent Interfaces to Inclusive Design -- hinge their success on voice interaction.
+
+<a href="https://thirstyhead.com/the-revolution-will-be-spoken">[Learn more...]</a></p>
+      </article>
+
+ 
+      <article>
+        <a href="https://thirstyhead.com/its-spelled-accessibility"
+           class="sneaky">
+        <h1>It's Spelled 'Accessibility', not 'Disability'</h1>
+        <!-- <img src="https://thirstyhead.com/its-spelled-accessibility/keyboard-a11y.jpg" --> 
+        <img src="keyboard-a11y.jpg" 
+             alt="Keyboard with Accessibility key"
+             class="contain">
+        </a>
+        <p>If your mobile phone is in silent/vibrate mode right now, would you say that you're using an accessibility feature, or just a feature of your phone? If you've ever adjusted the size of onscreen content by pinching or stretching, do you feel like you have a disability, or are you simply using your phone as it was meant to be used? <a href="https://thirstyhead.com/its-spelled-accessibility">[Learn more...]</a></p>
+      </article>
+
+      <article>
+        <a href="https://www.youtube.com/watch?reload=9&v=pE2O-zAXa7w"
+           class="sneaky">
+          <h1>Fireside Chat: Future of the Web</h1>
+          <img src="fire-side-chat.png"
+               alt="Fireside Chat"
+               class="contain">
+        </a>
+        <p>John Bruce has partnered with Sir Tim Berners Lee to power the movement to design the next 30 years of the web. A design that will offer everyday web users new choices about how they store and share data and the apps they use. The iconic Scott Davis is capping his tenth consecutive appearance at GIDS this year and has spoken extensively on varied aspects of the Web -- standards, architecture, framework, apps, components, accessibility, its past, present and future. Watch these two brilliant minds in a free-wheeling conversation at GIDS 2019 as they discuss and debate the future of the Web. <a href="https://www.youtube.com/watch?reload=9&v=pE2O-zAXa7w">[Watch Video]</a>
+</p>
+      </article>
+
+
+       <article>
+        <a href="https://thirstyhead.com/the-wrong-kind-of-fast-2020"
+           class="sneaky">
+          <h1>The Wrong Kind of Fast: Embracing Evidence-Based Architecture</h1>
+          <img src="flashlight.jpg" 
+               alt="flashlight"
+               class="contain">
+        </a>
+        <p>Of course we want software to be fast, but we should want it to be the right kind of fast. In this keynote, Scott Davis (Principal Engineer and Web Architect, ThoughtWorks) debunks common software tropes with empirical, quantifiable, measurable facts -- what he calls "Evidence-Based Architecture". <a href="https://thirstyhead.com/the-wrong-kind-of-fast-2020">[Learn more...]</a></p>
+      </article>
+
+
+
+
+      <article>
+        <a href="https://thirstyhead.com/browser-native-web-development"
+           class="sneaky">
+          <h1>The Framework-Free Web: Browser-Native Web Development</h1>
+          <img src="bread.jpg"
+               alt="Crusty Homemade Bread"
+               class="contain">
+        </a>
+        <p>Netflix saw a 50% performance improvement when they removed React from their landing page. Moving to Google's Accelerated Mobile Pages (AMP) project lead publishers like Gizmodo and the Times of India to see 300% performance improvements. Their secret? Removing client-side JavaScript. <a href="https://thirstyhead.com/browser-native-web-development">[Learn more...]</a></p>
+      </article>
+
+
+
+     <article>
+       <a href="https://thirstyhead.com/deconstructing-the-web-browser"
+           class="sneaky">
+         <h1>Deconstructing the Modern Web Browser</h1>
+         <!-- <img src="https://thirstyhead.com/deconstructing-the-web-browser/milk-and-butter.jpg" -->
+         <img src="milk-and-butter.jpg"
+              alt="Milk and butter"
+              class="contain">
+       </a>
+       <p>In this talk, Scott Davis (Web Architect and Principal Engineer, ThoughtWorks) will take you on a guided tour of the inner mechanisms of a web browser. You'll learn about the HTML Rendering Engine (like Blink, Gecko, and WebKit). You'll learn about the Scripting Engine (like V8, SpiderMonkey, and Nitro). With those two pieces of knowledge in hand, we'll discuss running headless browsers (for testing in your CI/CD pipeline) and headless JavaScript engines (perhaps you've heard of NodeJS?). And then the fun really begins, digging into developer consoles, Lighthouse audits for a11y and performance, and automated ways to drive the browser remotely using the Chrome DevTools Protocol, Puppeteer, ThoughtWorks' Gauge and Taiko, and more. <a href="https://thirstyhead.com/deconstructing-the-web-browser">[Learn more...]</a></p>
+      </article>
+
+
+
+
+     <article>
+       <a href="https://thirstyhead.com/user-journey-testing"
+           class="sneaky">
+         <h1>User Journey Testing with Gauge and Taiko</h1>
+         <img src="gauge-buildings.png"
+              alt="Gauge"
+              class="contain">
+       </a>
+       <p>
+       Gauge is a test runner that makes it easy to express your tests in the language of your users. Taiko is a browser automation tool that makes it easy to drive your web browser with a friendly Domain-Specific Language (DSL). Together, they make writing User Journey Tests easier than you might have thought possible.
+        </p>
+
+        <p>
+        If you are familiar with Selenium, WebDriver, or Cucumber, they are all projects that ThoughtWorkers founded and open-sourced over 15 years ago. Gauge and Taiko are next-generation, modern incarnations that are truly standing on the shoulders of giants. Come see how easy it is to write User Journey tests with a light, modern, fast, stable technology stack.
+        <a href="https://thirstyhead.com/user-journey-testing">[Learn more...]</a>
+        </p>
+
+      </article>
+
+
+
+
+
+
+
+
+     <article>
+       <a href="https://thirstyhead.com/introducing-gauge"
+           class="sneaky">
+         <h1>Introducing Gauge: A Framework for User Journey Testing</h1>
+         <!-- <img src="https://thirstyhead.com/introducing-gauge/gauge.png" -->
+         <img src="gauge-diagonal-buildings.png"
+              alt="Gauge"
+              class="contain">
+       </a>
+       <p>In this talk, Scott Davis (Web Architect and Principal Engineer, ThoughtWorks) introduces a wholly different kind of testing -- User Journey testing. User Journey tests are written in the language of the user, not the developer. ("I'd like to add tomatoes to my shopping cart", not "I'd like to add the UPC string of the selected item to that array of Strings over there in that CartComponent.") Gauge and Taiko -- both free and open source -- allow you to level up your testing skills and start thinking like a user. Are you up to the challenge?<a href="https://thirstyhead.com/introducing-gauge">[Learn more...]</a></p>
+
+      </article>
+
+     <article>
+       <a href="https://thirstyhead.com/introducing-taiko"
+           class="sneaky">
+         <h1>Introducing Taiko: Driving Your Web Browser Programmatically</h1>
+         <!-- <img src="https://thirstyhead.com/introducing-taiko/taiko-drummer.jpg" -->
+         <img src="taiko-circular-building.jpg"
+              alt="Taiko"
+              class="contain">
+       </a>
+       <p>As a web programmer, I've always wanted to drive my web browser programmatically -- open this page, fill in that field, click on that button over there; all driven by JavaScript instead of a pesky human. Past solutions were flaky at best, because they were third-party, aftermarket attempts to add functionality to a browser that didn't support it natively. Modern browsers now offer this level of programmatic instrumentation baked-in. All we have to do is start using it.<a href="https://thirstyhead.com/introducing-taiko">[Learn more...]</a></p>
+
+      </article>
+
+
+
+
+    </main>
+
+    <th-colophon id="sidebar"></th-colophon>
+ </body>
+</html>

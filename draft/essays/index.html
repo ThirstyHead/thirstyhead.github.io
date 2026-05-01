@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<!-- 
+  A11Y LESSON: Always declare the language of the document. 
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Searching for Truth in the Age of Maybe | Scott Davis</title>
+  
+  <meta name="description" content="An essay by Scott Davis on how AI is replacing binary concepts of true and false with probability and hallucination.">
+
+  <style>
+    /* ==========================================================================
+       SMACSS Architecture: Base, Layout, Module, State, Theme
+       ========================================================================== */
+
+    :root {
+      --color-bg: #fdfbf7; /* Warm Ivory */
+      --color-text: #1a1a1a;
+      --color-text-muted: #555555;
+      
+      --color-primary: #005C63; /* Deep Teal */
+      --color-accent: #e2e8f0; 
+
+      --color-header-bg: #1a1a19; 
+      --color-header-text: #fdfbf7;
+      --color-header-link: #4fd1c5; 
+      
+      --color-surface: transparent; 
+      --color-border: transparent; 
+
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+      
+      --spacing-base: 1.25rem; 
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --color-bg: #1a1a19; 
+        --color-text: #f2f0eb;
+        --color-text-muted: #a09e99;
+        --color-primary: #4fd1c5; 
+        --color-accent: #2d3748; 
+      }
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-serif);
+      line-height: 1.7; 
+      font-size: 1.125rem; 
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-sans);
+      line-height: 1.2;
+      margin-top: 0;
+      color: var(--color-text);
+    }
+
+    a {
+      color: var(--color-primary);
+      text-decoration-thickness: 0.1em;
+      text-underline-offset: 0.2em;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--color-primary);
+      outline-offset: 3px;
+      border-radius: 4px; 
+    }
+
+    /* ==========================================================================
+       2. LAYOUT
+       ========================================================================== */
+    .l-container {
+      max-width: 56rem; 
+      margin: 0 auto;
+      padding: 0 calc(var(--spacing-base) * 1.5);
+    }
+
+    .l-header {
+      background-color: var(--color-header-bg);
+      color: var(--color-header-text);
+      padding: calc(var(--spacing-base) * 1) 0;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .l-header__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    @media (min-width: 768px) {
+      .l-header__inner {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .l-main {
+      padding: 0; 
+      min-height: 70vh; /* Ensures footer stays at bottom on short content */
+    }
+
+    .l-footer {
+      padding: calc(var(--spacing-base) * 4) 0;
+      margin-top: 0; 
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      background-color: var(--color-header-bg);
+      color: #a09e99;
+    }
+    .l-footer strong { color: var(--color-header-text); }
+    .l-footer a { color: var(--color-header-link); }
+
+    /* ==========================================================================
+       3. MODULES
+       ========================================================================== */
+    
+    .m-skip-link {
+      position: absolute;
+      top: -auto;
+      left: -10000px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      background-color: var(--color-primary);
+      color: var(--color-bg);
+      padding: 1rem;
+      font-family: var(--font-sans);
+      font-weight: bold;
+      z-index: 100;
+      border-radius: 4px;
+    }
+    .m-skip-link:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      display: inline-block;
+      margin: 1rem;
+    }
+
+    .m-brand {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+    }
+    .m-brand__title {
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin: 0;
+      letter-spacing: -0.02em;
+    }
+    .m-brand__tagline {
+      font-size: 0.9rem;
+      color: var(--color-header-link); 
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 0;
+    }
+
+    .m-nav__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: calc(var(--spacing-base) * 1.5);
+      font-family: var(--font-sans);
+      font-weight: 600;
+    }
+    .m-nav__link {
+      color: #a09e99;
+      text-decoration: none;
+      padding: 0.25rem;
+      transition: color 0.2s ease;
+    }
+    .m-nav__link:hover, .m-nav__link.is-active {
+      color: var(--color-header-link);
+    }
+
+    /* Module: Long-Form Article */
+    /* A11Y LESSON: The 65-Character Rule
+       Restricting text width to ~65ch (characters) or ~42rem ensures the reader's 
+       eye doesn't have to track too far back and forth, significantly reducing 
+       fatigue and improving comprehension for users with cognitive or reading disabilities.
+    */
+    .m-article {
+      max-width: 42rem; 
+      margin: 0 auto;
+      padding: calc(var(--spacing-base) * 5) calc(var(--spacing-base) * 1.5);
+    }
+
+    .m-article__header {
+      margin-bottom: calc(var(--spacing-base) * 3);
+    }
+
+    .m-article__title {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      color: var(--color-primary); /* Grounds the title with our signature Teal */
+    }
+
+    .m-article__meta {
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-text-muted);
+      border-bottom: 2px solid var(--color-primary);
+      padding-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .m-article__content p {
+      margin-bottom: 1.5rem;
+    }
+
+    /* A11Y LESSON: Heading spacing
+       Always provide more margin ABOVE a heading than BELOW it. This visually 
+       groups the heading with the content it introduces, aiding cognitive parsing.
+    */
+    .m-article__content h2 {
+      font-size: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      color: var(--color-text);
+    }
+
+    .m-article__content blockquote {
+      margin: 2.5rem 0;
+      padding: 1rem 1.5rem;
+      border-left: 4px solid var(--color-primary);
+      background-color: rgba(0, 92, 99, 0.03); /* Extremely subtle teal tint */
+      font-size: 1.35rem;
+      font-style: italic;
+      color: var(--color-text-muted);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .m-article__content blockquote {
+        background-color: rgba(79, 209, 197, 0.05);
+      }
+    }
+
+    .m-article__content code {
+      font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+      background-color: var(--color-accent);
+      padding: 0.1em 0.3em;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
+
+    /* Module: Back to Home Link */
+    .m-back-link {
+      display: inline-flex;
+      align-items: center;
+      font-family: var(--font-sans);
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 2rem;
+      text-decoration: none;
+    }
+    .m-back-link:hover {
+      text-decoration: underline;
+    }
+    .m-back-link::before {
+      content: "←";
+      margin-right: 0.5rem;
+      font-size: 1.2em;
+    }
+
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="m-skip-link">Skip to main content</a>
+
+  <header class="l-header">
+    <div class="l-container l-header__inner">
+      <a href="index.html" class="m-brand" aria-label="ThirstyHead Home">
+        <h1 class="m-brand__title">ThirstyHead</h1>
+        <p class="m-brand__tagline">Scott Davis</p>
+      </a>
+      <nav class="m-nav" aria-label="Main Navigation">
+        <ul class="m-nav__list">
+          <li><a href="index.html#essays" class="m-nav__link is-active">Essays</a></li>
+          <li><a href="index.html#speaking" class="m-nav__link">Speaking</a></li>
+          <li><a href="index.html#writing" class="m-nav__link">Writing</a></li>
+          <li><a href="index.html#projects" class="m-nav__link">Projects</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="l-main" tabindex="-1">
+    
+    <!-- 
+      A11Y LESSON: The <article> Tag
+      By wrapping the essay in an <article> tag, we explicitly tell screen readers 
+      and read-it-later apps (like Pocket or Safari Reader Mode) that this is a 
+      self-contained, independent piece of content. 
+    -->
+    <article class="m-article">
+      
+      <a href="index.html" class="m-back-link">Back to Essays</a>
+
+      <header class="m-article__header">
+        <h1 class="m-article__title">Searching for Truth in the Age of Maybe</h1>
+        <div class="m-article__meta">
+          <time datetime="2026-04-15">April 15, 2026</time> • 8 Min Read
+        </div>
+      </header>
+
+      <div class="m-article__content">
+        <p>
+          For the first thirty years of the web, the fundamental architecture of our digital lives was built on absolute certainty. A hyperlink either resolved to a <code>200 OK</code> status, or it threw a <code>404 Not Found</code>. A boolean was true, or it was false. The machines did exactly what we told them to do, with brutal, uncompromising exactitude.
+        </p>
+
+        <p>
+          We are now exiting the era of exactitude. As generative AI models integrate themselves into our search engines, our IDEs, and our daily workflows, we are trading deterministic logic for probabilistic reasoning. We are building the future of the web on top of machines that are remarkably good at guessing. 
+        </p>
+
+        <h2>The Hallucination of Structure</h2>
+
+        <p>
+          The challenge for Web Architects and Digital Accessibility advocates is profound. Accessibility has always relied on <em>structure</em>. A screen reader navigates a page by interpreting the DOM tree—the strict hierarchy of headings, landmarks, and ARIA attributes that developers meticulously code. 
+        </p>
+
+        <blockquote>
+          If the underlying foundation of our data becomes fluid, probabilistic, and prone to hallucination, how do we guarantee equal access to truth?
+        </blockquote>
+
+        <p>
+          Consider the generation of Alternative Text (alt-text) for images. For years, advocates have begged developers to manually write descriptive text for users who are blind or low-vision. Now, AI can auto-generate alt-text in milliseconds. But what happens when the AI misunderstands the context of the image? What happens when it confidently asserts a falsehood?
+        </p>
+
+        <p>
+          The concept of "truth" is no longer just a philosophical debate; it is a structural imperative for the accessible web. As we lean into the "Age of Maybe", our focus must shift from merely enforcing syntax to verifying semantics. We must design systems that allow users to interrogate the confidence interval of the data they are consuming.
+        </p>
+      </div>
+
+    </article>
+
+  </main>
+
+  <footer class="l-footer">
+    <div class="l-container">
+      <p>
+        <strong>Scott Davis</strong><br>
+        Web Architect & Digital Accessibility Advocate
+      </p>
+      <p style="margin-top: 1rem;">
+        Contact: <a href="mailto:scott@thirstyhead.com">scott@thirstyhead.com</a> | 
+        Mastodon: <a href="https://mastodon.social/@scottdavis99">@scottdavis99</a>
+      </p>
+      <p style="margin-top: 2rem;">
+        &copy; 2026 ThirstyHead. All rights reserved. Built with 
+        <span class="m-skip-link" style="position: absolute;">accessibility in mind and</span> 
+        Browser-Native principles.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

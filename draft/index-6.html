@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<!-- 
+  A11Y LESSON: Always declare the language of the document. 
+  This allows screen readers to load the correct pronunciation rules. 
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scott Davis | ThirstyHead | Web Architect & Digital Accessibility</title>
+  
+  <meta name="description" content="Scott Davis is a Web Architect and Digital Accessibility Advocate focusing on the multisensory aspects of web development.">
+
+  <style>
+    /* ==========================================================================
+       SMACSS Architecture
+       Categories: Base, Layout, Module, State, Theme
+       ========================================================================== */
+
+    /* ==========================================================================
+       1. BASE & THEME
+       Setting up CSS Variables, resets, and default element styling.
+       ========================================================================== */
+    :root {
+      /* A11Y LESSON: Contrast Ratios
+        WCAG AAA requires a 7:1 contrast ratio for normal text.
+        Our Teal (#005C63) on Ivory (#fdfbf7) is 8.2:1. 
+        White text (#ffffff) inside our Teal hero block is 4.5:1 (AA for normal, AAA for large).
+      */
+      --color-bg: #fdfbf7; /* Warm Ivory */
+      --color-text: #1a1a1a;
+      --color-text-muted: #555555;
+      
+      /* The requested Teal and Ivory accents */
+      --color-primary: #005C63; /* Deep Teal */
+      --color-accent: #e2e8f0; 
+
+      /* NEW: Dark Header/Footer Colors */
+      --color-header-bg: #1a1a19; 
+      --color-header-text: #fdfbf7;
+      --color-header-link: #4fd1c5; /* High contrast teal for dark backgrounds */
+      
+      --color-surface: transparent; /* Changed to transparent for floating text */
+      --color-border: transparent; /* Removed all borders for the floating text look */
+
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+      
+      --spacing-base: 1.25rem; 
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        /* A11Y LESSON: Warm Dark Mode */
+        --color-bg: #1a1a19; 
+        --color-text: #f2f0eb;
+        --color-text-muted: #a09e99;
+        --color-primary: #4fd1c5; /* Brighter teal for dark mode */
+        --color-accent: #2d3748; 
+        --color-surface: transparent;
+        --color-border: transparent;
+      }
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-serif);
+      line-height: 1.7; 
+      font-size: 1.125rem; 
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-sans);
+      line-height: 1.2;
+      margin-top: 0;
+      color: var(--color-text);
+    }
+
+    a {
+      color: var(--color-primary);
+      text-decoration-thickness: 0.1em;
+      text-underline-offset: 0.2em;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--color-primary);
+      outline-offset: 3px;
+      border-radius: 4px; 
+    }
+
+    /* ==========================================================================
+       2. LAYOUT
+       ========================================================================== */
+    .l-container {
+      max-width: 56rem; 
+      margin: 0 auto;
+      padding: 0 calc(var(--spacing-base) * 1.5);
+    }
+
+    .l-header {
+      background-color: var(--color-header-bg);
+      color: var(--color-header-text);
+      border-bottom: none;
+      padding: calc(var(--spacing-base) * 1) 0;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    /* Right-aligned Navigation via Flexbox */
+    .l-header__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    @media (min-width: 768px) {
+      .l-header__inner {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .l-main {
+      padding: 0 0 calc(var(--spacing-base) * 5) 0; /* Removed top padding to sit flush with header */
+    }
+
+    .l-footer {
+      padding: calc(var(--spacing-base) * 4) 0;
+      margin-top: calc(var(--spacing-base) * 4);
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      background-color: var(--color-header-bg);
+      color: #a09e99;
+      border-top: none;
+    }
+    .l-footer strong {
+      color: var(--color-header-text);
+    }
+    .l-footer a {
+      color: var(--color-header-link);
+    }
+
+    .l-grid-2 {
+      display: grid;
+      gap: calc(var(--spacing-base) * 3); 
+    }
+    @media (min-width: 768px) {
+      .l-grid-2 { grid-template-columns: 1fr 1fr; }
+    }
+
+    .l-section {
+      margin-bottom: calc(var(--spacing-base) * 6); 
+    }
+
+    /* ==========================================================================
+       3. MODULES
+       ========================================================================== */
+    
+    .m-skip-link {
+      position: absolute;
+      top: -auto;
+      left: -10000px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      background-color: var(--color-primary);
+      color: #ffffff;
+      padding: 1rem;
+      font-family: var(--font-sans);
+      font-weight: bold;
+      z-index: 100;
+      border-radius: 4px;
+    }
+    .m-skip-link:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      display: inline-block;
+      margin: 1rem;
+    }
+
+    .m-brand {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+    }
+    .m-brand__title {
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin: 0;
+      letter-spacing: -0.02em;
+    }
+    .m-brand__tagline {
+      font-size: 0.9rem;
+      color: var(--color-header-link); /* High contrast teal on dark header */
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 0;
+    }
+
+    .m-nav__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: calc(var(--spacing-base) * 1.5);
+      font-family: var(--font-sans);
+      font-weight: 600;
+    }
+    .m-nav__link {
+      color: #a09e99;
+      text-decoration: none;
+      padding: 0.25rem;
+      transition: color 0.2s ease;
+    }
+    .m-nav__link:hover {
+      color: var(--color-header-link);
+    }
+
+    /* A11Y LESSON: Structural vs. Decorative HTML & Full-Bleed CSS Grids
+       By using a 4-column CSS Grid, we can create backgrounds that stretch 
+       all the way to the edge of the viewport (1fr) while keeping the text 
+       perfectly aligned with our central 56rem reading container.
+    */
+    .m-hero {
+      display: grid;
+      grid-template-columns: 1fr; /* Mobile fallback */
+      margin-top: 0; /* Touches the dark header cleanly */
+    }
+    @media (min-width: 768px) {
+      .m-hero {
+        /* [Left gutter] [Left half of 56rem] [Right half of 56rem] [Right gutter] */
+        grid-template-columns: minmax(1.5rem, 1fr) minmax(0, 28rem) minmax(0, 28rem) minmax(1.5rem, 1fr);
+      }
+    }
+
+    /* The Teal Rectangle */
+    .m-hero__primary {
+      background-color: var(--color-primary);
+      min-height: 12rem; 
+    }
+    @media (min-width: 768px) {
+      .m-hero__primary {
+        grid-column: 1 / 3; /* Stretches from the far left edge to the middle */
+      }
+    }
+
+    /* The Ivory Rectangle */
+    .m-hero__secondary {
+      background-color: transparent;
+      padding: calc(var(--spacing-base) * 3) calc(var(--spacing-base) * 1.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    @media (min-width: 768px) {
+      .m-hero__secondary {
+        grid-column: 3 / 4; /* Stays locked in the right half of the container */
+      }
+    }
+
+    .m-hero__heading {
+      font-size: clamp(2.5rem, 5vw, 3.5rem); 
+      margin-bottom: 0;
+      letter-spacing: -0.02em;
+      color: var(--color-text); /* Ensure heading is dark inside ivory block */
+    }
+    
+    .m-hero__subtext {
+      font-size: 1.25rem;
+      color: var(--color-text-muted);
+      max-width: 45ch; 
+      margin: 0;
+    }
+
+    /* Module: Right Split (For Speaking Section) */
+    .m-split-right {
+      display: grid;
+      grid-template-columns: 1fr; /* Mobile fallback */
+      background-color: transparent;
+    }
+    @media (min-width: 768px) {
+      .m-split-right {
+        /* [Left gutter] [2/3 of 56rem (37.33rem)] [1/3 of 56rem (18.67rem)] [Right gutter] */
+        grid-template-columns: minmax(1.5rem, 1fr) minmax(0, 37.33rem) minmax(0, 18.67rem) minmax(1.5rem, 1fr);
+      }
+    }
+
+    .m-split-right__content {
+      padding: calc(var(--spacing-base) * 2) calc(var(--spacing-base) * 1.5);
+    }
+    @media (min-width: 768px) {
+      .m-split-right__content {
+        grid-column: 2 / 3; /* Locked to the left 2/3 of the container */
+        padding: 0 calc(var(--spacing-base) * 4) 0 calc(var(--spacing-base) * 1.5); /* Aligns with container padding */
+      }
+    }
+
+    .m-split-right__teal {
+      background-color: var(--color-primary);
+      min-height: 12rem;
+    }
+    @media (min-width: 768px) {
+      .m-split-right__teal {
+        grid-column: 3 / 5; /* Starts at the 2/3 mark and stretches to the far right edge! */
+      }
+    }
+
+    /* Module: Content Card (Borderless Floating Text) */
+    /* A11Y LESSON: Visual Hierarchy through Spacing
+       By removing borders and drop shadows, we force the design to rely 
+       entirely on typography, font weights, and negative space to establish hierarchy.
+    */
+    .m-card {
+      position: relative;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      box-shadow: none;
+      transition: transform 0.2s ease;
+      z-index: 1;
+    }
+    .m-card:hover {
+      transform: translateX(8px); /* Subtle horizontal slide to indicate interaction */
+    }
+
+    .m-card__meta {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-primary);
+      margin-bottom: 1rem;
+    }
+    .m-card__title {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+    .m-card__link {
+      text-decoration: none;
+      color: inherit;
+    }
+    .m-card__link:hover {
+      color: var(--color-primary);
+    }
+
+    /* Module: List Item */
+    .m-list-item {
+      padding: calc(var(--spacing-base) * 1.5) 0;
+      border-bottom: none; /* Removed border for floating text aesthetic */
+    }
+    .m-list-item:last-child {
+      border-bottom: none;
+    }
+    .m-list-item__title {
+      font-size: 1.5rem;
+      margin: 0 0 0.5rem 0;
+    }
+    .m-list-item__meta {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      display: inline-block;
+      background-color: transparent; /* Removed background to let text float */
+      padding: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Module: Section Header */
+    .m-section-header {
+      margin-bottom: calc(var(--spacing-base) * 2);
+      border-bottom: none; /* Removed border to let text float */
+      padding-bottom: 0;
+      display: inline-block;
+      color: var(--color-primary); /* Use teal for section headers to ground them */
+    }
+
+    /* ==========================================================================
+       4. STATE
+       ========================================================================== */
+    .m-nav__link.is-active {
+      color: var(--color-header-link);
+      border-bottom: 3px solid var(--color-header-link);
+    }
+
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="m-skip-link">Skip to main content</a>
+
+  <header class="l-header">
+    <div class="l-container l-header__inner">
+      
+      <!-- Logo / Brand -->
+      <a href="/" class="m-brand" aria-label="ThirstyHead Home">
+        <h1 class="m-brand__title">ThirstyHead</h1>
+        <p class="m-brand__tagline">Scott Davis</p>
+      </a>
+
+      <!-- Right-Aligned Nav -->
+      <nav class="m-nav" aria-label="Main Navigation">
+        <ul class="m-nav__list">
+          <li><a href="#essays" class="m-nav__link is-active" aria-current="page">Essays</a></li>
+          <li><a href="#speaking" class="m-nav__link">Speaking</a></li>
+          <li><a href="#writing" class="m-nav__link">Writing</a></li>
+          <li><a href="#projects" class="m-nav__link">Projects</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Removed .l-container from main so our backgrounds can bleed to the edges -->
+  <main id="main-content" class="l-main" tabindex="-1">
+
+    <!-- HERO SECTION -->
+    <section class="l-section" aria-labelledby="hero-heading">
+      
+      <div class="m-hero">
+        <!-- Teal Rectangle (Empty for negative space, hidden from screen readers) -->
+        <div class="m-hero__primary" aria-hidden="true"></div>
+        
+        <!-- Ivory Rectangle (Inherits background, creates floating text effect) -->
+        <div class="m-hero__secondary">
+          <p class="m-skip-link" style="position: absolute;">
+            Psst! Hello there, screen reader user. Thanks for exploring the accessibility of this site. You are experiencing the web in high-definition audio. High five!
+          </p>
+          <h2 id="hero-heading" class="m-hero__heading">
+            Web Architect & Digital Accessibility Advocate.
+          </h2>
+          <p class="m-hero__subtext" style="margin-top: 1rem;">
+            Focusing on the multisensory aspects of web development. In a world where half of all Google searches are done by voice, and 80% of all social media videos are watched with the sound off, accessibility is a springboard for innovation.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ESSAYS SECTION -->
+    <!-- Added .l-container back here so the standard text remains constrained -->
+    <section id="essays" class="l-section l-container" aria-labelledby="essays-heading">
+      <header>
+        <h2 id="essays-heading" class="m-section-header">Essays & Thoughts</h2>
+      </header>
+
+      <div class="l-grid-2">
+        <!-- Floating Card with Offset Solid Rectangle Shadow -->
+        <article class="m-card">
+          <div class="m-card__meta">April 2026 • 8 Min Read</div>
+          <h3 class="m-card__title">
+            <a href="#" class="m-card__link">Searching for Truth in the Age of Maybe</a>
+          </h3>
+          <p>As AI permeates our development stacks and daily lives, the binary concepts of 'true' and 'false' are being replaced by probability and hallucination. How do we architect for a web that is increasingly guessing?</p>
+        </article>
+
+        <article class="m-card">
+          <div class="m-card__meta">April 2026 • 6 Min Read</div>
+          <h3 class="m-card__title">
+            <a href="#" class="m-card__link">How to Build a Completely Inaccessible Website</a>
+          </h3>
+          <p>A tongue-in-cheek masterclass on all the specific ways developers inadvertently break the web for users with disabilities, and how to unlearn those bad habits.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SPEAKING SECTION (Now uses the Full-Bleed Split-Right grid) -->
+    <section id="speaking" class="l-section m-split-right" aria-labelledby="speaking-heading">
+      
+      <!-- Ivory content locked to the left 2/3 -->
+      <div class="m-split-right__content">
+        <header>
+          <h2 id="speaking-heading" class="m-section-header">Speaking & Conferences</h2>
+        </header>
+        
+        <article class="m-list-item">
+          <div class="m-list-item__meta">GIDS 2026 • FrontEnd Technical Session</div>
+          <h3 class="m-list-item__title">
+            <a href="#">How to Build a Completely Inaccessible Website</a>
+          </h3>
+          <p style="margin-top: 0.5rem;">A tongue-in-cheek masterclass on all the specific ways developers inadvertently break the web for users with disabilities, and how to unlearn those bad habits.</p>
+        </article>
+
+        <article class="m-list-item">
+          <div class="m-list-item__meta">GIDS 2025 • Technical Session</div>
+          <h3 class="m-list-item__title">
+            <a href="#">Bridging the Digital Divide: Empowering Accessibility Through AI Innovations</a>
+          </h3>
+        </article>
+
+        <article class="m-list-item">
+          <div class="m-list-item__meta">GIDS 2024 • Technical Session</div>
+          <h3 class="m-list-item__title">
+            <a href="#">Continuous Accessibility: Adding Lighthouse to Your CI/CD Pipeline</a>
+          </h3>
+        </article>
+
+        <article class="m-list-item">
+          <div class="m-list-item__meta">GIDS 2019 • YouTube Panel</div>
+          <h3 class="m-list-item__title">
+            <a href="https://www.youtube.com/watch?reload=9&v=pE2O-zAXa7w">
+              Fireside Chat: Future of the Web (w/ John Bruce)
+            </a>
+          </h3>
+          <p style="margin-top: 0.5rem;">Watch these two brilliant minds in a free-wheeling conversation at GIDS 2019 as they discuss and debate the future of the Web.</p>
+        </article>
+      </div>
+
+      <!-- Teal Rectangle (Stretches to the right, hidden from screen readers) -->
+      <div class="m-split-right__teal" aria-hidden="true"></div>
+
+    </section>
+
+    <!-- WRITING / ARTICLES SECTION -->
+    <section id="writing" class="l-section l-container" aria-labelledby="writing-heading">
+      <header>
+        <h2 id="writing-heading" class="m-section-header">Books & Articles</h2>
+      </header>
+      
+      <article class="m-list-item">
+        <div class="m-list-item__meta">Published on ThirstyHead</div>
+        <h3 class="m-list-item__title">
+          <a href="https://thirstyhead.com/the-revolution-will-be-spoken">The Revolution will be Spoken</a>
+        </h3>
+        <p style="margin-top: 0.5rem;">Gartner estimates that roughly 25% of our computer interactions these days happen with our voice. 4 out of its "5 Digital Technology Trends" hinge their success on voice interaction.</p>
+      </article>
+
+      <article class="m-list-item">
+        <div class="m-list-item__meta">Published on ThirstyHead</div>
+        <h3 class="m-list-item__title">
+          <a href="https://thirstyhead.com/its-spelled-accessibility">It's Spelled 'Accessibility', not 'Disability'</a>
+        </h3>
+        <p style="margin-top: 0.5rem;">If your mobile phone is in silent/vibrate mode right now, would you say that you're using an accessibility feature, or just a feature of your phone?</p>
+      </article>
+
+      <article class="m-list-item">
+        <div class="m-list-item__meta">Published on ThirstyHead</div>
+        <h3 class="m-list-item__title">
+          <a href="https://thirstyhead.com/deconstructing-the-web-browser">Deconstructing the Modern Web Browser</a>
+        </h3>
+        <p style="margin-top: 0.5rem;">A guided tour of the inner mechanisms of a web browser, from the HTML Rendering Engine (Blink, Gecko, WebKit) to the Scripting Engine (V8, SpiderMonkey).</p>
+      </article>
+    </section>
+
+    <!-- PROJECTS / COMPANION WEBSITES -->
+    <section id="projects" class="l-section l-container" aria-labelledby="projects-heading">
+      <header>
+        <h2 id="projects-heading" class="m-section-header">Companion Websites</h2>
+      </header>
+      <div class="l-grid-2" style="margin-top: 1rem;">
+        
+        <div class="m-card">
+          <h3 class="m-list-item__title" style="margin-bottom: 0.5rem;"><a href="#">Browser-Native Demos</a></h3>
+          <p style="font-size: 1rem;">A collection of vanilla HTML/JS/CSS demonstrations highlighting the power of the framework-free web.</p>
+        </div>
+
+        <div class="m-card">
+          <h3 class="m-list-item__title" style="margin-bottom: 0.5rem;"><a href="#">A11y Testing Playground</a></h3>
+          <p style="font-size: 1rem;">Live examples from "How to Build a Completely Inaccessible Website" to test with screen readers.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="l-footer">
+    <div class="l-container">
+      <p>
+        <strong>Scott Davis</strong><br>
+        Web Architect & Digital Accessibility Advocate
+      </p>
+      <p style="margin-top: 1rem;">
+        Contact: <a href="mailto:scott@thirstyhead.com">scott@thirstyhead.com</a> | 
+        Mastodon: <a href="https://mastodon.social/@scottdavis99">@scottdavis99</a>
+      </p>
+      <p style="margin-top: 2rem;">
+        &copy; 2026 ThirstyHead. All rights reserved. Built with 
+        <span class="m-skip-link" style="position: absolute;">accessibility in mind and</span> 
+        Browser-Native principles.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
