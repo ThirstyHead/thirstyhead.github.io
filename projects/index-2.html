@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | ThirstyHead</title>
+    <style>
+        /* * ThirstyHead Base Styles & SMACSS Architecture 
+         * Theme: Minimalist, Editorial, Accessible
+         */
+        :root {
+            --color-ivory: #Fdfbf7;
+            --color-teal: #0f4c5c;
+            --color-dark: #1a1a1a;
+            --color-accent: #e36414;
+            --font-serif: "Merriweather", "Georgia", serif;
+            --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --spacing-base: 1.5rem;
+            --spacing-lg: 4rem;
+        }
+
+        /* Base & Reset */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: var(--font-sans);
+            color: var(--color-dark);
+            background-color: var(--color-ivory);
+            line-height: 1.7;
+            font-size: 1.125rem;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 4px;
+            transition: color 0.2s ease;
+        }
+        
+        a:hover, a:focus {
+            color: var(--color-accent);
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-base);
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -0.02em; }
+        h2 { font-size: clamp(2rem, 3vw, 2.5rem); }
+        h3 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        
+        p { margin-bottom: var(--spacing-base); }
+        
+        .text-lead {
+            font-size: clamp(1.25rem, 2vw, 1.5rem);
+            font-family: var(--font-serif);
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
+        /* Layout & Modules */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-base);
+        }
+
+        /* Navigation */
+        .site-header {
+            padding: var(--spacing-base) 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .site-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--spacing-base);
+        }
+
+        .brand {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 900;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .brand svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--color-accent);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .nav-links a { text-decoration: none; }
+        .nav-links a:hover { text-decoration: underline; }
+
+        /* Full Bleed Sections */
+        .full-bleed {
+            padding: var(--spacing-lg) 0;
+        }
+
+        .bg-teal {
+            background-color: var(--color-teal);
+            color: var(--color-ivory);
+        }
+
+        .bg-ivory {
+            background-color: var(--color-ivory);
+            color: var(--color-dark);
+        }
+
+        /* Layout Grids */
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-lg);
+        }
+
+        @media (min-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 1fr 2fr;
+                align-items: start;
+            }
+        }
+
+        .hero-meta {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-top: 2px solid var(--color-accent);
+            padding-top: 1rem;
+            position: sticky;
+            top: 2rem;
+        }
+
+        .hero-meta span {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .hero-meta strong {
+            color: var(--color-ivory);
+        }
+
+        /* Projects List */
+        .projects-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-base);
+        }
+
+        .project-item {
+            padding-bottom: var(--spacing-lg);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .project-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .project-url {
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-teal);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .btn-external {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--color-teal);
+            color: var(--color-ivory) !important;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            margin-top: 1rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-external:hover {
+            background-color: var(--color-dark);
+        }
+
+        .btn-external svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        /* Footer */
+        .site-footer {
+            padding: var(--spacing-lg) 0;
+            text-align: center;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="site-header bg-ivory">
+        <div class="container site-nav">
+            <a href="/" class="brand" aria-label="ThirstyHead Home">
+                <!-- Spark of Knowledge Icon -->
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 0C12 6.627 17.373 12 24 12C17.373 12 12 17.373 12 24C12 17.373 6.627 12 0 12C6.627 12 12 6.627 12 0Z"/>
+                </svg>
+                ThirstyHead
+            </a>
+            <nav aria-label="Main Navigation">
+                <ul class="nav-links">
+                    <li><a href="essays/">Essays</a></li>
+                    <li><a href="writing.html">Writing</a></li>
+                    <li><a href="speaking/">Speaking</a></li>
+                    <li><a href="projects.html" aria-current="page">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section (Teal) -->
+        <section class="full-bleed bg-teal">
+            <div class="container hero-grid">
+                <div class="hero-meta">
+                    <span>Index</span>
+                    <strong>External Web Properties</strong>
+                    <br>
+                    <span>Curator</span>
+                    <strong>Scott Davis</strong>
+                </div>
+                
+                <div class="hero-intro">
+                    <h1>Projects</h1>
+                    <p class="text-lead">
+                        A curated collection of educational platforms, architectural demonstrations, and informational resources designed and maintained by Scott Davis outside of ThirstyHead.
+                    </p>
+                    <p style="color: rgba(255,255,255,0.8);">
+                        These properties serve as living laboratories for modern web development, exploring how semantic standards, evidence-based architecture, and visual simplicity can be leveraged to build a web that is radically accessible for everyone.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects List Section (Ivory) -->
+        <section class="full-bleed bg-ivory">
+            <div class="container">
+                <ul class="projects-list">
+                    
+                    <!-- SimpleAccess.io -->
+                    <li class="project-item">
+                        <span class="project-url">simpleaccess.io</span>
+                        <h3>SimpleAccess</h3>
+                        <p>
+                            SimpleAccess is an educational hub dedicated to demystifying digital accessibility. Grounded in the philosophy that accessibility is fundamentally about "Sight, Sound, and Touch," the platform breaks down complex Web Content Accessibility Guidelines (WCAG) into manageable, evidence-based architectural patterns.
+                        </p>
+                        <p>
+                            Rather than treating accessibility as an afterthought or a tedious compliance checklist, SimpleAccess provides software engineers, designers, and project managers with the practical tools needed to build digital environments that are inherently inclusive from the ground up—proving that accessible software is simply better software.
+                        </p>
+                        
+                        <a href="https://simpleaccess.io/" class="btn-external" target="_blank" rel="noopener noreferrer">
+                            Visit SimpleAccess.io
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7zm-2 16H5V5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7z"/>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <!-- A11yView.com -->
+                    <li class="project-item">
+                        <span class="project-url">a11yview.com</span>
+                        <h3>A11yView</h3>
+                        <p>
+                            A11yView exists to serve a dual purpose: it is both a transparent record of accessibility testing and a roadmap for other developers to follow. It proves that building a 100% WCAG-compliant website—one where human intent meets AI execution—is entirely possible when backed by engineering rigor.
+                        </p>
+                        <p>
+                            Rather than just displaying passing scores, A11yView shows the work. By publicly sharing the methodology, HTML reports, and raw audit data generated by tools like Google Lighthouse, it reinforces the philosophy that accessibility isn't a feature you finish, but a foundation you maintain. It stands as a living demonstration that Digital Accessibility is truly Sight, Sound, and Touch.
+                        </p>
+
+                        <a href="https://a11yview.com/" class="btn-external" target="_blank" rel="noopener noreferrer">
+                            Visit A11yView.com
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7zm-2 16H5V5h7V3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7z"/>
+                            </svg>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer bg-ivory">
+        <div class="container">
+            <p>Digital Accessibility is Sight, Sound, and Touch.</p>
+            <p>&copy; 2026 Scott Davis / ThirstyHead</p>
+        </div>
+    </footer>
+
+</body>
+</html>
