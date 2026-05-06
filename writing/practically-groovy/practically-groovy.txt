@@ -64,5 +64,3 @@ http://public.dhe.ibm.com/software/dw/java/j-groovy09299-pdf.pdf
 Nov 11, 2009|SwingBuilder and the Twitter API, Part 2|Demonstrated how to write a functional, declarative Groovy GUI client capable of communicating securely with the Twitter API using HTTP Basic Authentication and Base64 encoding.|
 http://public.dhe.ibm.com/software/dw/java/j-pg11179-pdf.pdf 
 
-Dec 15, 2009|The @Delegate annotation|Explored Groovy's Abstract Syntax Tree (AST) transformations. The article specifically covered how the @Delegate annotation can be used to implement the delegation design pattern at compile-time, entirely eliminating boilerplate routing code.|
-http://public.dhe.ibm.com/software/dw/java/j-pg12159-pdf.pdf
