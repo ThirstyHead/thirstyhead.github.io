@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <!-- 
-  A11Y LESSON: Always declare the language of the document. 
+  A11Y LESSON: Always declare the language of the document. The lang attribute is the polite way to tell a screen reader which pronunciation engine to use. Without it, your English text might be read with a very confused, generic accent. Je ne sais pas!
 -->
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <!-- A11Y LESSON: Always set the viewport to ensure mobile users can actually read the text without a magnifying glass. Zooming is a fundamental accessibility right, don't you dare disable it with maximum-scale=1.0! -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mastering Grails | Scott Davis | ThirstyHead</title>
 
-    <meta name="description" content="Archive of the series Mastering MEAN">
+    <meta name="description" content="Archive of the series Mastering Grails">
 
     <style>
         /* ==========================================================================
@@ -61,6 +62,7 @@
             color: var(--color-text);
             font-family: var(--font-serif);
             line-height: 1.7;
+            /* A11Y LESSON: A slightly larger base font size is a win for everyone's tired eyes. */
             font-size: 1.125rem;
         }
 
@@ -80,6 +82,7 @@
             text-underline-offset: 0.2em;
         }
 
+        /* A11Y LESSON: Never, ever set `outline: none;` without providing a custom focus state. Keyboard navigators need to know where they are, otherwise they're driving blindfolded. */
         :focus-visible {
             outline: 3px solid var(--color-primary);
             outline-offset: 3px;
@@ -152,6 +155,7 @@
        3. MODULES
        ========================================================================== */
 
+        /* A11Y LESSON: The 'Skip to main content' link. The ultimate fast-pass for keyboard users who don't want to tab through your navigation menu for the 500th time today. Treat them like VIPs. */
         .m-skip-link {
             position: absolute;
             top: -auto;
@@ -321,7 +325,7 @@
         /* Downloads */
         .pdf-download-card {
             background: rgba(15, 76, 92, 0.05);
-            border-left: 4px solid var(--color-teal);
+            border-left: 4px solid var(--color-primary);
             padding: 1.5rem;
             margin-top: 1rem;
             border-radius: 0 8px 8px 0;
@@ -331,8 +335,8 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background-color: var(--color-teal);
-            color: var(--color-ivory) !important;
+            background-color: var(--color-primary);
+            color: var(--color-bg) !important;
             padding: 0.75rem 1.5rem;
             text-decoration: none;
             font-weight: 600;
@@ -341,7 +345,7 @@
         }
 
         .btn-download:hover {
-            background-color: var(--color-dark);
+            opacity: 0.9;
         }
 
         .btn-download svg {
@@ -362,22 +366,18 @@
                 <!-- Dynamic "Spark of Knowledge" Icon -->
                 <svg class="m-brand__icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
                     fill="currentColor" aria-hidden="true">
-                    <!-- Main squished/bouncing spark -->
                     <path
                         d="M10.5 1.5C10.5 7 14.5 9.5 20 10C14.5 10.5 10.5 13 10.5 18.5C10.5 13 5.5 10.5 0.5 10C5.5 9.5 10.5 7 10.5 1.5Z" />
-                    <!-- Secondary spark top right -->
                     <path
                         d="M19.5 2C19.5 4 21.5 5 23.5 5C21.5 5 19.5 6 19.5 8C19.5 6 17.5 5 15.5 5C17.5 5 19.5 4 19.5 2Z" />
-                    <!-- Small tertiary spark bottom right -->
                     <path
                         d="M16.5 17C16.5 18.5 18 19 19.5 19.5C18 20 16.5 20.5 16.5 22C16.5 20.5 14.5 20 13 19.5C14.5 19 16.5 18.5 16.5 17Z" />
                 </svg>
                 <h1 class="m-brand__title">ThirstyHead</h1>
             </a>
+            <!-- A11Y LESSON: The <nav> tag automatically communicates its role to screen readers. No need to add role="navigation"—redundancy is just noisy. -->
             <nav class="m-nav" aria-label="Main Navigation">
                 <ul class="m-nav__list">
-                    <!-- <li><a href="/essays/" class="m-nav__link">Essays</a></li> -->
-                    <!-- <li><a href="/speaking/" class="m-nav__link">Speaking</a></li> -->
                     <li><a href="/writing/" class="m-nav__link is-active" aria-current="page">Writing</a></li>
                     <li><a href="/projects/" class="m-nav__link">Projects</a></li>
                 </ul>
@@ -385,20 +385,23 @@
         </div>
     </header>
 
+    <!-- A11Y LESSON: The <main> landmark! Because screen reader users shouldn't have to play 'Where's Waldo?' to find your primary content. -->
     <main id="main-content" class="l-main" tabindex="-1">
 
         <!-- WRITING HERO SECTION -->
         <section class="l-section m-hero" aria-labelledby="writing-heading">
             <div class="m-hero__primary" aria-hidden="true"></div>
             <div class="m-hero__secondary">
+                <!-- A11Y LESSON: Heading levels must be strictly sequential. Skipping from H1 to H3 is like building a staircase with missing steps—someone is going to trip! -->
                 <h1 id="writing-heading" class="m-hero__heading">Mastering Grails</h1>
+
                 <p class="m-hero__subtext">
                     The landscape of Java-based web development underwent a profound transformation in the mid-to-late
                     2000s, moving away from heavy-weight, XML-intensive configurations toward more agile, dynamic, and
-                    productive frameworks.
+                    productive frameworks. At the heart of this evolution was the "Mastering Grails" series published on
+                    IBM developerWorks.
                 </p>
                 <p class="m-hero__subtext">
-                    At the heart of this evolution was the "Mastering Grails" series published on IBM developerWorks.
                     Authored by Scott Davis, this series served as a definitive guide for enterprise developers seeking
                     to leverage the power of the Java Virtual Machine (JVM) while adopting the rapid development
                     paradigms pioneered by frameworks like Ruby on Rails.
@@ -411,49 +414,29 @@
             </div>
         </section>
 
-        <!-- Syllabus Section (Ivory) -->
         <!-- BIBLIOGRAPHY LISTS -->
         <section class="l-section l-container">
 
-            <h2 class="m-group-header">Series</h2>
+            <h2 class="m-group-header">Series Archive</h2>
 
             <article class="m-list-item">
-                <div class="m-list-item__meta">Part 1</div>
+                <!-- A11Y LESSON: Wrap dates in a <time> element with a machine-readable datetime. Computers are notoriously bad at parsing human dates. Help a silicon sibling out. -->
+                <div class="m-list-item__meta"><time datetime="2008-01-15">Jan 15, 2008</time></div>
                 <h3 class="m-list-item__title">
                     Build your first Grails application
                 </h3>
-                <p style="margin-top: 0.5rem;">An introduction to the Grails framework. Discover how to leverage
-                    convention over configuration to rapidly build a basic trip-planner web application on the Java
-                    Virtual Machine without writing verbose XML.
+                <p style="margin-top: 0.5rem;">
+                    An introduction to the Grails framework. Discover how to leverage convention over configuration to
+                    rapidly build a basic trip-planner web application on the Java Virtual Machine without writing
+                    verbose XML.
                 </p>
                 <div class="pdf-download-card">
-                    <p><strong>Archival Document Available</strong><br>A preserved copy of this initial installment is
-                        available for review.</p>
-                    <a href="Mastering-Grails-Build-your-first-Grails-application.pdf" class="btn-download"
-                        target="_blank" rel="noopener noreferrer">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
-                        </svg>
-                        Download PDF Archive
-                    </a>
-                </div>
-
-            </article>
-
-            <article class="m-list-item">
-                <div class="m-list-item__meta">Part 2</div>
-                <h3 class="m-list-item__title">
-                    GORM: Funny name, serious technology
-                </h3>
-                <p style="margin-top: 0.5rem;">A deep dive into Grails Object Relational Mapping (GORM). Learn how to
-                    interact with relational databases seamlessly using Groovy closures and dynamic finders instead of
-                    writing complex SQL or mapping files.
-                </p>
-                <div class="pdf-download-card">
-                    <p><strong>Archival Document Available</strong><br>A preserved copy of this installment is
-                        available for review.</p>
-                    <a href="Mastering-Grails-GORM-Funny-name-serious-technology.pdf" class="btn-download"
-                        target="_blank" rel="noopener noreferrer">
+                    <p><strong>Archival Document Available</strong><br>A preserved copy of this installment is available
+                        for review.</p>
+                    <!-- A11Y LESSON: 'Download PDF Archive' is a terrible link text on its own. If a screen reader lists all links, the user just hears 'Download PDF' 14 times. We use aria-label to invisibly bolt on some much-needed context! -->
+                    <a href="https://public.dhe.ibm.com/software/dw/java/j-grails01158-pdf.pdf" class="btn-download"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Download PDF Archive for Build your first Grails application">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
                         </svg>
@@ -463,19 +446,19 @@
             </article>
 
             <article class="m-list-item">
-                <div class="m-list-item__meta">Part 3</div>
-                <h3 class="m-list-item__title">
-                    Changing the view with Groovy Server Pages
-                </h3>
-                <p style="margin-top: 0.5rem;">Putting the Web into the Grails framework. See how easy it is to use
-                    Grails TagLibs, mix together partial fragments of Groovy Server Pages (GSP), and customize default
-                    templates for automatically generated views.
+                <div class="m-list-item__meta"><time datetime="2008-02-12">Feb 12, 2008</time></div>
+                <h3 class="m-list-item__title">GORM: Funny name, serious technology</h3>
+                <p style="margin-top: 0.5rem;">
+                    A deep dive into Grails Object Relational Mapping (GORM). Learn how to interact with relational
+                    databases seamlessly using Groovy closures and dynamic finders instead of writing complex SQL or
+                    mapping files.
                 </p>
                 <div class="pdf-download-card">
-                    <p><strong>Archival Document Available</strong><br>A preserved copy of this installment is
-                        available for review.</p>
-                    <a href="Mastering-Grails-Changing-the-view-with-Groovy-Server-Pages.pdf" class="btn-download"
-                        target="_blank" rel="noopener noreferrer">
+                    <p><strong>Archival Document Available</strong><br>A preserved copy of this installment is available
+                        for review.</p>
+                    <a href="https://public.dhe.ibm.com/software/dw/java/j-grails02128-pdf.pdf" class="btn-download"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Download PDF Archive for GORM: Funny name, serious technology">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
                         </svg>
@@ -485,19 +468,19 @@
             </article>
 
             <article class="m-list-item">
-                <div class="m-list-item__meta">Part 4</div>
-                <h3 class="m-list-item__title">
-                    Grails and the mobile Web
-                </h3>
-                <p style="margin-top: 0.5rem;">Adapting the trip planner application to support the burgeoning mobile
-                    web ecosystem, ensuring layouts and data delivery perform optimally across varied devices and screen
-                    sizes.
+                <div class="m-list-item__meta"><time datetime="2008-03-11">Mar 11, 2008</time></div>
+                <h3 class="m-list-item__title">Changing the view with Groovy Server Pages</h3>
+                <p style="margin-top: 0.5rem;">
+                    Putting the Web into the Grails framework. See how easy it is to use Grails TagLibs, mix together
+                    partial fragments of Groovy Server Pages (GSP), and customize default templates for automatically
+                    generated views.
                 </p>
                 <div class="pdf-download-card">
-                    <p><strong>Archival Document Available</strong><br>A preserved copy of this installment is
-                        available for review.</p>
-                    <a href="Mastering-Grails-Grails-and-the-mobile-Web.pdf" class="btn-download" target="_blank"
-                        rel="noopener noreferrer">
+                    <p><strong>Archival Document Available</strong><br>A preserved copy of this installment is available
+                        for review.</p>
+                    <a href="https://public.dhe.ibm.com/software/dw/java/j-grails03118-pdf.pdf" class="btn-download"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Download PDF Archive for Changing the view with Groovy Server Pages">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
                         </svg>
@@ -507,85 +490,19 @@
             </article>
 
             <article class="m-list-item">
-                <div class="m-list-item__meta">Part 5</div>
-                <h3 class="m-list-item__title">
-                    Validation and Error Handling
-                </h3>
-                <p style="margin-top: 0.5rem;">An exploration of establishing robust data integrity. Learn how to
-                    implement declarative constraints in your domain classes and seamlessly render validation errors
-                    back to the user interface.
-                </p>
-            </article>
-
-            <article class="m-list-item">
-                <div class="m-list-item__meta">Part 6</div>
-                <h3 class="m-list-item__title">
-                    Advanced Relationships and GORM
-                </h3>
-                <p style="margin-top: 0.5rem;">Moving beyond basic CRUD operations. This installment explored how to
-                    model complex real-world data structures using one-to-many, many-to-many, and embedded entity
-                    relationships within GORM.
-                </p>
-            </article>
-
-            <article class="m-list-item">
-                <div class="m-list-item__meta">Part 7</div>
-                <h3 class="m-list-item__title">
-                    Controllers and Request Handling
-                </h3>
-                <p style="margin-top: 0.5rem;">A comprehensive examination of the Controller layer. Discover how Grails
-                    manages HTTP requests, handles data binding, utilizes interceptors, and redirects application flow
-                    elegantly.
-                </p>
-            </article>
-
-            <article class="m-list-item">
-                <div class="m-list-item__meta">Part 8</div>
-                <h3 class="m-list-item__title">
-                    Grails Services and Business Logic (with Google Maps)
-                </h3>
-                <p style="margin-top: 0.5rem;">Keeping controllers thin by extracting core business logic into
-                    transactional Grails Services. This installment demonstrates mixing external technologies into the
-                    application by integrating geocoding and the Google Maps API.
-                </p>
-            </article>
-
-            <article class="m-list-item">
-                <div class="m-list-item__meta">Part 9</div>
-                <h3 class="m-list-item__title">
-                    Understanding and Building Grails Plug-ins
-                </h3>
-                <p style="margin-top: 0.5rem;">Extending the Grails framework by leveraging its powerful plug-in
-                    architecture. Learn how to encapsulate reusable features and integrate community-driven plug-ins to
-                    accelerate development.
-                </p>
-            </article>
-
-            <article class="m-list-item">
-                <div class="m-list-item__meta">Part 10</div>
-                <h3 class="m-list-item__title">
-                    Testing Grails Applications
-                </h3>
-                <p style="margin-top: 0.5rem;">Establishing robust application reliability through automated testing. An
-                    exploration of writing unit and integration tests for your domain classes, controllers, and services
-                    using the built-in testing framework.
-                </p>
-            </article>
-
-            <article class="m-list-item">
-                <div class="m-list-item__meta">Part 11</div>
-                <h3 class="m-list-item__title">
-                    Grails in the enterprise
-                </h3>
-                <p style="margin-top: 0.5rem;">Putting to rest any qualms about Grails' readiness for the enterprise.
-                    Discover how to natively integrate Grails with enterprise-caliber libraries including Java
-                    Management Extensions (JMX), Spring, and log4j.
+                <div class="m-list-item__meta"><time datetime="2008-04-15">Apr 15, 2008</time></div>
+                <h3 class="m-list-item__title">Many-to-many relationships with a dollop of Ajax</h3>
+                <p style="margin-top: 0.5rem;">
+                    Moving beyond basic CRUD operations. This installment explores how to model complex real-world data
+                    structures using many-to-many relationships within GORM, and enhances the interface using
+                    asynchronous JavaScript (Ajax).
                 </p>
                 <div class="pdf-download-card">
-                    <p><strong>Archival Document Available</strong><br>A preserved copy of this installment is
-                        available for review.</p>
-                    <a href="Mastering-Grails-Grails-in-the-enterprise.pdf" class="btn-download" target="_blank"
-                        rel="noopener noreferrer">
+                    <p><strong>Archival Document Available</strong><br>A preserved copy of this installment is available
+                        for review.</p>
+                    <a href="https://public.dhe.ibm.com/software/dw/java/j-grails04158-pdf.pdf" class="btn-download"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Download PDF Archive for Many-to-many relationships with a dollop of Ajax">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
                         </svg>
@@ -593,6 +510,178 @@
                     </a>
                 </div>
             </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta"><time datetime="2008-05-20">May 20, 2008</time></div>
+                <h3 class="m-list-item__title">Grails services and Google Maps</h3>
+                <p style="margin-top: 0.5rem;">
+                    Keeping controllers thin by extracting core business logic into transactional Grails Services. This
+                    installment demonstrates mixing external technologies into the application by integrating geocoding
+                    and the Google Maps API.
+                </p>
+                <div class="pdf-download-card">
+                    <p><strong>Archival Document Available</strong><br>A preserved copy of this installment is available
+                        for review.</p>
+                    <a href="https://public.dhe.ibm.com/software/dw/java/j-grails05208-pdf.pdf" class="btn-download"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Download PDF Archive for Grails services and Google Maps">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                        </svg>
+                        Download PDF Archive
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta"><time datetime="2008-06-17">Jun 17, 2008</time></div>
+                <h3 class="m-list-item__title">Grails and the mobile Web</h3>
+                <p style="margin-top: 0.5rem;">
+                    Adapting the trip planner application to support the burgeoning mobile web ecosystem, ensuring
+                    layouts and data delivery perform optimally across varied devices and screen sizes.
+                </p>
+                <div class="pdf-download-card">
+                    <p><strong>Archival Document Available</strong><br>A preserved copy of this installment is available
+                        for review.</p>
+                    <a href="https://public.dhe.ibm.com/software/dw/java/j-grails06178-pdf.pdf" class="btn-download"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Download PDF Archive for Grails and the mobile Web">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                        </svg>
+                        Download PDF Archive
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta"><time datetime="2008-07-15">Jul 15, 2008</time></div>
+                <h3 class="m-list-item__title">Grails and legacy databases</h3>
+                <p style="margin-top: 0.5rem;">
+                    Explores strategies and best practices for securely connecting a modern Grails application to
+                    pre-existing legacy relational databases without compromising data integrity.
+                </p>
+                <div class="pdf-download-card">
+                    <p><strong>Archival Document Available</strong><br>A preserved copy of this installment is available
+                        for review.</p>
+                    <a href="https://public.dhe.ibm.com/software/dw/java/j-grails07158-pdf.pdf" class="btn-download"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Download PDF Archive for Grails and legacy databases">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                        </svg>
+                        Download PDF Archive
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta"><time datetime="2008-08-12">Aug 12, 2008</time></div>
+                <h3 class="m-list-item__title">The Grails event model</h3>
+                <p style="margin-top: 0.5rem;">
+                    Investigates the asynchronous event-driven capabilities within the Grails framework, demonstrating
+                    how to decouple application components for better scalability, performance, and maintainability.
+                </p>
+                <div class="pdf-download-card">
+                    <p><strong>Archival Document Available</strong><br>A preserved copy of this installment is available
+                        for review.</p>
+                    <a href="https://public.dhe.ibm.com/software/dw/java/j-grails08128-pdf.pdf" class="btn-download"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Download PDF Archive for The Grails event model">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                        </svg>
+                        Download PDF Archive
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta"><time datetime="2008-09-16">Sep 16, 2008</time></div>
+                <h3 class="m-list-item__title">RESTful Grails</h3>
+                <p style="margin-top: 0.5rem;">
+                    A comprehensive examination of building Representational State Transfer (REST) APIs with Grails,
+                    allowing for seamless data exchange with external clients and modern web architectures.
+                </p>
+                <div class="pdf-download-card">
+                    <p><strong>Archival Document Available</strong><br>A preserved copy of this installment is available
+                        for review.</p>
+                    <a href="https://public.dhe.ibm.com/software/dw/java/j-grails09168-pdf.pdf" class="btn-download"
+                        target="_blank" rel="noopener noreferrer" aria-label="Download PDF Archive for RESTful Grails">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                        </svg>
+                        Download PDF Archive
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta"><time datetime="2008-10-14">Oct 14, 2008</time></div>
+                <h3 class="m-list-item__title">Testing your Grails application</h3>
+                <p style="margin-top: 0.5rem;">
+                    Establishing robust application reliability through automated testing. An exploration of writing
+                    unit and integration tests for your domain classes, controllers, and services using the built-in
+                    testing framework.
+                </p>
+                <div class="pdf-download-card">
+                    <p><strong>Archival Document Available</strong><br>A preserved copy of this installment is available
+                        for review.</p>
+                    <a href="https://public.dhe.ibm.com/software/dw/java/j-grails10148-pdf.pdf" class="btn-download"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Download PDF Archive for Testing your Grails application">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                        </svg>
+                        Download PDF Archive
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta"><time datetime="2008-11-18">Nov 18, 2008</time></div>
+                <h3 class="m-list-item__title">Asynchronous Grails with JSON and Ajax</h3>
+                <p style="margin-top: 0.5rem;">
+                    Enhancing application responsiveness by utilizing JavaScript Object Notation (JSON) to
+                    asynchronously stream data between the server and the browser, shifting rendering logic to the
+                    client.
+                </p>
+                <div class="pdf-download-card">
+                    <p><strong>Archival Document Available</strong><br>A preserved copy of this installment is available
+                        for review.</p>
+                    <a href="https://public.dhe.ibm.com/software/dw/java/j-grails11188-pdf.pdf" class="btn-download"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Download PDF Archive for Asynchronous Grails with JSON and Ajax">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                        </svg>
+                        Download PDF Archive
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta"><time datetime="2008-12-16">Dec 16, 2008</time></div>
+                <h3 class="m-list-item__title">Grails in the Enterprise</h3>
+                <p style="margin-top: 0.5rem;">
+                    Putting to rest any qualms about Grails' readiness for the enterprise. Discover how to natively
+                    integrate Grails with enterprise-caliber libraries including Java Management Extensions (JMX),
+                    Spring, and log4j.
+                </p>
+                <div class="pdf-download-card">
+                    <p><strong>Archival Document Available</strong><br>A preserved copy of this installment is available
+                        for review.</p>
+                    <a href="https://public.dhe.ibm.com/software/dw/java/j-grails12168-pdf.pdf" class="btn-download"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Download PDF Archive for Grails in the Enterprise">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                        </svg>
+                        Download PDF Archive
+                    </a>
+                </div>
+            </article>
+
         </section>
     </main>
 

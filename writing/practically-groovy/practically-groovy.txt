@@ -40,10 +40,29 @@ http://public.dhe.ibm.com/software/dw/java/j-pg09205-pdf.pdf
 Oct 25, 2005|Smooth operators|Examines the concept of operator overloading in Groovy, showing how developers can overload standard mathematical and logical operators to make custom objects behave more intuitively.|
 http://public.dhe.ibm.com/software/dw/java/j-pg10255-pdf.pdf 
 
+Feb 17, 2009|Groovy: A DSL for Java programmers||
+http://public.dhe.ibm.com/software/dw/java/j-pg02179-pdf.pdf 
+
+Apr 14, 2009|Reaching for each||
+http://public.dhe.ibm.com/software/dw/java/j-pg04149-pdf.pdf 
+
+May 19, 2009|Building, parsing, and slurping XML||
+http://public.dhe.ibm.com/software/dw/java/j-pg05199-pdf.pdf 
+
+Jun 23, 2009|Metaprogramming with closures, ExpandoMetaClass, and categories||
+https://public.dhe.ibm.com/software/dw/java/j-pg06239-pdf.pdf
+
+Jul 21, 2009|Unit testing with GroovyTestCase and GMock||
+http://public.dhe.ibm.com/software/dw/java/j-pg07219-pdf.pdf 
+
+Aug 25, 2009|The @Delegate annotation|Explored Groovy's Abstract Syntax Tree (AST) transformations. The article specifically covered how the @Delegate annotation can be used to implement the delegation design pattern at compile-time, entirely eliminating boilerplate routing code.|
+http://public.dhe.ibm.com/software/dw/java/j-pg08259-pdf.pdf 
+
 Sep 29, 2009|SwingBuilder and the Twitter API, Part 1|Based on the existence of the subsequent part, this initial article likely introduced the foundational setup required to build a desktop Graphical User Interface (GUI) using Groovy's SwingBuilder class.|
 http://public.dhe.ibm.com/software/dw/java/j-groovy09299-pdf.pdf 
 
-Nov 2009|SwingBuilder and the Twitter API, Part 2|Demonstrated how to write a functional, declarative Groovy GUI client capable of communicating securely with the Twitter API using HTTP Basic Authentication and Base64 encoding.|
+Nov 11, 2009|SwingBuilder and the Twitter API, Part 2|Demonstrated how to write a functional, declarative Groovy GUI client capable of communicating securely with the Twitter API using HTTP Basic Authentication and Base64 encoding.|
 http://public.dhe.ibm.com/software/dw/java/j-pg11179-pdf.pdf 
 
-Dec 2009|The @Delegate annotation|Explored Groovy's Abstract Syntax Tree (AST) transformations. The article specifically covered how the @Delegate annotation can be used to implement the delegation design pattern at compile-time, entirely eliminating boilerplate routing code.
+Dec 15, 2009|The @Delegate annotation|Explored Groovy's Abstract Syntax Tree (AST) transformations. The article specifically covered how the @Delegate annotation can be used to implement the delegation design pattern at compile-time, entirely eliminating boilerplate routing code.|
+http://public.dhe.ibm.com/software/dw/java/j-pg12159-pdf.pdf

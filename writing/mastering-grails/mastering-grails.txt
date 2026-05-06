@@ -1,0 +1,38 @@
+
+
+Publication Date|Article Title|Brief Description|Archived PDF 
+Jan 15, 2008|Build your first Grails application|An introduction to the Grails framework. Discover how to leverage convention over configuration to rapidly build a basic trip-planner web application on the Java Virtual Machine without writing verbose XML.|
+https://public.dhe.ibm.com/software/dw/java/j-grails01158-pdf.pdf
+
+Feb 12, 2008|GORM: Funny name, serious technology|A deep dive into Grails Object Relational Mapping (GORM). Learn how to interact with relational databases seamlessly using Groovy closures and dynamic finders instead of writing complex SQL or mapping files.|
+https://public.dhe.ibm.com/software/dw/java/j-grails02128-pdf.pdf
+
+Mar 11, 2008|Changing the view with Groovy Server Pages|Putting the Web into the Grails framework. See how easy it is to use Grails TagLibs, mix together partial fragments of Groovy Server Pages (GSP), and customize default templates for automatically generated views.|
+https://public.dhe.ibm.com/software/dw/java/j-grails03118-pdf.pdf
+
+Apr 15, 2008|Many-to-many relationships with a dollop of Ajax||
+https://public.dhe.ibm.com/software/dw/java/j-grails04158-pdf.pdf
+
+May 20, 2008|Grails services and Google Maps||
+https://public.dhe.ibm.com/software/dw/java/j-grails05208-pdf.pdf
+
+Jun 17, 2008|Grails and the mobile Web|Adapting the trip planner application to support the burgeoning mobile web ecosystem, ensuring layouts and data delivery perform optimally across varied devices and screen sizes.|
+https://public.dhe.ibm.com/software/dw/java/j-grails06178-pdf.pdf
+
+Jul 15, 2008|Grails and legacy databases||
+https://public.dhe.ibm.com/software/dw/java/j-grails07158-pdf.pdf
+
+Aug 12, 2008|The Grails event model||
+https://public.dhe.ibm.com/software/dw/java/j-grails08128-pdf.pdf
+
+Sep 16, 2008|RESTful Grails||
+https://public.dhe.ibm.com/software/dw/java/j-grails09168-pdf.pdf
+
+Oct 14, 2008|Testing your Grails application||
+https://public.dhe.ibm.com/software/dw/java/j-grails10148-pdf.pdf
+
+Nov 18, 2008|Asynchronous Grails with JSON and Ajax||
+https://public.dhe.ibm.com/software/dw/java/j-grails11188-pdf.pdf
+
+Dec 16, 2008|Grails in the Enterprise||
+https://public.dhe.ibm.com/software/dw/java/j-grails12168-pdf.pdf
