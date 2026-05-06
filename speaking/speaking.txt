@@ -1,5 +1,13 @@
 Speaking
 
+This is a list of software conference talks given by Scott Davis. Each entry is a list with typically 4 entries:
+- Title
+- Conference or Appearance
+- YouTube URL
+- Abstract
+
+
+
 # 2025
 - Bridging the Digital Divide: Empowering Accessibility Through AI Innovations
 - GIDS
