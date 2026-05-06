@@ -1,0 +1,73 @@
+Part
+Article Title
+IBM ID
+Date
+Archive PDF Download URL
+
+1
+What is Groovy?
+j-pg02174
+Feb 17, 2004
+(https://public.dhe.ibm.com/software/dw/java/j-pg02174-pdf.pdf)
+2
+Groovy basics
+j-pg03164
+Mar 16, 2004
+(https://public.dhe.ibm.com/software/dw/java/j-pg03164-pdf.pdf)
+3
+Collective Groovy datatypes
+j-pg04134
+Apr 13, 2004
+(https://public.dhe.ibm.com/software/dw/java/j-pg04134-pdf.pdf)
+4
+Regular expressions
+j-pg05114
+May 11, 2004
+(https://public.dhe.ibm.com/software/dw/java/j-pg05114-pdf.pdf)
+5
+Working with closures
+j-pg06154
+Jun 15, 2004
+(https://public.dhe.ibm.com/software/dw/java/j-pg06154-pdf.pdf)
+6
+Unit testing
+j-pg07134
+Jul 13, 2004
+(https://public.dhe.ibm.com/software/dw/java/j-pg07134-pdf.pdf)
+7
+Metaprogramming
+j-pg08104
+Aug 10, 2004
+(https://public.dhe.ibm.com/software/dw/java/j-pg08104-pdf.pdf)
+8
+XML processing
+j-pg11124
+Nov 12, 2004
+(https://public.dhe.ibm.com/software/dw/java/j-pg11124-pdf.pdf)
+9
+JDBC and SQL
+j-pg02085
+Feb 08, 2005
+(https://public.dhe.ibm.com/software/dw/java/j-pg02085-pdf.pdf)
+10
+SwingBuilder
+j-pg04125
+Apr 12, 2005
+(https://public.dhe.ibm.com/software/dw/java/j-pg04125-pdf.pdf)
+11
+Template engines
+j-pg06145
+Jun 14, 2005
+(https://public.dhe.ibm.com/software/dw/java/j-pg06145-pdf.pdf)
+12
+Ant and Gant
+j-pg10115
+Oct 11, 2005
+(https://public.dhe.ibm.com/software/dw/java/j-pg10115-pdf.pdf)
+
+http://www.ibm.com/developerworks/java/library/j-groovy09299/index.html
+http://public.dhe.ibm.com/software/dw/java/j-groovy09299-pdf.pdf 
+
+
+http://www.ibm.com/developerworks/java/library/j-pg11179/index.html
+http://public.dhe.ibm.com/software/dw/java/j-pg11179-pdf.pdf 

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<!-- A11Y LESSON: The lang attribute is the polite way to tell a screen reader which pronunciation engine to use. Without it, your English text might be read with a very confused, generic accent. Je ne sais pas! -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- A11Y LESSON: Always set the viewport to ensure mobile users can actually read the text without a magnifying glass. Zooming is a fundamental accessibility right, don't you dare disable it with maximum-scale=1.0! -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practically Groovy | Scott Davis | ThirstyHead</title>
+
+    <style>
+        /* * THIRSTYHEAD SMACSS ARCHITECTURE
+         * Note: Bundled here for review. Extract to respective CSS files in production.
+         */
+
+        /* ==========================================================================
+           BASE
+           ========================================================================== */
+        :root {
+            --color-text-main: #222222;
+            --color-text-muted: #555555;
+            --color-bg-main: #ffffff;
+            --color-bg-offset: #f4f4f4;
+            --color-link: #0056b3;
+            --color-link-hover: #003d82;
+            --color-focus: #ffbf47;
+            --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --spacing-base: 1.5rem;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            color: var(--color-text-main);
+            background-color: var(--color-bg-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            /* A11Y LESSON: A slightly larger base font size is a win for everyone's tired eyes. */
+            font-size: 1.125rem;
+        }
+
+        /* A11Y LESSON: Never, ever set `outline: none;` without providing a custom focus state. Keyboard navigators need to know where they are, otherwise they're driving blindfolded. */
+        :focus-visible {
+            outline: 3px solid var(--color-focus);
+            outline-offset: 2px;
+            text-decoration: none;
+        }
+
+        a {
+            color: var(--color-link);
+            text-decoration: underline;
+            text-decoration-thickness: 0.1em;
+            text-underline-offset: 0.15em;
+        }
+
+        a:hover {
+            color: var(--color-link-hover);
+            text-decoration-thickness: 0.2em;
+        }
+
+        h1,
+        h2,
+        h3 {
+            line-height: 1.2;
+            margin-top: 2em;
+            margin-bottom: 0.5em;
+            color: var(--color-text-main);
+        }
+
+        /* ==========================================================================
+           LAYOUT
+           ========================================================================== */
+        .l-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-base);
+        }
+
+        .l-header {
+            padding: var(--spacing-base) 0;
+            border-bottom: 2px solid var(--color-bg-offset);
+            margin-bottom: calc(var(--spacing-base) * 2);
+        }
+
+        .l-footer {
+            margin-top: calc(var(--spacing-base) * 4);
+            padding: calc(var(--spacing-base) * 2) 0;
+            border-top: 2px solid var(--color-bg-offset);
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+        }
+
+        /* ==========================================================================
+           MODULES
+           ========================================================================== */
+
+        /* Skip Link */
+        .m-skip-link {
+            position: absolute;
+            top: -auto;
+            left: -10000px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        .m-skip-link:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            padding: 0.5rem 1rem;
+            background: var(--color-bg-main);
+            border: 2px solid var(--color-text-main);
+            z-index: 999;
+        }
+
+        /* Navigation */
+        .m-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .m-nav-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: var(--color-text-main);
+        }
+
+        .m-nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        /* Article Card */
+        .m-article {
+            background-color: var(--color-bg-offset);
+            padding: var(--spacing-base);
+            margin-bottom: var(--spacing-base);
+            border-radius: 4px;
+            border-left: 4px solid var(--color-link);
+        }
+
+        .m-article-title {
+            margin-top: 0;
+            font-size: 1.25rem;
+        }
+
+        .m-article-meta {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .m-article-availability {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- A11Y LESSON: The 'Skip to main content' link. The ultimate fast-pass for keyboard users who don't want to tab through your navigation menu for the 500th time today. Treat them like VIPs. -->
+    <a href="#main-content" class="m-skip-link">Skip to main content</a>
+
+    <header class="l-header" role="banner">
+        <div class="l-container m-nav">
+            <a href="https://thirstyhead.com/" class="m-nav-logo">ThirstyHead</a>
+
+            <!-- A11Y LESSON: The <nav> tag automatically communicates its role to screen readers. No need to add role="navigation"—redundancy is just noisy. -->
+            <nav aria-label="Primary">
+                <ul class="m-nav-list">
+                    <li><a href="/writing/">Writing</a></li>
+                    <li><a href="/projects/">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- A11Y LESSON: The <main> landmark! Because screen reader users shouldn't have to play 'Where's Waldo?' to find your primary content. -->
+    <main id="main-content" class="l-container l-main" tabindex="-1">
+
+        <!-- A11Y LESSON: Heading levels must be strictly sequential. Skipping from H1 to H3 is like building a staircase with missing steps—someone is going to trip! -->
+        <h1>Practically Groovy</h1>
+
+        <p>The "Practically Groovy" series was a highly influential collection of technical articles originally
+            published on the IBM developerWorks platform. The series was designed to advocate for the Groovy programming
+            language, a dynamic language for the Java Virtual Machine (JVM), and to teach developers how to use it to
+            simplify traditional Java tasks. Because IBM has since retired the developerWorks platform, the original
+            live articles and their archival PDFs are no longer officially available.</p>
+
+        <p>In the mid-2000s, the Java development community was searching for ways to reduce boilerplate code and speed
+            up the development lifecycle. Groovy emerged as a powerful solution: an agile, dynamic language for the Java
+            Virtual Machine (JVM) that seamlessly integrated with all existing Java objects and libraries. Groovy built
+            upon the strengths of Java but added robust features inspired by languages like Python, Ruby, and Smalltalk.
+            It offered a virtually flat learning curve for busy Java professionals while introducing modern programming
+            concepts like closures, duck-typing, and native collections.</p>
+
+        <p>Recognizing this shift, IBM developerWorks launched the "Practically Groovy" article series. The objective
+            was to provide practical, hands-on tutorials showing developers how to smoothly integrate Groovy into their
+            existing Java applications, highlighting its ability to simplify testing, database access, and GUI creation.
+        </p>
+
+        <h2>Series Architecture Archive</h2>
+
+        <section aria-labelledby="series-list">
+            <h3 id="series-list" class="m-skip-link">Chronological Article List</h3>
+
+            <article class="m-article">
+                <h3 class="m-article-title">Unit test your Java code faster with Groovy</h3>
+                <!-- A11Y LESSON: Wrap dates in a <time> element with a machine-readable datetime. Computers are notoriously bad at parsing human dates. Help a silicon sibling out. -->
+                <p class="m-article-meta">Published: <time datetime="2004-11-09">Nov 09, 2004</time></p>
+                <p>Introduces the concept of using Groovy's dynamic typing and scripting flexibility to write robust
+                    unit tests for existing, statically-typed Java codeframes.</p>
+                <div class="m-article-availability">
+                    <strong>Archival Document Available</strong><br>
+                    A preserved copy of this installment is available for review.<br>
+                    <!-- A11Y LESSON: 'Download PDF Archive' is a terrible link text on its own. If a screen reader lists all links, the user just hears 'Download PDF' 14 times. We use aria-label to invisibly bolt on some much-needed context! -->
+                    <a href="http://public.dhe.ibm.com/software/dw/java/j-pg11094-pdf.pdf"
+                        aria-label="Download PDF Archive for Unit test your Java code faster with Groovy">Download PDF
+                        Archive</a>
+                </div>
+            </article>
+
+            <article class="m-article">
+                <h3 class="m-article-title">Ant scripting with Groovy</h3>
+                <p class="m-article-meta">Published: <time datetime="2004-12-14">Dec 14, 2004</time></p>
+                <p>Explores Groovy's native integration with Apache Ant through AntBuilder, demonstrating how developers
+                    can write complex build logic programmatically instead of relying on verbose XML.</p>
+                <div class="m-article-availability">
+                    <strong>Archival Document Available</strong><br>
+                    A preserved copy of this installment is available for review.<br>
+                    <a href="http://public.dhe.ibm.com/software/dw/java/j-pg12144-pdf.pdf"
+                        aria-label="Download PDF Archive for Ant scripting with Groovy">Download PDF Archive</a>
+                </div>
+            </article>
+
+            <article class="m-article">
+                <h3 class="m-article-title">JDBC programming with Groovy</h3>
+                <p class="m-article-meta">Published: <time datetime="2005-01-11">Jan 11, 2005</time></p>
+                <p>Demonstrates Groovy's simplified approach to database connectivity. By utilizing closures and string
+                    interpolation, Groovy drastically reduces the boilerplate code typically required by traditional
+                    Java Database Connectivity (JDBC).</p>
+                <div class="m-article-availability">
+                    <strong>Archival Document Available</strong><br>
+                    A preserved copy of this installment is available for review.<br>
+                    <a href="http://public.dhe.ibm.com/software/dw/java/j-pg01115-pdf.pdf"
+                        aria-label="Download PDF Archive for JDBC programming with Groovy">Download PDF Archive</a>
+                </div>
+            </article>
+
+            <article class="m-article">
+                <h3 class="m-article-title">MVC programming with Groovy templates</h3>
+                <p class="m-article-meta">Published: <time datetime="2005-02-15">Feb 15, 2005</time></p>
+                <p>Discusses how to leverage Groovy's built-in templating engines to generate dynamic web views,
+                    effectively implementing the presentation tier of the Model-View-Controller (MVC) design pattern.
+                </p>
+                <div class="m-article-availability">
+                    <strong>Archival Document Available</strong><br>
+                    A preserved copy of this installment is available for review.<br>
+                    <a href="http://public.dhe.ibm.com/software/dw/java/j-pg02155-pdf.pdf"
+                        aria-label="Download PDF Archive for MVC programming with Groovy templates">Download PDF
+                        Archive</a>
+                </div>
+            </article>
+
+            <article class="m-article">
+                <h3 class="m-article-title">Go server side up, with Groovy</h3>
+                <p class="m-article-meta">Published: <time datetime="2005-03-15">Mar 15, 2005</time></p>
+                <p>Looks at embedding Groovy scripts into server-side web environments, allowing developers to enjoy
+                    rapid, iterative development without the constant need for JVM recompilation.</p>
+                <div class="m-article-availability">
+                    <strong>Archival Document Available</strong><br>
+                    A preserved copy of this installment is available for review.<br>
+                    <a href="http://public.dhe.ibm.com/software/dw/java/j-pg03155-pdf.pdf"
+                        aria-label="Download PDF Archive for Go server side up, with Groovy">Download PDF Archive</a>
+                </div>
+            </article>
+
+            <article class="m-article">
+                <h3 class="m-article-title">Mark it up with Groovy Builders</h3>
+                <p class="m-article-meta">Published: <time datetime="2005-04-12">Apr 12, 2005</time></p>
+                <p>A deep dive into Groovy's MarkupBuilder, which provides a streamlined, programmable, and highly
+                    readable syntax for generating hierarchical data structures like XML and HTML.</p>
+                <div class="m-article-availability">
+                    <strong>Archival Document Available</strong><br>
+                    A preserved copy of this installment is available for review.<br>
+                    <a href="http://public.dhe.ibm.com/software/dw/java/j-pg04125-pdf.pdf"
+                        aria-label="Download PDF Archive for Mark it up with Groovy Builders">Download PDF Archive</a>
+                </div>
+            </article>
+
+            <article class="m-article">
+                <h3 class="m-article-title">Stir some Groovy into your Java apps</h3>
+                <p class="m-article-meta">Published: <time datetime="2005-05-24">May 24, 2005</time></p>
+                <p>Provides architectural strategies and best practices for seamlessly embedding the Groovy runtime
+                    engine directly into legacy Java applications.</p>
+                <div class="m-article-availability">
+                    <strong>Archival Document Available</strong><br>
+                    A preserved copy of this installment is available for review.<br>
+                    <a href="http://public.dhe.ibm.com/software/dw/java/j-pg05245-pdf.pdf"
+                        aria-label="Download PDF Archive for Stir some Groovy into your Java apps">Download PDF
+                        Archive</a>
+                </div>
+            </article>
+
+            <article class="m-article">
+                <h3 class="m-article-title">Groovy's growth spurt</h3>
+                <p class="m-article-meta">Published: <time datetime="2005-07-19">Jul 19, 2005</time></p>
+                <p>Acts as a mid-year update on the evolution of the Groovy language, chronicling changes to its syntax
+                    and expanded capabilities as the language matured toward its official 1.0 release.</p>
+                <div class="m-article-availability">
+                    <strong>Archival Document Available</strong><br>
+                    A preserved copy of this installment is available for review.<br>
+                    <a href="http://public.dhe.ibm.com/software/dw/java/j-pg07195-pdf.pdf"
+                        aria-label="Download PDF Archive for Groovy's growth spurt">Download PDF Archive</a>
+                </div>
+            </article>
+
+            <article class="m-article">
+                <h3 class="m-article-title">Functional programming with curried closures</h3>
+                <p class="m-article-meta">Published: <time datetime="2005-08-23">Aug 23, 2005</time></p>
+                <p>Explores functional programming paradigms within Groovy, specifically detailing how to utilize
+                    curried closures for partial function application—a concept somewhat foreign to standard Java at the
+                    time.</p>
+                <div class="m-article-availability">
+                    <strong>Archival Document Available</strong><br>
+                    A preserved copy of this installment is available for review.<br>
+                    <a href="http://public.dhe.ibm.com/software/dw/java/j-pg08235-pdf.pdf"
+                        aria-label="Download PDF Archive for Functional programming with curried closures">Download PDF
+                        Archive</a>
+                </div>
+            </article>
+
+            <article class="m-article">
+                <h3 class="m-article-title">Of MOPs and mini-languages</h3>
+                <p class="m-article-meta">Published: <time datetime="2005-09-20">Sep 20, 2005</time></p>
+                <p>Discusses Groovy's Meta-Object Protocol (MOP), which enables runtime metaprogramming and dynamic
+                    method dispatch, allowing developers to write their own highly expressive Domain Specific Languages
+                    (DSLs).</p>
+                <div class="m-article-availability">
+                    <strong>Archival Document Available</strong><br>
+                    A preserved copy of this installment is available for review.<br>
+                    <a href="http://public.dhe.ibm.com/software/dw/java/j-pg09205-pdf.pdf"
+                        aria-label="Download PDF Archive for Of MOPs and mini-languages">Download PDF Archive</a>
+                </div>
+            </article>
+
+            <article class="m-article">
+                <h3 class="m-article-title">Smooth operators</h3>
+                <p class="m-article-meta">Published: <time datetime="2005-10-25">Oct 25, 2005</time></p>
+                <p>Examines the concept of operator overloading in Groovy, showing how developers can overload standard
+                    mathematical and logical operators to make custom objects behave more intuitively.</p>
+                <div class="m-article-availability">
+                    <strong>Archival Document Available</strong><br>
+                    A preserved copy of this installment is available for review.<br>
+                    <a href="http://public.dhe.ibm.com/software/dw/java/j-pg10255-pdf.pdf"
+                        aria-label="Download PDF Archive for Smooth operators">Download PDF Archive</a>
+                </div>
+            </article>
+
+            <article class="m-article">
+                <h3 class="m-article-title">SwingBuilder and the Twitter API, Part 1</h3>
+                <p class="m-article-meta">Published: <time datetime="2009-09-29">Sep 29, 2009</time></p>
+                <p>Based on the existence of the subsequent part, this initial article likely introduced the
+                    foundational setup required to build a desktop Graphical User Interface (GUI) using Groovy's
+                    SwingBuilder class.</p>
+                <div class="m-article-availability">
+                    <strong>Archival Document Available</strong><br>
+                    A preserved copy of this installment is available for review.<br>
+                    <a href="http://public.dhe.ibm.com/software/dw/java/j-groovy09299-pdf.pdf"
+                        aria-label="Download PDF Archive for SwingBuilder and the Twitter API, Part 1">Download PDF
+                        Archive</a>
+                </div>
+            </article>
+
+            <article class="m-article">
+                <h3 class="m-article-title">SwingBuilder and the Twitter API, Part 2</h3>
+                <p class="m-article-meta">Published: <time datetime="2009-11-01">Nov 2009</time></p>
+                <p>Demonstrated how to write a functional, declarative Groovy GUI client capable of communicating
+                    securely with the Twitter API using HTTP Basic Authentication and Base64 encoding.</p>
+                <div class="m-article-availability">
+                    <strong>Archival Document Available</strong><br>
+                    A preserved copy of this installment is available for review.<br>
+                    <a href="http://public.dhe.ibm.com/software/dw/java/j-pg11179-pdf.pdf"
+                        aria-label="Download PDF Archive for SwingBuilder and the Twitter API, Part 2">Download PDF
+                        Archive</a>
+                </div>
+            </article>
+
+            <article class="m-article">
+                <h3 class="m-article-title">The @Delegate annotation</h3>
+                <p class="m-article-meta">Published: <time datetime="2009-12-01">Dec 2009</time></p>
+                <p>Explored Groovy's Abstract Syntax Tree (AST) transformations. The article specifically covered how
+                    the @Delegate annotation can be used to implement the delegation design pattern at compile-time,
+                    entirely eliminating boilerplate routing code.</p>
+                <!-- A11Y LESSON: Only render the document link UI if there is an actual destination. Don't tease users with broken or empty href attributes! -->
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="l-footer" role="contentinfo">
+        <div class="l-container">
+            <p><strong>Scott Davis</strong><br>
+                Web Architect &amp; Digital Accessibility Advocate<br>
+                Contact: <a href="mailto:scott@thirstyhead.com">scott@thirstyhead.com</a> | Mastodon: <a
+                    href="https://mastodon.social/@scottdavis99">@scottdavis99</a></p>
+            <p>&copy; 2026 ThirstyHead. All rights reserved.<br>
+                Built with accessibility in mind and Browser-Native principles.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

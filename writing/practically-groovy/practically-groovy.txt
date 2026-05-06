@@ -1,66 +1,49 @@
-Part
-Article Title
-IBM ID
-Date
-Archive PDF Download URL
+The "Practically Groovy" series was a highly influential collection of technical articles originally published on the IBM developerWorks platform. The series was designed to advocate for the Groovy programming language, a dynamic language for the Java Virtual Machine (JVM), and to teach developers how to use it to simplify traditional Java tasks. Because IBM has since retired the developerWorks platform, the original live articles and their archival PDFs are no longer officially available.
 
-1
-What is Groovy?
-j-pg02174
-Feb 17, 2004
-(https://public.dhe.ibm.com/software/dw/java/j-pg02174-pdf.pdf)
-2
-Groovy basics
-j-pg03164
-Mar 16, 2004
-(https://public.dhe.ibm.com/software/dw/java/j-pg03164-pdf.pdf)
-3
-Collective Groovy datatypes
-j-pg04134
-Apr 13, 2004
-(https://public.dhe.ibm.com/software/dw/java/j-pg04134-pdf.pdf)
-4
-Regular expressions
-j-pg05114
-May 11, 2004
-(https://public.dhe.ibm.com/software/dw/java/j-pg05114-pdf.pdf)
-5
-Working with closures
-j-pg06154
-Jun 15, 2004
-(https://public.dhe.ibm.com/software/dw/java/j-pg06154-pdf.pdf)
-6
-Unit testing
-j-pg07134
-Jul 13, 2004
-(https://public.dhe.ibm.com/software/dw/java/j-pg07134-pdf.pdf)
-7
-Metaprogramming
-j-pg08104
-Aug 10, 2004
-(https://public.dhe.ibm.com/software/dw/java/j-pg08104-pdf.pdf)
-8
-XML processing
-j-pg11124
-Nov 12, 2004
-(https://public.dhe.ibm.com/software/dw/java/j-pg11124-pdf.pdf)
-9
-JDBC and SQL
-j-pg02085
-Feb 08, 2005
-(https://public.dhe.ibm.com/software/dw/java/j-pg02085-pdf.pdf)
-10
-SwingBuilder
-j-pg04125
-Apr 12, 2005
-(https://public.dhe.ibm.com/software/dw/java/j-pg04125-pdf.pdf)
-11
-Template engines
-j-pg06145
-Jun 14, 2005
-(https://public.dhe.ibm.com/software/dw/java/j-pg06145-pdf.pdf)
-12
-Ant and Gant
-j-pg10115
-Oct 11, 2005
-(https://public.dhe.ibm.com/software/dw/java/j-pg10115-pdf.pdf)
+In the mid-2000s, the Java development community was searching for ways to reduce boilerplate code and speed up the development lifecycle. Groovy emerged as a powerful solution: an agile, dynamic language for the Java Virtual Machine (JVM) that seamlessly integrated with all existing Java objects and libraries. Groovy built upon the strengths of Java but added robust features inspired by languages like Python, Ruby, and Smalltalk. It offered a virtually flat learning curve for busy Java professionals while introducing modern programming concepts like closures, duck-typing, and native collections.
+
+Recognizing this shift, IBM developerWorks launched the "Practically Groovy" article series. The objective was to provide practical, hands-on tutorials showing developers how to smoothly integrate Groovy into their existing Java applications, highlighting its ability to simplify testing, database access, and GUI creation.
+
+
+
+Publication Date|Article Title|Brief Description|Archived PDF 
+Nov 09, 2004|Unit test your Java code faster with Groovy|Introduces the concept of using Groovy's dynamic typing and scripting flexibility to write robust unit tests for existing, statically-typed Java codeframes.|
+http://public.dhe.ibm.com/software/dw/java/j-pg11094-pdf.pdf
+
+Dec 14, 2004|Ant scripting with Groovy|Explores Groovy's native integration with Apache Ant through AntBuilder, demonstrating how developers can write complex build logic programmatically instead of relying on verbose XML.|
+http://public.dhe.ibm.com/software/dw/java/j-pg12144-pdf.pdf
+
+Jan 11, 2005|JDBC programming with Groovy|Demonstrates Groovy's simplified approach to database connectivity. By utilizing closures and string interpolation, Groovy drastically reduces the boilerplate code typically required by traditional Java Database Connectivity (JDBC).|
+http://public.dhe.ibm.com/software/dw/java/j-pg01115-pdf.pdf
+
+Feb 15, 2005|MVC programming with Groovy templates|Discusses how to leverage Groovy's built-in templating engines to generate dynamic web views, effectively implementing the presentation tier of the Model-View-Controller (MVC) design pattern.|
+http://public.dhe.ibm.com/software/dw/java/j-pg02155-pdf.pdf
+
+Mar 15, 2005|Go server side up, with Groovy|Looks at embedding Groovy scripts into server-side web environments, allowing developers to enjoy rapid, iterative development without the constant need for JVM recompilation.|
+http://public.dhe.ibm.com/software/dw/java/j-pg03155-pdf.pdf
+
+Apr 12, 2005|Mark it up with Groovy Builders|A deep dive into Groovy's MarkupBuilder, which provides a streamlined, programmable, and highly readable syntax for generating hierarchical data structures like XML and HTML.|
+http://public.dhe.ibm.com/software/dw/java/j-pg04125-pdf.pdf
+
+May 24, 2005|Stir some Groovy into your Java apps|Provides architectural strategies and best practices for seamlessly embedding the Groovy runtime engine directly into legacy Java applications.|
+http://public.dhe.ibm.com/software/dw/java/j-pg05245-pdf.pdf
+
+Jul 19, 2005|Groovy's growth spurt|Acts as a mid-year update on the evolution of the Groovy language, chronicling changes to its syntax and expanded capabilities as the language matured toward its official 1.0 release.|
+http://public.dhe.ibm.com/software/dw/java/j-pg07195-pdf.pdf
+
+Aug 23, 2005|Functional programming with curried closures|Explores functional programming paradigms within Groovy, specifically detailing how to utilize curried closures for partial function application—a concept somewhat foreign to standard Java at the time.|
+http://public.dhe.ibm.com/software/dw/java/j-pg08235-pdf.pdf
+
+Sep 20, 2005|Of MOPs and mini-languages|Discusses Groovy's Meta-Object Protocol (MOP), which enables runtime metaprogramming and dynamic method dispatch, allowing developers to write their own highly expressive Domain Specific Languages (DSLs).|
+http://public.dhe.ibm.com/software/dw/java/j-pg09205-pdf.pdf 
+
+Oct 25, 2005|Smooth operators|Examines the concept of operator overloading in Groovy, showing how developers can overload standard mathematical and logical operators to make custom objects behave more intuitively.|
+http://public.dhe.ibm.com/software/dw/java/j-pg10255-pdf.pdf 
+
+Sep 29, 2009|SwingBuilder and the Twitter API, Part 1|Based on the existence of the subsequent part, this initial article likely introduced the foundational setup required to build a desktop Graphical User Interface (GUI) using Groovy's SwingBuilder class.|
+http://public.dhe.ibm.com/software/dw/java/j-groovy09299-pdf.pdf 
+
+Nov 2009|SwingBuilder and the Twitter API, Part 2|Demonstrated how to write a functional, declarative Groovy GUI client capable of communicating securely with the Twitter API using HTTP Basic Authentication and Base64 encoding.|
+http://public.dhe.ibm.com/software/dw/java/j-pg11179-pdf.pdf 
+
+Dec 2009|The @Delegate annotation|Explored Groovy's Abstract Syntax Tree (AST) transformations. The article specifically covered how the @Delegate annotation can be used to implement the delegation design pattern at compile-time, entirely eliminating boilerplate routing code.
