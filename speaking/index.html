@@ -351,6 +351,12 @@
             height: 20px;
             fill: currentColor;
         }
+
+        .m-button-group {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
     </style>
 </head>
 
@@ -361,6 +367,7 @@
     <header class="l-header">
         <div class="l-container l-header__inner">
             <a href="/" class="m-brand" aria-label="ThirstyHead Home">
+                <!-- A11Y LESSON: Notice we use aria-hidden='true' on purely decorative elements. If an SVG icon is just eye-candy, hide it from assistive technologies so they don't get stuck describing a 'squished bouncing spark' when the user just wants to go Home. -->
                 <svg class="m-brand__icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
                     fill="currentColor" aria-hidden="true">
                     <!-- Main squished/bouncing spark -->
@@ -410,12 +417,13 @@
         </section>
 
         <!-- TALKS LIST -->
+        <!-- A11Y LESSON: Notice how we are grouping the years using proper h2 tags? A logical heading hierarchy isn't just good SEO; it's a structural map that screen reader users use to jump straight to the content they care about. -->
         <section class="l-section l-container">
 
             <h2 class="m-group-header">2025</h2>
 
             <article class="m-list-item">
-                <div class="m-list-item__meta">GIDS</div>
+                <div class="m-list-item__meta">May 26, 2025 | GIDS</div>
                 <h3 class="m-list-item__title">Bridging the Digital Divide: Empowering Accessibility Through AI
                     Innovations</h3>
                 <p style="margin-top: 0.5rem;">
@@ -434,9 +442,73 @@
                 </p>
                 <div class="video-link-card">
                     <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
-                    <!-- A11Y LESSON: Notice the `rel="noopener noreferrer"` on external links? While technically a security and performance best practice, predictable link behavior (like opening in a new tab without compromising the parent window) keeps cognitive load low. A predictable web is an accessible web! -->
+                    <!-- A11Y LESSON: When providing a list of external links (like these YouTube videos), using descriptive aria-labels prevents the dreaded 'Watch Video, Watch Video, Watch Video' screen reader chorus. Context is king! -->
                     <a href="https://www.youtube.com/watch?v=0Bfq-or-BmE" class="btn-video" target="_blank"
                         rel="noopener noreferrer" aria-label="Watch Bridging the Digital Divide on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">May 27, 2025 | GIDS</div>
+                <h3 class="m-list-item__title">Will AI Replace My Job? A Town Hall for Software Developers</h3>
+                <p style="margin-top: 0.5rem;">
+                    Will AI replace my job? What happens to my role as a developer, architect, or engineering leader in
+                    the next 1–2 years — or 5–7? These are the questions we’re hearing from software professionals
+                    everywhere. In this special closing session at GIDS 2025, join Venkat Subramaniam and a panel of
+                    industry voices (including Birgitta Boeckeler and James Ward) for a candid, high-energy town hall on
+                    how AI is transforming the work of software teams — now and in the years to come.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=AkHgJXjqWw4" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Will AI Replace My Job Town Hall on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">May 27, 2025 | GIDS</div>
+                <h3 class="m-list-item__title">AI and Ethics: Navigating the Future of Responsible Technology</h3>
+                <p style="margin-top: 0.5rem;">
+                    As artificial intelligence becomes woven into the fabric of daily life, its ethical implications
+                    demand serious attention. In "AI and Ethics: Navigating the Future of Responsible Technology," we’ll
+                    examine the crucial intersection of AI and ethical decision-making, exploring how developers and
+                    organizations can build responsible technology. Through real-world scenarios, such as whether a
+                    smart lightbulb vendor should track when it’s used, we’ll discuss the broader implications of data
+                    collection and corporate accountability.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=AiRVOt3wEeM" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch AI and Ethics on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">May 27, 2025 | GIDS</div>
+                <h3 class="m-list-item__title">Everyday AI: Practical Applications Beyond the Chatbot</h3>
+                <p style="margin-top: 0.5rem;">
+                    Explore practical, real-world integrations of Artificial Intelligence that go beyond simple chat
+                    interfaces to genuinely enhance user workflows.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=1mTUsyN2wEs" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Everyday AI on YouTube">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8 5v14l11-7z" />
                         </svg>
@@ -448,20 +520,13 @@
             <h2 class="m-group-header">2024</h2>
 
             <article class="m-list-item">
-                <div class="m-list-item__meta">GIDS, Keynote</div>
+                <div class="m-list-item__meta">May 7, 2024 | GIDS</div>
                 <h3 class="m-list-item__title">Digital Modernization Through Accessibility</h3>
                 <p style="margin-top: 0.5rem;">
                     Did you know that half of the US uses their voice, daily, for web searches? Did you know that 3 out
-                    of 4 Gen Zers (people 27 years old or younger) watch videos with closed captions on all the time?
-                    These accessibility features, long associated with people with disabilities, have broken through to
-                    mainstream success and are used by nearly everybody. Are you prepared to support these features in
-                    your app or website today?
-                </p>
-                <p style="margin-top: 0.5rem;">
-                    In this talk, Scott Davis (founder of Simple Access, author and international speaker on digital
-                    accessibility) shows you how to incorporate accessibility into your software development practices
-                    by “shifting accessibility left” in the process. We’ll explore accessibility trends and demonstrate
-                    simple techniques and free tools that you can start using immediately.
+                    of 4 Gen Zers watch videos with closed captions on all the time? These accessibility features, long
+                    associated with people with disabilities, have broken through to mainstream success and are used by
+                    nearly everybody. Are you prepared to support these features in your app or website today?
                 </p>
                 <div class="video-link-card">
                     <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
@@ -477,15 +542,33 @@
             </article>
 
             <article class="m-list-item">
-                <div class="m-list-item__meta">GIDS</div>
+                <div class="m-list-item__meta">May 7, 2024 | GIDS</div>
+                <h3 class="m-list-item__title">Accessibility in the Smart Home: Matter and Thread</h3>
+                <p style="margin-top: 0.5rem;">
+                    In the age of IoT and smart homes, how can we ensure that technology is inclusive and accessible to
+                    all? Scott Davis explores the intersection of smart home technology with accessibility, focusing on
+                    two groundbreaking protocols: Matter and Thread.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=8pOLk8Dyncs" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Accessibility in the Smart Home on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">May 10, 2024 | GIDS</div>
                 <h3 class="m-list-item__title">Continuous Accessibility: Adding Lighthouse to Your CI/CD Pipeline</h3>
                 <p style="margin-top: 0.5rem;">
                     In the age of digital transformation, accessibility can't be an afterthought; it has to be
                     continuous and integrated into your development pipeline. In this enlightening session, Scott Davis
                     will guide you through the process of incorporating Google Lighthouse into your CI/CD pipeline to
-                    ensure accessibility checks become a seamless part of your development cycle. This talk will empower
-                    developers, DevOps engineers, and accessibility advocates to make web accessibility a standard
-                    practice, not a checkbox.
+                    ensure accessibility checks become a seamless part of your development cycle.
                 </p>
                 <div class="video-link-card">
                     <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
@@ -500,19 +583,18 @@
             </article>
 
             <article class="m-list-item">
-                <div class="m-list-item__meta">Techstrong Unplugged, Interview</div>
-                <h3 class="m-list-item__title">Redefining Digital Accessibility with Scott Davis</h3>
+                <div class="m-list-item__meta">May 10, 2024 | GIDS</div>
+                <h3 class="m-list-item__title">Browser Native Web Development: No Frameworks, Just the Browser</h3>
                 <p style="margin-top: 0.5rem;">
-                    Scott Davis, an expert in digital accessibility and cutting-edge technologies, delves into the
-                    evolution of technology from typewriters to modern smartphones, the transformative potential of
-                    conversational UIs, and the importance of multi-sensory architecture in computing. He emphasizes the
-                    significance of accessibility in technology, highlighting how inclusive design not only benefits
-                    people with disabilities but enhances user experience for all.
+                    In an era where JavaScript frameworks come and go like fashion trends, Scott Davis advocates for a
+                    timeless approach: relying on the power and sophistication of modern browsers themselves. In this
+                    session, Scott will delve into how you can build robust, maintainable web applications using just
+                    native browser capabilities, sidestepping the need for external libraries and frameworks.
                 </p>
                 <div class="video-link-card">
                     <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
-                    <a href="https://www.youtube.com/watch?v=HPxbNojV_6k" class="btn-video" target="_blank"
-                        rel="noopener noreferrer" aria-label="Watch Redefining Digital Accessibility on YouTube">
+                    <a href="https://www.youtube.com/watch?v=KZstxGPYO1o" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Browser Native Web Development on YouTube">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8 5v14l11-7z" />
                         </svg>
@@ -522,11 +604,11 @@
             </article>
 
             <article class="m-list-item">
-                <div class="m-list-item__meta">Bootiful Podcast, Interview</div>
+                <div class="m-list-item__meta">Jul 15, 2024 | Bootiful Podcast, Interview</div>
                 <h3 class="m-list-item__title">Scott Davis on a Bootiful Podcast</h3>
                 <p style="margin-top: 0.5rem;">
-                    Hi, Spring fans! In this installment I talk to my friend and world reknowned technologist Scott
-                    Davis.
+                    Hi, Spring fans! In this installment I (Josh Long) talk to my friend and world reknowned
+                    technologist Scott Davis.
                 </p>
                 <div class="video-link-card">
                     <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
@@ -543,20 +625,18 @@
             <h2 class="m-group-header">2022</h2>
 
             <article class="m-list-item">
-                <div class="m-list-item__meta">Thoughtworks XConf, Keynote</div>
+                <div class="m-list-item__meta">Jul 28, 2022 | Thoughtworks XConf, Keynote</div>
                 <h3 class="m-list-item__title">Re-Decentralizing the Web and recapturing our data</h3>
                 <p style="margin-top: 0.5rem;">
                     In this talk, Nimisha Asthagiri and Scott Davis explore Tim Berners-Lee’s new vision for the Web –
                     Solid and Pods – where user data is “at the beck and call of the users themselves… a future in which
                     [web] programs work for you”. This is an alternative path where privacy and resiliency are at the
                     heart of our system architectures. A path where the web’s pendulum swings back to decentralization.
-                    A path that leads to a fundamentally user-centric tech ecosystem.
                 </p>
                 <div class="video-link-card">
                     <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
                     <a href="https://www.youtube.com/watch?v=LdiL4UtlnN8" class="btn-video" target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Watch Re-Decentralizing the Web and recapturing our data on YouTube">
+                        rel="noopener noreferrer" aria-label="Watch Re-Decentralizing the Web on YouTube">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8 5v14l11-7z" />
                         </svg>
@@ -568,33 +648,7 @@
             <h2 class="m-group-header">2021</h2>
 
             <article class="m-list-item">
-                <div class="m-list-item__meta">Thoughtworks, Keynote</div>
-                <h3 class="m-list-item__title">Digital trust and the architecture of participation</h3>
-                <p style="margin-top: 0.5rem;">
-                    In 2005, Tim O’Reilly coined the phrase “architecture of participation”, a Web 2.0 concept that
-                    pivoted the web away from a “publishing” metaphor to one of “participation”. Over thirty years
-                    later, Sir Tim Berners-Lee (the creator of Web 1.0) is back with a new perspective on the
-                    architecture of participation - one that is personal, privacy-based, and most strikingly,
-                    identity-based. His new decentralized approach to participation reintroduces the idea of digital
-                    trust back into our lives at a time when it is deeply needed and conspicuously absent. In this
-                    keynote, Scott will give pragmatic examples of digital trust that exemplify this new emerging era of
-                    the web and advise on how digital trust can be a competitive advantage for early adopters.
-                </p>
-                <div class="video-link-card">
-                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
-                    <a href="https://www.youtube.com/watch?v=Jo9aIcnf_Fs" class="btn-video" target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Watch Digital trust and the architecture of participation on YouTube">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8 5v14l11-7z" />
-                        </svg>
-                        Watch Video
-                    </a>
-                </div>
-            </article>
-
-            <article class="m-list-item">
-                <div class="m-list-item__meta">Tanzu.TV, Interview</div>
+                <div class="m-list-item__meta">Jan 6, 2021 | VMWare Tanzu.TV, Interview</div>
                 <h3 class="m-list-item__title">Tanzu.TV Between Chair and Keyboard - The one with Scott Davis</h3>
                 <p style="margin-top: 0.5rem;">
                     Please join Nate Schutta and Scott Davis, a Web Architect and Principal Engineer with ThoughtWorks,
@@ -615,36 +669,45 @@
                 </div>
             </article>
 
-            <h2 class="m-group-header">2020</h2>
-
             <article class="m-list-item">
-                <div class="m-list-item__meta">Thoughtworks</div>
-                <h3 class="m-list-item__title">It’s Spelled, "Accessibility", not "Disability"</h3>
+                <div class="m-list-item__meta">Oct 12, 2021 | Thoughtworks, Keynote</div>
+                <h3 class="m-list-item__title">Digital trust and the architecture of participation</h3>
                 <p style="margin-top: 0.5rem;">
-                    If your mobile phone is in silent/vibrate mode right now, would you say that you’re using an
-                    accessibility feature, or just a feature of your phone? If you’ve ever adjusted the size of onscreen
-                    content by pinching or stretching, do you feel like you have a disability, or are you simply using
-                    your phone as it was meant to be used? In this keynote, Scott Davis (Principal Engineer and Web
-                    Architect, ThoughtWorks) discusses Universal Design, in which we design features for everyone to
-                    use, not just an arbitrary subset of our users. Granted, over 1 billion people across the world have
-                    some form of disability – that’s between 15% and 20% of the planet. And the top 1 million websites
-                    average over 60 accessibility errors per page – that’s one error for every 13 elements on the page.
-                    So yes, we as an industry have quite a bit of work to do to support the 20% of our users that need
-                    our accessibility efforts the most. But if you have plans to add a Conversational UI (like Siri,
-                    Alexa, or Cortana) to your product, is your plan to limit that interface to only your blind and
-                    low-vision users, or is it something that you hope all of your users will enjoy?
-                </p>
-                <p style="margin-top: 0.5rem;">
-                    Scott Davis is a Principal Engineer with ThoughtWorks, where he focuses on leading-edge / innovative
-                    / emerging / non-traditional aspects of web development. This includes serverless web apps, mobile
-                    web apps (Responsive PWAs), HTML5-based SmartTV apps, Conversational UIs (like Siri and Alexa), and
-                    using web technologies to build IoT solutions.
+                    In 2005, Tim O’Reilly coined the phrase “architecture of participation”, a Web 2.0 concept that
+                    pivoted the web away from a “publishing” metaphor to one of “participation”. Over thirty years
+                    later, Sir Tim Berners-Lee is back with a new perspective on the architecture of participation - one
+                    that is personal, privacy-based, and most strikingly, identity-based. In this keynote, Scott will
+                    give pragmatic examples of digital trust that exemplify this new emerging era of the web.
                 </p>
                 <div class="video-link-card">
                     <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
-                    <a href="https://www.youtube.com/watch?v=EP9gfNTiSS0" class="btn-video" target="_blank"
+                    <a href="https://www.youtube.com/watch?v=Jo9aIcnf_Fs" class="btn-video" target="_blank"
                         rel="noopener noreferrer"
-                        aria-label="Watch It’s Spelled, Accessibility, not Disability on YouTube">
+                        aria-label="Watch Digital trust and the architecture of participation on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <h2 class="m-group-header">2020</h2>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Sep 2, 2020 | GIDS</div>
+                <h3 class="m-list-item__title">The Wrong Kind of Fast: Embracing Evidence-Based Architecture</h3>
+                <p style="margin-top: 0.5rem;">
+                    Scott Davis debunks common software tropes with empirical, quantifiable, measurable facts -- what he
+                    calls "Evidence-Based Architecture". We look at making your web app fast by creating measurable
+                    performance budgets. We explore your development process through the prism of the book "Accelerate".
+                    And we create "objective integrity assessments" through measurable Fitness Functions, as discussed
+                    in the book "Building Evolutionary Architectures".
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=LEsti2VFRmg" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch The Wrong Kind of Fast on YouTube">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8 5v14l11-7z" />
                         </svg>
@@ -654,18 +717,79 @@
             </article>
 
             <article class="m-list-item">
-                <div class="m-list-item__meta">Connect.Tech, Keynote</div>
+                <div class="m-list-item__meta">Sep 2, 2020 | GIDS</div>
+                <h3 class="m-list-item__title">Design Thinking: Putting the Design Back in Architectural Design</h3>
+                <p style="margin-top: 0.5rem;">
+                    Design Thinking is about taking a solution-focused approach rather than a problem-focused one (like
+                    in Agile methodology). Scott Davis offers a hands-on, user-centric flow of understanding, exploring,
+                    and materializing to arrive at solutions to a problem. Companies as diverse as Apple, IBM, and SAP
+                    successfully use this creative way of problem solving — perhaps you can as well.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=WzzPMPd5kTw" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Design Thinking on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Sep 3, 2020 | GIDS</div>
+                <h3 class="m-list-item__title">Its Spelled Accessibility not Disability</h3>
+                <p style="margin-top: 0.5rem;">
+                    What if you could increase your website's SEO, improve your mobile web design, and get a head start
+                    on the coming Conversational UI revolution through a renewed focus on Accessibility? And what if,
+                    while you did it, you increased your user base by 20% by making it more accessible to disabled
+                    users? Scott Davis explains how accessibility today should be just as important to you as a mobile
+                    design strategy was ten years ago.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=i0aiAMiL3WE" class="btn-video" target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Watch Its Spelled Accessibility not Disability on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Sep 3, 2020 | GIDS</div>
+                <h3 class="m-list-item__title">Adding Speech to your Web App</h3>
+                <p style="margin-top: 0.5rem;">
+                    Conversational UI architecture not only helps to improve your SEO, but it also helps you tap into an
+                    underserved market with an estimated market value of over $7 trillion dollars. Scott Davis explores
+                    W3C specifications like the Web Speech API, Speech Synthesis Markup Language (SSML), and WebVTT for
+                    closed captioning.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=1AY2oXC3lp0" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Adding Speech to your Web App on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Oct 21, 2020 | Connect.Tech, Keynote</div>
                 <h3 class="m-list-item__title">The Revolution Will Be Spoken</h3>
                 <p style="margin-top: 0.5rem;">
-                    Gartner estimates that roughly 25% of our computer interactions these days happen with our voice.
-                    ("Siri, can you confirm that statistic?") 4 out of its "5 Digital Technology Trends for 2020" --
-                    from Multiexperience Across Devices to Interfaceless Machines to Agent Interfaces to Inclusive
-                    Design -- hinge their success on voice interaction. So, are you ready to help implement the Spoken
-                    Revolution? In this talk, Scott Davis (Web Architect and Developer Advocate, ThoughtWorks) will give
-                    you a gentle introduction to the basics (Text-to-Speech and Speech-to-Text), complete with some
-                    simple standards-based examples that you can run in any modern browser. You'll also learn how
-                    command-driven interfaces work ("Alexa, play some Bob Marley") and how continuous speech recognition
-                    can bring live closed captioning to video conferencing.
+                    Gartner estimates that roughly 25% of our computer interactions these days happen with our voice. In
+                    this talk, Scott Davis will give you a gentle introduction to the basics of Text-to-Speech and
+                    Speech-to-Text, complete with some simple standards-based examples that you can run in any modern
+                    browser. You'll also learn how continuous speech recognition can bring live closed captioning to
+                    video conferencing.
                 </p>
                 <div class="video-link-card">
                     <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
@@ -679,111 +803,33 @@
                 </div>
             </article>
 
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Nov 12, 2020 | Thoughtworks</div>
+                <h3 class="m-list-item__title">It’s Spelled, "Accessibility", not "Disability"</h3>
+                <p style="margin-top: 0.5rem;">
+                    If your mobile phone is in silent/vibrate mode right now, would you say that you’re using an
+                    accessibility feature, or just a feature of your phone? In this keynote, Scott Davis discusses
+                    Universal Design, in which we design features for everyone to use, not just an arbitrary subset of
+                    our users. We as an industry have quite a bit of work to do to support the 20% of our users that
+                    need our accessibility efforts the most.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=EP9gfNTiSS0" class="btn-video" target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Watch It’s Spelled Accessibility not Disability on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
             <h2 class="m-group-header">2019</h2>
 
             <article class="m-list-item">
-                <div class="m-list-item__meta">Craft</div>
-                <h3 class="m-list-item__title">It’s Spelled, "Accessibility", not "Disability"</h3>
-                <p style="margin-top: 0.5rem;">
-                    Over ten years ago -- in the pre-iPhone days -- many companies questioned the need for a
-                    mobile-friendly website. Last year, mobile internet traffic surpassed desktop traffic, and many of
-                    those same companies are still struggling to catch up. What does this have to do with Accessibility
-                    ("a11y" for short)? The World Wide Web Consortium says, "Accessibility overlaps with other best
-                    practices such as mobile web design, device independence, multi-modal interaction, usability, design
-                    for older users, and search engine optimization (SEO)." They go on to say, "Users of mobile devices
-                    and people with disabilities experience similar barriers when interacting with web content."
-                </p>
-                <p style="margin-top: 0.5rem;">
-                    What if you could increase your website's SEO, improve your mobile web design, and get a head start
-                    on the coming Conversational UI revolution ("Hello Alexa, Siri, Google, and Cortana") through a
-                    renewed focus on Accessibility? And what if, while you did it, you increased your user base by 20%
-                    by making it more accessible to disabled users (1.1 billion people worldwide; 18% of the US
-                    population)? Come hear Scott Davis (Principal Engineer, ThoughtWorks) explain how Accessibility
-                    today should be just as important to you as a mobile design strategy was ten years ago.
-                </p>
-                <div class="video-link-card">
-                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
-                    <a href="https://www.youtube.com/watch?v=jTxX_Vkyw6Y" class="btn-video" target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Watch It’s Spelled, Accessibility, not Disability (Craft) on YouTube">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8 5v14l11-7z" />
-                        </svg>
-                        Watch Video
-                    </a>
-                </div>
-            </article>
-
-            <article class="m-list-item">
-                <div class="m-list-item__meta">UI Arch Conf, Interview</div>
-                <h3 class="m-list-item__title">Scott Davis on UI Architecture</h3>
-                <p style="margin-top: 0.5rem;">
-                    Scott Davis, Principal UX Architect from Thoughtworks describes the role of the UX Architect and how
-                    he/she is responsible for presenting information and an organized structure on a website from the
-                    perspective of the user. Making sure a website is both user-friendly while also providing the
-                    information the website owner deems important and necessary. They will typically do a lot of
-                    research on new and innovative methods of improving usability.
-                </p>
-                <p style="margin-top: 0.5rem;">
-                    A website’s usability is affected by the work of the UX architect, and usability is arguably the
-                    most important element of gaining traffic, regular users, and improving search engine optimization.
-                </p>
-                <div class="video-link-card">
-                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
-                    <a href="https://www.youtube.com/watch?v=_OjN_IoKNgo" class="btn-video" target="_blank"
-                        rel="noopener noreferrer" aria-label="Watch Scott Davis on UI Architecture on YouTube">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8 5v14l11-7z" />
-                        </svg>
-                        Watch Video
-                    </a>
-                </div>
-            </article>
-
-            <article class="m-list-item">
-                <div class="m-list-item__meta">Thoughtworks</div>
-                <h3 class="m-list-item__title">User Journey Testing with Gauge and Taiko</h3>
-                <p style="margin-top: 0.5rem;">
-                    In this session, Scott Davis, principal consultant at ThoughtWorks covers: The importance of User
-                    Journey Testing Introduction to Gauge - an OSS test automation framework Introduction to Taiko - an
-                    OSS browser automation tool
-                </p>
-                <div class="video-link-card">
-                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
-                    <a href="https://www.youtube.com/watch?v=gXK-0lGGNSQ" class="btn-video" target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Watch User Journey Testing with Gauge and Taiko on YouTube">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8 5v14l11-7z" />
-                        </svg>
-                        Watch Video
-                    </a>
-                </div>
-            </article>
-
-            <article class="m-list-item">
-                <div class="m-list-item__meta">QCON SF</div>
-                <h3 class="m-list-item__title">User Journey Testing With Gauge And Taiko</h3>
-                <p style="margin-top: 0.5rem;">
-                    In this session, Scott Davis, principal consultant at ThoughtWorks covers: The importance of User
-                    Journey Testing Introduction to Gauge - an OSS test automation framework Introduction to Taiko - an
-                    OSS browser automation tool
-                </p>
-                <div class="video-link-card">
-                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
-                    <a href="https://www.youtube.com/watch?v=RxASYh94JOs" class="btn-video" target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Watch User Journey Testing With Gauge And Taiko (QCON) on YouTube">
-                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8 5v14l11-7z" />
-                        </svg>
-                        Watch Video
-                    </a>
-                </div>
-            </article>
-
-            <article class="m-list-item">
-                <div class="m-list-item__meta">Thoughtworks</div>
+                <div class="m-list-item__meta">Apr 22, 2019 | Thoughtworks, Webinar</div>
                 <h3 class="m-list-item__title">Browser automation using Taiko</h3>
                 <p style="margin-top: 0.5rem;">
                     Scott Davis, Principal Consultant at ThoughtWorks, provides a short hands-on demo of Taiko - a free
@@ -802,9 +848,56 @@
             </article>
 
             <article class="m-list-item">
-                <div class="m-list-item__meta">GIDS, Interview</div>
+                <div class="m-list-item__meta">Apr 26, 2019 | GIDS</div>
+                <h3 class="m-list-item__title">The Framework-Free Web</h3>
+                <p style="margin-top: 0.5rem;">
+                    Netflix saw a 50% performance improvement when they removed React from their landing page. Moving to
+                    Google's AMP project lead publishers to see 300% performance improvements. Their secret? Removing
+                    client-side JavaScript. In this talk, Scott Davis demonstrates what framework-free web development
+                    looks like by taking you on a guided tour of practical, commonsense examples that combine HTML, CSS,
+                    and JavaScript in a holistic way.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=FtHJQ9mNrTQ" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch The Framework-Free Web on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">May 16, 2019 | Craft Conference, Budapest</div>
+                <h3 class="m-list-item__title">It's Spelled 'Accessibility', not 'Disability'</h3>
+                <p style="margin-top: 0.5rem;">
+                    Over ten years ago, many companies questioned the need for a mobile-friendly website. Last year,
+                    mobile internet traffic surpassed desktop traffic. What does this have to do with Accessibility? The
+                    W3C says, "Accessibility overlaps with other best practices such as mobile web design, device
+                    independence, and search engine optimization."
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=jTxX_Vkyw6Y" class="btn-video" target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Watch Its Spelled Accessibility not Disability at Craft Conference on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Aug 20, 2019 | GIDS, Interview</div>
                 <h3 class="m-list-item__title">What Scott Davis Loves about Speaking at GIDS</h3>
-                <p style="margin-top: 0.5rem;">Speaker Testimonial</p>
+                <p style="margin-top: 0.5rem;">
+                    A brief interview discussing the unique energy, technical depth, and community spirit of the Great
+                    International Developer Summit.
+                </p>
                 <div class="video-link-card">
                     <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
                     <a href="https://www.youtube.com/watch?v=ZFgLPkcyryk" class="btn-video" target="_blank"
@@ -819,24 +912,182 @@
             </article>
 
             <article class="m-list-item">
-                <div class="m-list-item__meta">GIDS</div>
+                <div class="m-list-item__meta">Aug 20, 2019 | GIDS</div>
+                <h3 class="m-list-item__title">Exploring Vert.x in Java, Groovy, and JavaScript</h3>
+                <p style="margin-top: 0.5rem;">
+                    If you're a Java developer looking for something more than the usual JEE or Spring stack, maybe
+                    Vert.x is what you're looking for. Vert.x takes an asynchronous, event-driven view of the world that
+                    can be quite a departure for traditional synchronous Java programs, offering polyglot solutions in
+                    Java, Groovy, JavaScript, Ruby, Python, and more.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=ny69TPKDXjM" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Exploring Vert.x on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Aug 20, 2019 | GIDS</div>
+                <h3 class="m-list-item__title">If You Won't Test Your Code, Who Will?</h3>
+                <p style="margin-top: 0.5rem;">
+                    In this keynote, Scott Davis talks about how software testing is a crucial part of the development
+                    process. But it is more than a drudgery or a chore -- with the right tools in place, you can gain
+                    incredible insight into how your application ACTUALLY works (as opposed to how you THINK it works).
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=1eQkY0kjaIY" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch If You Wont Test Your Code Who Will on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Aug 20, 2019 | GIDS</div>
+                <h3 class="m-list-item__title">Testing the MEAN Stack</h3>
+                <p style="margin-top: 0.5rem;">
+                    Our industry has proven beyond the shadow of a doubt that you can slap together a Todo list in 60
+                    minutes using the latest framework de jour. But who would really want to put that un-tested mess
+                    into production? In this talk, Scott Davis will demonstrate a comprehensive testing stack for the
+                    MEAN stack using JasmineJS, MochaJS, KarmaJS, IstanbulJS, and ProtractorJS.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=IGXyVxqmEt4" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Testing the MEAN Stack on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Aug 20, 2019 | GIDS</div>
+                <h3 class="m-list-item__title">Exploring the MEAN Stack: MongoDB, ExpressJS, AngularJS, NodeJS</h3>
+                <p style="margin-top: 0.5rem;">
+                    In the late 20th century, web developers talked about using the LAMP stack. 15 years later, we have
+                    a new acronym that's gaining popularity -- the MEAN stack. In this talk, you'll learn how each one
+                    of these pieces of technology complement each other, representing a major shift in architecture and
+                    mental models.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=41cHxZOaJHA" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Exploring the MEAN Stack on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Aug 20, 2019 | GIDS</div>
+                <h3 class="m-list-item__title">Message to a Young Software Developer</h3>
+                <p style="margin-top: 0.5rem;">
+                    Regardless of how many years we've been in this industry, every time we learn a new language, a new
+                    framework, or a new library, we're "young" software developers all over again. In this talk, I'll
+                    show you tools and utilities to help out with the mechanics of learning something new, as well as
+                    rubrics and techniques following three steps: 1. Learn to type; 2. Learn to think; 3. Learn to see
+                    the future.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=9Eec03MuGTg" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Message to a Young Software Developer on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Aug 20, 2019 | GIDS</div>
+                <h3 class="m-list-item__title">RESTful Web Services in Grails 2.3</h3>
+                <p style="margin-top: 0.5rem;">
+                    No modern web application is complete without offering RESTful web services that return XML, JSON,
+                    or both. In this talk, Scott Davis will show you the vastly improved / vastly simplified RESTful
+                    offerings in Grails 2.3, and how to use cURL to explore and test any web services from the command
+                    line.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=kkywE5OeHvA" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch RESTful Web Services in Grails 2.3 on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Aug 20, 2019 | GIDS</div>
+                <h3 class="m-list-item__title">HTML5 Slidemaking 101</h3>
+                <p style="margin-top: 0.5rem;">
+                    Modern HTML5 browsers now have the power and sophistication to replace presentation software
+                    mainstays like PowerPoint and Keynote. In this talk, Scott Davis will show you three different HTML
+                    presentation frameworks: Slidy.js, AsciiDoc / Deck.js, and finally Reveal.js to create a fully
+                    modern HTML5 web experience.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=EbljuIuPugo" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch HTML5 Slidemaking 101 on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Aug 20, 2019 | GIDS</div>
+                <h3 class="m-list-item__title">Yeoman: Modern Workflows for Modern Webapps</h3>
+                <p style="margin-top: 0.5rem;">
+                    As a web developer, I'm always looking for tools that "script away" the boring part of the project.
+                    Enter Yeoman -- a collection of best-of-breed tools that streamline your workflow and can be reused
+                    across projects. Yo scaffolds out new projects; Grunt builds and tests your project; Bower tackles
+                    dependency management.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=mQCPN8kzQlc" class="btn-video" target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Watch Yeoman Modern Workflows for Modern Webapps on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Aug 20, 2019 | GIDS</div>
                 <h3 class="m-list-item__title">From Relational Databases to NoSQL</h3>
                 <p style="margin-top: 0.5rem;">
-                    The term "NoSQL" (either "No SQL" or "Not Only SQL" dependending on how upset you are with
-                    traditional relational databases) has been around for over 15 years. NoSQL solutions are no more of
-                    a "golden hammer" than relational databases -- it's important to recognize circumstances when one is
-                    more appropriate than the other.
-                </p>
-                <p style="margin-top: 0.5rem;">
-                    In this talk, Scott Davis (author of the IBM developerWorks series "Mastering MEAN") will give you a
-                    pragmatic overview of the strengths and weaknesses of current popular NoSQL solutions like CouchDB
-                    and MongoDB. Persistence stores such as these do a better job of mirroring Agile software practices
-                    like emergent design. If you treat NoSQL solutions as a drop-in replacement for your current
-                    relational database, you're going to have a bad day. We'll talk about document-orientation vs. rows
-                    and columns, composition vs. joins, and eventual consistency vs. transactions.
-                </p>
-                <p style="margin-top: 0.5rem;">
-                    Join Scott to see if a NoSQL solution is appropriate for your application.
+                    NoSQL solutions are no more of a "golden hammer" than relational databases -- it's important to
+                    recognize circumstances when one is more appropriate than the other. In this talk, Scott Davis will
+                    give you a pragmatic overview of the strengths and weaknesses of current popular NoSQL solutions
+                    like CouchDB and MongoDB.
                 </p>
                 <div class="video-link-card">
                     <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
@@ -850,32 +1101,19 @@
                 </div>
             </article>
 
-            <h2 class="m-group-header">2018</h2>
-
             <article class="m-list-item">
-                <div class="m-list-item__meta">O'Reilly Fluent 2018 Keynote</div>
-                <h3 class="m-list-item__title">It's Spelled 'Accessibility', not 'Disability'</h3>
+                <div class="m-list-item__meta">Oct 29, 2019 | Thoughtworks, Webinar</div>
+                <h3 class="m-list-item__title">User Journey Testing with Gauge and Taiko</h3>
                 <p style="margin-top: 0.5rem;">
-                    Ten years ago, back in the pre-iPhone days, many companies questioned the need for a mobile-friendly
-                    website. Last year, mobile internet traffic surpassed desktop traffic, and many of those same
-                    companies are still struggling to catch up. What does this have to do with accessibility (“a11y” for
-                    short)? As the World Wide Web Consortium puts it, “Accessibility overlaps with other best practices
-                    such as mobile web design, device independence, multimodal interaction, usability, design for older
-                    users, and search engine optimization (SEO).” Further, "users of mobile devices and people with
-                    disabilities experience similar barriers when interacting with web content.”
-                </p>
-                <p style="margin-top: 0.5rem;">
-                    What if you could increase your website’s SEO, improve your mobile web design, and get a head start
-                    on the coming conversational UI revolution through a renewed focus on accessibility? And what if you
-                    increased your user base (potentially as much as 10–20%) by making it more accessible to disabled
-                    users (1.1 billion people worldwide; 18% of the US population)? Scott Davis explains why
-                    accessibility should be just as important to you as a mobile design strategy was 10 years ago.
+                    In this session, Scott Davis, Principal Consultant at ThoughtWorks covers the importance of User
+                    Journey Testing, an introduction to Gauge (an OSS test automation framework), and Taiko (an OSS
+                    browser automation tool).
                 </p>
                 <div class="video-link-card">
                     <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
-                    <a href="https://www.youtube.com/watch?v=dp_h2VfW0sc" class="btn-video" target="_blank"
+                    <a href="https://www.youtube.com/watch?v=gXK-0lGGNSQ" class="btn-video" target="_blank"
                         rel="noopener noreferrer"
-                        aria-label="Watch It's Spelled 'Accessibility', not 'Disability' (Fluent) on YouTube">
+                        aria-label="Watch User Journey Testing with Gauge and Taiko Webinar on YouTube">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8 5v14l11-7z" />
                         </svg>
@@ -885,15 +1123,124 @@
             </article>
 
             <article class="m-list-item">
-                <div class="m-list-item__meta">GIDS Keynote</div>
+                <div class="m-list-item__meta">Nov 16, 2019 | UI Arch Conf, Interview</div>
+                <h3 class="m-list-item__title">Scott Davis on UI Architecture</h3>
+                <p style="margin-top: 0.5rem;">
+                    Scott Davis, Principal UX Architect from Thoughtworks describes the role of the UX Architect and how
+                    he/she is responsible for presenting information and an organized structure on a website from the
+                    perspective of the user. Making sure a website is both user-friendly while also providing the
+                    information the website owner deems important and necessary.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=_OjN_IoKNgo" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Scott Davis on UI Architecture on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Nov 25, 2019 | QCON SF</div>
+                <h3 class="m-list-item__title">User Journey Testing With Gauge And Taiko</h3>
+                <p style="margin-top: 0.5rem;">
+                    In this session, Scott Davis covers the importance of User Journey Testing along with practical
+                    introductions to Gauge and Taiko, bridging the gap between business requirements and technical
+                    assertions.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=RxASYh94JOs" class="btn-video" target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Watch User Journey Testing With Gauge And Taiko at QCON on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Nov 27, 2019 | GIDS</div>
+                <h3 class="m-list-item__title">Fire-side Chat with John Bruce: The Future of the Web is SOLID and PODS
+                </h3>
+                <p style="margin-top: 0.5rem;">
+                    Watch these two brilliant minds in a free-wheeling conversation at GIDS 2019 as they discuss and
+                    debate the future of the Web. John Bruce has partnered with Sir Tim Berners-Lee to power the
+                    movement to design the next 30 years of the web—a design that will offer everyday web users new
+                    choices about how they store and share data.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=pE2O-zAXa7w" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Fire-side Chat with John Bruce on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <h2 class="m-group-header">2018</h2>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Apr 24, 2018 | GIDS, Keynote</div>
                 <h3 class="m-list-item__title">The Ship of Theseus: Building the 1,000 Year Web</h3>
-                <p style="margin-top: 0.5rem;">An exploration into the longevity of web architectures and how we build
-                    software capable of withstanding the test of time.</p>
+                <p style="margin-top: 0.5rem;">
+                    An architectural keynote exploring how we can build resilient, long-lasting web applications by
+                    embracing continuous, incremental evolution.
+                </p>
                 <div class="video-link-card">
                     <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
                     <a href="https://www.youtube.com/watch?v=pJSYP8Fxh3k" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch The Ship of Theseus Keynote on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Jun 19, 2018 | GIDS</div>
+                <h3 class="m-list-item__title">Town Hall Panel Discussion</h3>
+                <p style="margin-top: 0.5rem;">
+                    A collaborative panel discussion tackling the most pressing questions and emerging trends facing
+                    modern software development teams.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=eAlIPFdOJnU" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Town Hall Panel Discussion on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Dec 5, 2018 | O'Reilly Fluent, Keynote</div>
+                <h3 class="m-list-item__title">It's Spelled 'Accessibility', not 'Disability'</h3>
+                <p style="margin-top: 0.5rem;">
+                    Ten years ago, back in the pre-iPhone days, many companies questioned the need for a mobile-friendly
+                    website. Last year, mobile internet traffic surpassed desktop traffic. What does this have to do
+                    with accessibility? What if you increased your user base (potentially as much as 10–20%) by making
+                    it more accessible to disabled users? Scott Davis explains why accessibility should be just as
+                    important to you as a mobile design strategy was 10 years ago.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=dp_h2VfW0sc" class="btn-video" target="_blank"
                         rel="noopener noreferrer"
-                        aria-label="Watch The Ship of Theseus: Building the 1,000 Year Web on YouTube">
+                        aria-label="Watch Its Spelled Accessibility not Disability at Fluent on YouTube">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8 5v14l11-7z" />
                         </svg>
@@ -905,14 +1252,16 @@
             <h2 class="m-group-header">2017</h2>
 
             <article class="m-list-item">
-                <div class="m-list-item__meta">GIDS, Keynote</div>
+                <div class="m-list-item__meta">April 25, 2017 | GIDS, Keynote</div>
                 <h3 class="m-list-item__title">Do You Prefer Jazz or Classical? Enough Already!</h3>
-                <p style="margin-top: 0.5rem;">A deep dive into the metaphors we use in software development.</p>
+                <p style="margin-top: 0.5rem;">
+                    A keynote examining the spectrum of software engineering, from rigid, classical paradigms to the
+                    improvisational agility required by modern web development.
+                </p>
                 <div class="video-link-card">
                     <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
-                    <a href="https://www.youtube.com/watch?v=kEw249KqLP4" class="btn-video" target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Watch Do You Prefer Jazz or Classical? Enough Already! on YouTube">
+                    <a href="https://www.youtube.com/watch?v=oF3xErSS-x8" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Do You Prefer Jazz or Classical on YouTube">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8 5v14l11-7z" />
                         </svg>
@@ -922,13 +1271,16 @@
             </article>
 
             <article class="m-list-item">
-                <div class="m-list-item__meta">GIDS</div>
+                <div class="m-list-item__meta">April 25, 2017 | GIDS</div>
                 <h3 class="m-list-item__title">It's Time for Web Components</h3>
-                <p style="margin-top: 0.5rem;">Exploring the browser-native future of reusable UI components.</p>
+                <p style="margin-top: 0.5rem;">
+                    A practical guide to breaking free from framework lock-in by embracing the native Web Components
+                    standard for reusable UI elements.
+                </p>
                 <div class="video-link-card">
                     <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
                     <a href="https://www.youtube.com/watch?v=s-nRD5EPq2k" class="btn-video" target="_blank"
-                        rel="noopener noreferrer" aria-label="Watch It's Time for Web Components on YouTube">
+                        rel="noopener noreferrer" aria-label="Watch Its Time for Web Components on YouTube">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8 5v14l11-7z" />
                         </svg>
@@ -938,10 +1290,109 @@
             </article>
 
             <article class="m-list-item">
-                <div class="m-list-item__meta">GIDS</div>
+                <div class="m-list-item__meta">April 25, 2017 | GIDS</div>
+                <h3 class="m-list-item__title">Conversational UIs: Talking to Siri, Alexa, and Your Web Browser</h3>
+                <p style="margin-top: 0.5rem;">
+                    An introduction to integrating Voice and Speech Recognition APIs directly into your web browser for
+                    a truly hands-free experience.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=-C6rjlR6Bks" class="btn-video" target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Watch Conversational UIs Talking to Siri Alexa on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">April 26, 2017 | GIDS</div>
+                <h3 class="m-list-item__title">Conversational UIs in Java and Groovy</h3>
+                <p style="margin-top: 0.5rem;">
+                    A server-side perspective on building the robust, asynchronous backends required to power
+                    next-generation conversational interfaces.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=dwWVFvbqZpk" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Conversational UIs in Java and Groovy on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">April 26, 2017 | GIDS</div>
+                <h3 class="m-list-item__title">JavaScript for Java Developers</h3>
+                <p style="margin-top: 0.5rem;">
+                    A survival guide mapping familiar Java concepts to their JavaScript equivalents, easing the
+                    transition to client-side development.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=Uvy_eW7DhPA" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch JavaScript for Java Developers on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">April 27, 2017 | GIDS</div>
+                <h3 class="m-list-item__title">The Littlest Cloud: IoT, UPnP, and Mesh Networks</h3>
+                <p style="margin-top: 0.5rem;">
+                    An exploration of building localized, resilient mesh networks and utilizing Web APIs for IoT
+                    hardware orchestration.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=1owtUo2-Z58" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch The Littlest Cloud on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">April 27, 2017 | GIDS</div>
+                <h3 class="m-list-item__title">Practical Examples of Serverless Architecture</h3>
+                <p style="margin-top: 0.5rem;">
+                    A hands-on introduction to the serverless paradigm, demonstrating how front-end developers can
+                    deploy robust backends without managing infrastructure.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=IB8JI-Z2CVg" class="btn-video" target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Watch Practical Examples of Serverless Architecture on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">April 28, 2017 | GIDS</div>
                 <h3 class="m-list-item__title">MEAN Architecture 2.0</h3>
-                <p style="margin-top: 0.5rem;">The evolution of the MEAN stack for modern, full-stack JavaScript
-                    applications.</p>
+                <p style="margin-top: 0.5rem;">
+                    A look ahead at the next evolution of the MEAN stack, incorporating ES6, HTTP/2, and modern web
+                    standards.
+                </p>
                 <div class="video-link-card">
                     <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
                     <a href="https://www.youtube.com/watch?v=jSmpq6KRPLw" class="btn-video" target="_blank"
@@ -954,30 +1405,611 @@
                 </div>
             </article>
 
+            <article class="m-list-item">
+                <div class="m-list-item__meta">April 28, 2017 | GIDS</div>
+                <h3 class="m-list-item__title">It's Time for HTTP/2</h3>
+                <p style="margin-top: 0.5rem;">
+                    A deep dive into the performance benefits and architectural shifts introduced by the HTTP/2
+                    protocol.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=NE9cBBM-M3E" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Its Time for HTTP/2 on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
             <h2 class="m-group-header">2016</h2>
 
             <article class="m-list-item">
-                <div class="m-list-item__meta">GIDS, Keynote</div>
-                <h3 class="m-list-item__title">We are not Scientists; We are not Engineers; We are Storytellers.</h3>
-                <p style="margin-top: 0.5rem;">
-                    Phil Karlton ("Principle Curmudgeon" at Netscape Communications) famously said, "There are only two
-                    hard things in Computer Science: cache invalidation and naming things." In this talk, Scott Davis
-                    (author/presenter of the O'Reilly video "Exploring the Architecture of the MEAN Stack") focuses on
-                    the "naming things" part of our profession -- specifically, what we call ourselves and what we do.
-                </p>
+                <div class="m-list-item__meta">Sep 16, 2016 | MODS</div>
+                <h3 class="m-list-item__title">Keynote: We are not Scientists; We are not Engineers; We are
+                    Storytellers.</h3>
                 <p style="margin-top: 0.5rem;">
                     "Computer Scientist" and "Software Engineer" are two popular euphemisms for what we do, but neither
                     is a perfect metaphor. "Software Craftsmanship" -- an extension of the Agile Manifesto -- comes
-                    closer, but it's still not a perfect fit. We typically self-identify based on our programming
-                    language of choice. And our programming language of choice, in turn, colors our view of the world.
-                    Come learn about the "stories" you tell based on the language you use to tell them, and more
-                    importantly -- how to become a Master Storyteller.
+                    closer, but it's still not a perfect fit. Come learn about the "stories" you tell based on the
+                    language you use to tell them, and more importantly -- how to become a Master Storyteller.
                 </p>
                 <div class="video-link-card">
                     <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
                     <a href="https://www.youtube.com/watch?v=V7NmY_vpIlM" class="btn-video" target="_blank"
                         rel="noopener noreferrer"
-                        aria-label="Watch We are not Scientists; We are not Engineers; We are Storytellers on YouTube">
+                        aria-label="Watch We are not Scientists We are not Engineers We are Storytellers on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Sep 16, 2016 | MODS</div>
+                <h3 class="m-list-item__title">Hands on with Material Design</h3>
+                <p style="margin-top: 0.5rem;">
+                    Google introduced Material Design -- a new "look and feel" design language that is equal parts
+                    implementation and manifesto. In this talk, Scott Davis gives you a solid introduction to the
+                    concepts behind Material Design, as well as solid implementations using Web Components / Polymer and
+                    Material Design Lite.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=XNul1SXLXMU" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Hands on with Material Design on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <h2 class="m-group-header">2015</h2>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Aug 20, 2015 | GIDS</div>
+                <h3 class="m-list-item__title">MEAN 2.0 Architecture</h3>
+                <p style="margin-top: 0.5rem;">
+                    2015 was a watershed year -- new versions of HTML (HTML5), JavaScript (ECMAScript 6), and HTTP
+                    (HTTP/2) were all officially released. In this talk, Scott Davis talks about all of the core browser
+                    technologies you'll need to be familiar with in order to be successful with the new MEAN 2.0
+                    technology stack.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=eDUT-BNiGi8" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch MEAN 2.0 Architecture on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Aug 20, 2015 | GIDS</div>
+                <h3 class="m-list-item__title">What's New in JavaScript (ECMAScript 6)</h3>
+                <p style="margin-top: 0.5rem;">
+                    JavaScript turned 20 years old in 2015, and the latest version offers the most new language features
+                    in recent memory. In this talk, Scott Davis walks you through many of the new features of ECMAScript
+                    6 -- from syntactic sugar like arrow functions and multi-line Strings, to important new language
+                    features like constants, classes/inheritance, and importing/exporting modules.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=52ZZrbi4ON0" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Whats New in JavaScript on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Apr 21, 2015 | GIDS</div>
+                <h3 class="m-list-item__title">From Relational Databases to NoSQL</h3>
+                <p style="margin-top: 0.5rem;">
+                    The term "NoSQL" has been around for over 15 years. NoSQL solutions are no more of a "golden hammer"
+                    than relational databases -- it's important to recognize circumstances when one is more appropriate
+                    than the other. In this talk, Scott Davis will give you a pragmatic overview of the strengths and
+                    weaknesses of current popular NoSQL solutions like CouchDB and MongoDB.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=OqJYCrlOKGM" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch From Relational Databases to NoSQL on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <h2 class="m-group-header">2013</h2>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">May 17, 2013 | GIDS</div>
+                <h3 class="m-list-item__title">Node.js: More Than Just Another Web Server</h3>
+                <p style="margin-top: 0.5rem;">
+                    While Node.js certainly excels at web apps, there is so much more to explore in this exciting new
+                    platform that allows you to run JavaScript outside of the browser. In this talk, we'll give you a
+                    solid understanding of what Node.js is, exploring the built-in packages and the vibrant ecosystem of
+                    plug-ins.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=A8GZW79sM-w" class="btn-video" target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Watch Node.js More Than Just Another Web Server on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">May 17, 2013 | GIDS</div>
+                <h3 class="m-list-item__title">Responsive Web Design</h3>
+                <p style="margin-top: 0.5rem;">
+                    The web is fast becoming a mobile experience. What many web developers don't realize is how easy it
+                    is to move from a desktop-centric web experience to a multi-screen web experience -- one that
+                    responds to the end user's device and adapts itself accordingly.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=0iATa0S879w" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Responsive Web Design on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">May 21, 2013 | GIDS</div>
+                <h3 class="m-list-item__title">Video is the Future of the Web</h3>
+                <p style="margin-top: 0.5rem;">
+                    This super cutting-edge keynote will show you why HTML5 video is the future of the web. We'll start
+                    by playing movies using the video element, but quickly move towards emerging APIs like WebRTC that
+                    allow you to video conference natively in the browser -- no plug-ins!
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=AjcbOW_NAVs" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Video is the Future of the Web on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">May 21, 2013 | GIDS</div>
+                <h3 class="m-list-item__title">The Modern Web Developer's Toolkit</h3>
+                <p style="margin-top: 0.5rem;">
+                    This talk is aimed squarely at the web DEVELOPER. It is all about getting your tools installed and
+                    working together in concert -- setting up your "mise en place". We'll discuss build scripts, unit
+                    and functional tests, dealing with dependency management, linting, and minifying your JavaScript for
+                    deployment.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=xVZMXO-Pw9I" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch The Modern Web Developer's Toolkit on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">May 21, 2013 | GIDS</div>
+                <h3 class="m-list-item__title">Require.js: Using Client-side JavaScript Modules</h3>
+                <p style="margin-top: 0.5rem;">
+                    Modules are all the rage in the JavaScript community these days. In this talk, you'll learn how
+                    modules break the pathological global nature of JavaScript and replace it with the idea of
+                    encapsulation and a more mature approach to dependency management.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=bU6L6vu7i1w" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Require.js on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">May 23, 2013 | GIDS</div>
+                <h3 class="m-list-item__title">Groovy XML Ninja Skills</h3>
+                <p style="margin-top: 0.5rem;">
+                    Once you see XML tremble in fear at the awesome power of Groovy, you'll wonder what you ever did
+                    without it. In this talk, we look at various Groovy tools to create, parse, and export XML using
+                    XmlSlurper, XmlParser, and MarkupBuilder.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=hQPZjU-2w_I" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Groovy XML Ninja Skills on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">May 23, 2013 | GIDS</div>
+                <h3 class="m-list-item__title">Real World JSON</h3>
+                <p style="margin-top: 0.5rem;">
+                    This class will spike your JavaScript skill sets. We'll see how JSON is quickly replacing XML and
+                    SOAP for web services tailored for browser consumption.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=p6bZ_dXI9oY" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Real World JSON on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">May 23, 2013 | GIDS</div>
+                <h3 class="m-list-item__title">The Amazing Groovy Weight-loss Plan</h3>
+                <p style="margin-top: 0.5rem;">
+                    Groovy greases the wheels of Java by decreasing the complexity of the language while preserving the
+                    raw power. What this talk is really about is bringing simplicity, clarity, readability, and yes,
+                    beauty to your source code.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=nUYw8t0GRHE" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch The Amazing Groovy Weight-loss Plan on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">May 23, 2013 | GIDS</div>
+                <h3 class="m-list-item__title">Dim Sum Grails - A Sampler of Practical Non Database-Driven Grails
+                    Applications</h3>
+                <p style="margin-top: 0.5rem;">
+                    Most Grails tutorials demonstrate how easy it is to build simple CRUD applications. In this talk, we
+                    look at a variety of Grails applications that go beyond the simple CRUD metaphor -- blogs, wikis,
+                    maps, portals, and more.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=BdWZ2nlOch0" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Dim Sum Grails on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">May 23, 2013 | GIDS</div>
+                <h3 class="m-list-item__title">Lizard Brain Web Design</h3>
+                <p style="margin-top: 0.5rem;">
+                    Inspired by Steve Krug's book "Don't Make Me Think", this talk answers the question, "Why is that
+                    website so hard to use?" We'll get inside the heads of typical users and see how their view of our
+                    website is drastically different than what we painstakingly planned out.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=Xdf7mQD2id4" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Lizard Brain Web Design on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">May 23, 2013 | GIDS</div>
+                <h3 class="m-list-item__title">Web 2.0 Checklist - Deconstructing Modern Websites</h3>
+                <p style="margin-top: 0.5rem;">
+                    In this talk, we discuss what makes a "modern shiny Web 2.0" website look the way it does. We go
+                    beyond simple look and feel as we catalog the common features in modern websites and show you how to
+                    implement them yourself.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=PMpWYcloeEM" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Web 2.0 Checklist on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">May 23, 2013 | GIDS</div>
+                <h3 class="m-list-item__title">Tomorrow's Tech Today: HTML 5</h3>
+                <p style="margin-top: 0.5rem;">
+                    In this talk, you won't be subjected to discussions about the features that will appear in some
+                    distant future release of a web browser. Instead, you'll see the HTML 5 features that are already
+                    being used by Google, Apple, and others, ready for you to use right now.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=iKGQ9rEHFyA" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Tomorrow's Tech Today HTML 5 on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">May 23, 2013 | GIDS</div>
+                <h3 class="m-list-item__title">Hidden Web Services: Microformats and the Semantic Web</h3>
+                <p style="margin-top: 0.5rem;">
+                    We'll explore popular microformats such as hCard for contact information, hCalendar for events, and
+                    hAtom for syndication. We'll use Java and Groovy to tease out the hidden data in plain old HTML
+                    pages for use in everyday applications.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=b76-M7pooSA" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Hidden Web Services Microformats on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">May 23, 2013 | GIDS</div>
+                <h3 class="m-list-item__title">Node.js for Java Developers</h3>
+                <p style="margin-top: 0.5rem;">
+                    If you thought that Node.js was just good for web development, you're only half-wrong. In this talk,
+                    we'll learn how JavaScript can be used for administrative scripts that you run from the command
+                    line, and how your code can be organized into modules just like Java packages.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=KMFLYMORmzA" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Node.js for Java Developers on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">May 23, 2013 | GIDS</div>
+                <h3 class="m-list-item__title">Ringo.js: A JavaScript App Server for Java Developers</h3>
+                <p style="margin-top: 0.5rem;">
+                    In this talk, we'll leverage Ringo.js -- a CommonJS compliant App Server -- that runs on top of
+                    Java. If you're intrigued by the idea of Node.js, but would like to leverage your existing Java
+                    codebase, then come on by and see if Ringo.js is your cup of tea.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=imcHr2b-_sY" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Ringo.js A JavaScript App Server on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <h2 class="m-group-header">2012</h2>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Apr 17, 2012 | GIDS</div>
+                <h3 class="m-list-item__title">HTML5 in Your Pocket: Application Cache And Local Storage</h3>
+                <p style="margin-top: 0.5rem;">
+                    Two major new features of HTML5 - application cache and local storage - allow you to bring the web
+                    experience to your users, even when the web isn't there, enabling applications that behave like
+                    native desktop apps.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=ceODU6z4-yc" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch HTML5 in Your Pocket on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Apr 17, 2012 | GIDS</div>
+                <h3 class="m-list-item__title">Understanding Single-Page Web Apps (using Backbone.js)</h3>
+                <p style="margin-top: 0.5rem;">
+                    In this talk, we'll look at the emerging wave of client-side, component-oriented single page web
+                    frameworks like Backbone.js that are turning many long-held "best practices" on their ear.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=IkXlTwLAVro" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Understanding Single-Page Web Apps on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Apr 17, 2012 | GIDS</div>
+                <h3 class="m-list-item__title">CSS3 for Programmers</h3>
+                <p style="margin-top: 0.5rem;">
+                    Modern-day CSS goes far beyond colors and fonts. In this talk, you'll learn many of the new CSS3
+                    features, including media queries for responsive web design, new selectors, form validation, and how
+                    to program less by letting CSS3 do the heavy lifting for you.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=EaMnPtO_TVc" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch CSS3 for Programmers on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Apr 19, 2012 | GIDS</div>
+                <h3 class="m-list-item__title">Runtime and Compile-time Metaprogramming in Groovy</h3>
+                <p style="margin-top: 0.5rem;">
+                    In this talk, we'll explore what it means to be a dynamic programming language and see how Groovy
+                    adds new methods to existing Java classes -- even final classes like java.lang.String.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=0YxMVl0b76k" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Metaprogramming in Groovy on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Apr 19, 2012 | GIDS</div>
+                <h3 class="m-list-item__title">JavaScript for Java Developers</h3>
+                <p style="margin-top: 0.5rem;">
+                    I invite you to leave your biases at the door and learn -- maybe for the first time -- the good
+                    parts of JavaScript. There is real power in JavaScript once you understand it. Oh, and it couldn't
+                    be more different than Java.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=EKpGTvTLiag" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch JavaScript for Java Developers on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Oct 9, 2012 | MODS</div>
+                <h3 class="m-list-item__title">Mobile HTML 5 Video</h3>
+                <p style="margin-top: 0.5rem;">
+                    In this talk, we'll cut through the hype and the skepticism and get to the real details of the new
+                    native video element, including codecs, containers, and HTTP Live Streaming.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=i0XIY6sz1ww" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Mobile HTML 5 Video on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Oct 9, 2012 | MODS</div>
+                <h3 class="m-list-item__title">jQuery Mobile</h3>
+                <p style="margin-top: 0.5rem;">
+                    In this session, you'll learn how jQuery Mobile makes it easy to define finger-friendly widgets and
+                    enables you to write a single HTML5 app that runs equally well on all manner of tablets and
+                    smartphones.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=vmgKFZy9V-w" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch jQuery Mobile on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Oct 9, 2012 | MODS</div>
+                <h3 class="m-list-item__title">Backbone.js on Mobile</h3>
+                <p style="margin-top: 0.5rem;">
+                    Come learn how to write a component-oriented single-page app for smartphones and tablets using
+                    Backbone.js, taking a conceptual leap from traditional server-side web frameworks.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=e3Yuz30G-tI" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Backbone.js on Mobile on YouTube">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Watch Video
+                    </a>
+                </div>
+            </article>
+
+            <article class="m-list-item">
+                <div class="m-list-item__meta">Oct 9, 2012 | MODS</div>
+                <h3 class="m-list-item__title">The Web is Wider than You Think</h3>
+                <p style="margin-top: 0.5rem;">
+                    We are living in an era where the web encompasses a diverse set of devices. In this talk, you'll
+                    learn how Responsive Web Design allows your website to flow like water from a 3-inch smartphone
+                    screen to a 60-inch TV.
+                </p>
+                <div class="video-link-card">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <a href="https://www.youtube.com/watch?v=_Q5qWa0N1oM" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch The Web is Wider than You Think on YouTube">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8 5v14l11-7z" />
                         </svg>
@@ -988,67 +2020,80 @@
 
             <h2 class="m-group-header">2009</h2>
 
-            <!-- A11Y LESSON: When grouping multiple interactive links related to the same topic (like multi-part video series), ensure each link has a distinct, descriptive aria-label. Otherwise, screen reader users navigating by links will just hear 'Part 1', 'Part 2', which lacks all context! -->
             <article class="m-list-item">
-                <div class="m-list-item__meta">JDD09</div>
-                <h3 class="m-list-item__title">Resource-Oriented Architecture (ROA) and REST</h3>
-                <p style="margin-top: 0.5rem;">A multi-part deep dive into designing robust, resource-oriented web
-                    architectures using RESTful principles.</p>
+                <div class="m-list-item__meta">Jun 5, 2009 | JavaOne</div>
+                <h3 class="m-list-item__title">JavaOne Minute with Scott Davis</h3>
+                <p style="margin-top: 0.5rem;">
+                    Danno Ferrin talks with Scott Davis about Service Oriented Architecture and a rhyming rest REST
+                    service. Includes the multi-part interview recording.
+                </p>
                 <div class="video-link-card">
-                    <p><strong>Session Recordings Available</strong><br>Watch this multi-part presentation on YouTube.
-                    </p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                        <a href="https://www.youtube.com/watch?v=nPvx16UtYrY" class="btn-video" target="_blank"
-                            rel="noopener noreferrer" aria-label="Watch ROA and REST Part 1 on YouTube">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <div class="m-button-group">
+                        <a href="https://www.youtube.com/watch?v=VHSQYhn_c9A" class="btn-video" target="_blank"
+                            rel="noopener noreferrer" aria-label="Watch JavaOne Minute Intro on YouTube">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 5v14l11-7z" />
-                            </svg> Part 1
+                            </svg>
+                            Intro
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=nPvx16UtYrY" class="btn-video" target="_blank"
+                            rel="noopener noreferrer" aria-label="Watch JavaOne Minute Part 1 on YouTube">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                            Part 1
                         </a>
                         <a href="https://www.youtube.com/watch?v=dJVTbupJatI" class="btn-video" target="_blank"
-                            rel="noopener noreferrer" aria-label="Watch ROA and REST Part 2 on YouTube">
+                            rel="noopener noreferrer" aria-label="Watch JavaOne Minute Part 2 on YouTube">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 5v14l11-7z" />
-                            </svg> Part 2
+                            </svg>
+                            Part 2
                         </a>
                         <a href="https://www.youtube.com/watch?v=7U0xWkcwXrs" class="btn-video" target="_blank"
-                            rel="noopener noreferrer" aria-label="Watch ROA and REST Part 3 on YouTube">
+                            rel="noopener noreferrer" aria-label="Watch JavaOne Minute Part 3 on YouTube">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 5v14l11-7z" />
-                            </svg> Part 3
+                            </svg>
+                            Part 3
                         </a>
                         <a href="https://www.youtube.com/watch?v=jOCOSFkKROg" class="btn-video" target="_blank"
-                            rel="noopener noreferrer" aria-label="Watch ROA and REST Part 4 on YouTube">
+                            rel="noopener noreferrer" aria-label="Watch JavaOne Minute Part 4 on YouTube">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 5v14l11-7z" />
-                            </svg> Part 4
+                            </svg>
+                            Part 4
                         </a>
                         <a href="https://www.youtube.com/watch?v=8Zqh75lmETg" class="btn-video" target="_blank"
-                            rel="noopener noreferrer" aria-label="Watch ROA and REST Part 5 on YouTube">
+                            rel="noopener noreferrer" aria-label="Watch JavaOne Minute Part 5 on YouTube">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 5v14l11-7z" />
-                            </svg> Part 5
+                            </svg>
+                            Part 5
                         </a>
                         <a href="https://www.youtube.com/watch?v=8k3C9HFjeaE" class="btn-video" target="_blank"
-                            rel="noopener noreferrer" aria-label="Watch ROA and REST Part 6 on YouTube">
+                            rel="noopener noreferrer" aria-label="Watch JavaOne Minute Part 6 on YouTube">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 5v14l11-7z" />
-                            </svg> Part 6
+                            </svg>
+                            Part 6
                         </a>
                     </div>
                 </div>
             </article>
 
             <article class="m-list-item">
-                <div class="m-list-item__meta">JavaOne, Interview</div>
-                <h3 class="m-list-item__title">JavaOne Minute with Scott Davis</h3>
+                <div class="m-list-item__meta">Dec 3, 2009 | JDD, Krakow, Poland</div>
+                <h3 class="m-list-item__title">Resource-Oriented Architecture (ROA) and REST</h3>
                 <p style="margin-top: 0.5rem;">
-                    Danno Ferrin talks with Scott Davis about Service Oriented Architecture and a rhyming rest REST
-                    service.
+                    A technical session differentiating Resource-Oriented Architecture from traditional SOAP,
+                    emphasizing the simplicity of RESTful design.
                 </p>
                 <div class="video-link-card">
                     <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
-                    <a href="https://www.youtube.com/watch?v=VHSQYhn_c9A" class="btn-video" target="_blank"
-                        rel="noopener noreferrer" aria-label="Watch JavaOne Minute with Scott Davis on YouTube">
+                    <a href="https://www.youtube.com/watch?v=8k3C9HFjeaE" class="btn-video" target="_blank"
+                        rel="noopener noreferrer" aria-label="Watch Resource-Oriented Architecture on YouTube">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8 5v14l11-7z" />
                         </svg>
@@ -1060,25 +2105,28 @@
             <h2 class="m-group-header">2007</h2>
 
             <article class="m-list-item">
-                <div class="m-list-item__meta">OKC JAVA User Group</div>
+                <div class="m-list-item__meta">Jun 12, 2007 | OKC Java User Group</div>
                 <h3 class="m-list-item__title">Groovy and Grails Intro</h3>
-                <p style="margin-top: 0.5rem;">An early exploration of the paradigm shift brought on by dynamic JVM
-                    languages and the Grails framework.</p>
+                <p style="margin-top: 0.5rem;">
+                    A foundational introduction to rapid application development on the JVM using the dynamic
+                    capabilities of Groovy and Grails.
+                </p>
                 <div class="video-link-card">
-                    <p><strong>Session Recordings Available</strong><br>Watch this multi-part presentation on YouTube.
-                    </p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                    <p><strong>Session Recording Available</strong><br>Watch this presentation on YouTube.</p>
+                    <div class="m-button-group">
                         <a href="https://www.youtube.com/watch?v=RqHwwAWXcbE" class="btn-video" target="_blank"
                             rel="noopener noreferrer" aria-label="Watch Groovy and Grails Intro Part 1 on YouTube">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 5v14l11-7z" />
-                            </svg> Part 1
+                            </svg>
+                            Part 1
                         </a>
                         <a href="https://www.youtube.com/watch?v=gkaaOXGomzg" class="btn-video" target="_blank"
                             rel="noopener noreferrer" aria-label="Watch Groovy and Grails Intro Part 2 on YouTube">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 5v14l11-7z" />
-                            </svg> Part 2
+                            </svg>
+                            Part 2
                         </a>
                     </div>
                 </div>
