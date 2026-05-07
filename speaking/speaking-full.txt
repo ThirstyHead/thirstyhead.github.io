@@ -1,258 +1,251 @@
 Video URL|Title|Date|Conference|Description
 
-https://www.youtube.com/watch?v=xVZMXO-Pw9I
-|The Modern Web Developer's Toolkit
-|May 21, 2013
+
+
+# 2025
+
+https://www.youtube.com/watch?v=0Bfq-or-BmE
+|Bridging the Digital Divide: Empowering Accessibility Through AI Innovations
+|May 26, 2025
 |GIDS
-|Many (most?) conference talks address web DEVELOPMENT. This talk is aimed squarely at the web DEVELOPER. It is all about getting your tools installed and working together in concert -- setting up your "mise en place" as a modern web developer.
+|As digital spaces become integral to our lives, ensuring their inclusivity is more important than ever. "Bridging the Digital Divide: Empowering Accessibility Through AI Innovations" explores the transformative role of Artificial Intelligence (AI) in making technology more accessible for all. This session highlights how cutting-edge AI technologies, such as natural language processing, computer vision, and machine learning, are driving solutions to bridge accessibility gaps.
 
-We'll discuss build scripts, unit and functional tests, dealing with dependency management, linting your JavaScript during development, concatenating and minifying your JavaScript for deployment, and much more.
+From AI-powered screen readers and voice-controlled interfaces to real-time translation tools and personalized learning systems, we will delve into practical examples and inspiring case studies showcasing how AI empowers individuals with diverse needs. Attendees will learn how AI innovations are enabling greater independence, improving user experience, and creating opportunities for meaningful digital engagement.
 
-At the end of this workshop, you'll have Node.js installed for running command line scripts, volo.js for installing new packages, grunt.js for build scripts, mocha.js for testing, JSHint for linting, and uglify.js for minification.
+By the end of this talk, you’ll gain a deeper understanding of how AI can be leveraged to design inclusive technologies, creating digital environments that truly work for everyone.
 
-https://www.youtube.com/watch?v=A8GZW79sM-w
-|Node.js: More Than Just Another Web Server
-|May 17, 2013
+Target Audience: This session is for Accessibility Advocates, AI and ML Practitioners, UX Designers, and Software Engineers interested in leveraging technology to create inclusive solutions. Product Managers and Policy Makers focused on digital equity and accessibility initiatives will also find valuable insights into the potential of AI-driven accessibility tools.
+
+https://www.youtube.com/watch?v=AkHgJXjqWw4
+|Will AI Replace My Job? A Town Hall for Software Developers
+|May 27, 2025
 |GIDS
-|Every conference talk you see about Node.js, every book that you read about Node.js, every example you see always rushes straight to writing a web app. While Node.js certainly excels at web apps, there is so much more to explore in this exciting new platform that allows you to run JavaScript outside of the browser.
+|Will AI replace my job? What happens to my role as a developer, architect, or engineering leader in the next 1–2 years — or 5–7? These are the questions we’re hearing from software professionals everywhere.
 
-In this talk, we'll give you a solid understanding of what Node.js is. We'll explore the built-in packages that give you access to the file system and to command-line input. We'll learn about the vibrant ecosystem of plug-ins and supporting libraries available to you via CommonJS and NPM (the Node Package Manager). And, yes, we might even write the obligatory web app.
+In this special closing session at GIDS 2025, join Venkat Subramaniam and a panel of industry voices (including Birgitta Boeckeler and James Ward) for a candid, high-energy town hall on how AI is transforming the work of software teams — now and in the years to come.
 
-https://www.youtube.com/watch?v=AjcbOW_NAVs
-|Video is the Future of the Web
-|May 21, 2013
+We will explore:
+
+    Which roles and tasks are changing fastest, and which are here to stay
+    What developers and engineering leads can do to stay relevant
+    How AI will reshape teams, workflows, and expectations
+    And what a future-ready career might look like in the age of AI
+
+You’ll hear fresh perspectives, bold predictions, and honest takes — with time for live audience Q&A. Real concerns from the community will also guide the discussion.
+
+No slides. No sugar-coating. Just an open conversation about what’s coming — and how to get ready for it.
+
+https://www.youtube.com/watch?v=AiRVOt3wEeM
+|AI and Ethics: Navigating the Future of Responsible Technology
+|May 27, 2025
 |GIDS
-|This super cutting-edge keynote will show you why HTML5 video is the future of the web. We'll start by playing movies using the (video) element, but quickly move towards emerging APIs like WebRTC (Real Time Communication) that allow you to video conference (FaceTime, Skype, etc.) natively in the browser -- no plug-ins! Watch out for some amazing demos that will turn your browser + webcam into an XBox Kinect - complete with motion detection. You can wave your hands in front of your browser and play a virtual xylophone. Super cutting edge stuff, you don't want to miss this.
+|As artificial intelligence becomes woven into the fabric of daily life, its ethical implications demand serious attention. In "AI and Ethics: Navigating the Future of Responsible Technology," we’ll examine the crucial intersection of AI and ethical decision-making, exploring how developers and organizations can build responsible technology.
 
-https://www.youtube.com/watch?v=0iATa0S879w
-|Responsive Web Design
-|May 17, 2013
+This session will address pressing concerns, such as:
+
+    Bias in AI models: Understanding its sources and impacts, and strategies to mitigate it.
+    Algorithmic transparency: Ensuring that AI decisions are explainable and accountable.
+    Data privacy: Balancing the utility of AI with the responsibility to safeguard user data.
+
+Through real-world scenarios, such as whether a smart lightbulb vendor should track when it’s used, we’ll discuss the broader implications of data collection and corporate accountability. Attendees will leave with actionable insights into the ethical responsibilities that come with integrating AI into systems, equipping them to make informed decisions in their work.
+
+Target Audience: This session is ideal for AI Developers, Software Engineers, and Product Managers who are building or managing AI-driven systems. Ethics Advocates, Policymakers, and Tech Leaders will also gain valuable perspectives on fostering responsible AI practices in their organizations.
+
+https://www.youtube.com/watch?v=1mTUsyN2wEs
+|Everyday AI: Practical Applications Beyond the Chatbot
+|May 27, 2025
 |GIDS
-|The web is fast becoming a mobile experience -- Google got over 1 billion mobile hits on their web properties in 2012. What many web developers don't realize is how easy it is to move from a desktop-centric web experience to a multi-screen web experience -- one that responds to the end user's device and adapts itself accordingly.
+|
 
-In this talk, we'll start with a website design that is "hardcoded" to cater to desktop devices, and progressively, iteratively, create a Responsive Web Design that works equally well across all devices -- from Smartphones to tablets to desktops to SmartTVs and beyond.
 
-https://www.youtube.com/watch?v=KMFLYMORmzA
-|Node.js for Java Developers
-|May 23, 2013
+
+
+
+# 2024
+
+https://www.youtube.com/watch?v=bEBVsqhRBF0
+|Digital Modernization Through Accessibility
+|May 7, 2024
 |GIDS
-|Java developers know that installing the JDK gives them access to a number of valuable packages for file I/O, string manipulation, collection management, and more. What they might not realize is Node.js does the same thing for JavaScript developers.
+|Did you know that half of the US uses their voice, daily, for web searches? Did you know that 3 out of 4  Gen Zers (people 27 years old or younger) watch videos with closed captions on all the time? These accessibility features, long associated with people with disabilities, have broken through to mainstream success and are used by nearly everybody. Are you prepared to support these features in your app or website today?  
 
-If you have never used JavaScript outside of the browser, you are in for a treat. In this talk, we'll learn how JavaScript (via Node.js) can be used for administrative scripts that you run from the command line. How JavaScript can be used to access both NoSQL databases like CouchDB and SQL databases like MySQL. And how your JavaScript code can be organized into modules just like your Java code can be organized into packages and JARs.
+In this talk, Scott Davis (founder of Simple Access, author and international speaker on digital accessibility) shows you how to incorporate accessibility into your software development practices by “shifting accessibility left” in the process.  We’ll explore accessibility trends and demonstrate simple techniques and free tools that you can start using immediately.
 
-If you thought that Node.js was just good for web development, you're only half-wrong. It IS good for web development, but it is good for so much more than that as well...
+https://www.youtube.com/watch?v=8pOLk8Dyncs
+|Accessibility in the Smart Home: Matter and Thread
+|May 7, 2024
+|GIDS
+|In the age of IoT and smart homes, how can we ensure that technology is inclusive and accessible to all? Scott Davis explores the intersection of smart home technology with accessibility, focusing on two groundbreaking protocols: Matter and Thread. This session aims to shed light on the current state of smart home technology and how we can pave the way for more accessible, user-friendly experiences.
 
-https://www.youtube.com/watch?v=XNul1SXLXMU
-|Hands on with Material Design
+https://www.youtube.com/watch?v=pGMvxwhtyao
+|Continuous Accessibility: Adding Lighthouse to Your CI/CD Pipeline
+|May 10, 2024
+|GIDS
+|In the age of digital transformation, accessibility can't be an afterthought; it has to be continuous and integrated into your development pipeline. In this enlightening session, Scott Davis will guide you through the process of incorporating Google Lighthouse into your CI/CD pipeline to ensure accessibility checks become a seamless part of your development cycle. This talk will empower developers, DevOps engineers, and accessibility advocates to make web accessibility a standard practice, not a checkbox.
+
+https://www.youtube.com/watch?v=KZstxGPYO1o
+|Browser Native Web Development: No Frameworks, Just the Browser
+|May 10, 2024
+|GIDS
+|In an era where JavaScript frameworks come and go like fashion trends, Scott Davis advocates for a timeless approach: relying on the power and sophistication of modern browsers themselves. In this session, Scott will delve into how you can build robust, maintainable web applications using just native browser capabilities, sidestepping the need for external libraries and frameworks. From DOM manipulation to Web APIs, you'll learn how to leverage what the browser already offers to create fast, efficient, and future-proof web applications.
+
+https://www.youtube.com/watch?v=sosSbx1md6g
+|Scott Davis on a Bootiful Podcast
+|Jul 15, 2024
+|Bootiful Podcast, Interview
+|Hi, Spring fans! In this installment I (Josh Long) talk to my friend and world reknowned technologist Scott Davis.
+
+
+
+
+
+
+
+
+# 2022
+
+https://www.youtube.com/watch?v=LdiL4UtlnN8
+|Re-Decentralizing the Web and recapturing our data
+|Jul 28, 2022
+|Thoughtworks XConf, Keynote
+|In this talk, Nimisha Asthagiri and Scott Davis explore Tim Berners-Lee’s new vision for the Web – Solid and Pods – where user data is “at the beck and call of the users themselves… a future in which [web] programs work for you”. This is an alternative path where privacy and resiliency are at the heart of our system architectures. A path where the web’s pendulum swings back to decentralization. A path that leads to a fundamentally user-centric tech ecosystem.
+
+
+
+
+
+
+
+
+# 2021
+
+https://www.youtube.com/watch?v=pHGi4wqX-h8
+|Tanzu.TV Between Chair and Keyboard - The one with Scott Davis
+|Jan 6, 2021
+|VMWare Tanzu.TV, Interview
+|Please join Nate Schutta and Scott Davis, a Web Architect and Principal Engineer with ThoughtWorks, where he focuses on leading-edge / innovative / emerging / non-traditional aspects of web development. This includes serverless web apps, mobile web apps (Responsive PWAs), HTML5-based SmartTV apps, Conversational UIs (like Siri and Alexa), and using web technologies to build IoT solutions.
+
+https://www.youtube.com/watch?v=Jo9aIcnf_Fs
+|Digital trust and the architecture of participation
+|Oct 12, 2021
+|Thoughtworks, Keynote
+|In 2005, Tim O’Reilly coined the phrase “architecture of participation”, a Web 2.0 concept that pivoted the web away from a “publishing” metaphor to one of “participation”. Over thirty years later, Sir Tim Berners-Lee (the creator of Web 1.0) is back with a new perspective on the architecture of participation - one that is personal, privacy-based, and most strikingly, identity-based. His new decentralized approach to participation reintroduces the idea of digital trust back into our lives at a time when it is deeply needed and conspicuously absent. In this keynote, Scott will give pragmatic examples of digital trust that exemplify this new emerging era of the web and advise on how digital trust can be a competitive advantage for early adopters.
+
+
+
+
+
+
+
+# 2020
+
+https://www.youtube.com/watch?v=LEsti2VFRmg
+|The Wrong Kind of Fast: Embracing Evidence-Based Architecture
+|Sep 2, 2020
+|GIDS
+|Scott Davis (Web Architect and Developer Advocate at ThoughtWorks) debunks common software tropes with empirical, quantifiable, measurable facts -- what he calls "Evidence-Based Architecture".We look at making your web app fast by creating measurable performance budgets. We explore your development process through the prism of the book "Accelerate: The Science of Lean Software and DevOps: Building and Scaling High Performing Technology Organizations". And we create "objective integrity assessments" through measurable Fitness Functions, as discussed in the book "Building Evolutionary Architectures: Support Constant Change".
+
+https://www.youtube.com/watch?v=WzzPMPd5kTw
+|Design Thinking: Putting the Design Back in Architectural Design
+|Sep 2, 2020
+|GIDS
+|Design Thinking is about taking a solution-focused approach rather than a problem-focused one (like in Agile methodology). Scott Davis (Principal Engineer at ThoughtWorks) offers a hands-on, user-centric flow of understanding, exploring, and materializing to arrive at solutions to a problem. Companies as diverse as Apple, IBM, and SAP successfully use this creative way of problem solving — perhaps you can as well.
+
+https://www.youtube.com/watch?v=i0aiAMiL3WE
+|Its Spelled Accessibility not Disability
+|Sep 3, 2020
+|GIDS
+|What if you could increase your website's SEO, improve your mobile web design, and get a head start on the coming Conversational UI revolution ("Hello Alexa, Siri, Google, and Cortana") through a renewed focus on Accessibility? And what if, while you did it, you increased your user base by 20% by making it more accessible to disabled users (1.1 billion people worldwide; 18% of the US population)? Scott Davis (Principal Engineer at ThoughtWorks) explains how accessibility today should be just as important to you as a mobile design strategy was ten years ago.
+
+https://www.youtube.com/watch?v=1AY2oXC3lp0
+|Adding Speech to your Web App
+|Sep 3, 2020
+|GIDS
+|Conversational UI architecture, not only helps to improve your SEO, but it also helps you tap into an underserved market (one in five people, over 1.5 billion people worldwide) with an estimated market value of over $7 trillion dollars in discretionary spending. Scott Davis (Web Architect and Principal Engineer at ThoughtWorks) explores W3C specifications like the Web Speech API (for speech synthesis and speech recognition), Speech Synthesis Markup Language (SSML), and WebVTT (for closed captioning). These technologies not only power smart speakers from Amazon, Google, Microsoft, and Apple; they power smartphones and desktop browsers as well.
+
+https://www.youtube.com/watch?v=AM2LnHanzqo
+|The Revolution Will Be Spoken
+|Oct 21, 2020
+|Connect.Tech, Keynote
+|Gartner estimates that roughly 25% of our computer interactions these days happen with our voice. ("Siri, can you confirm that statistic?") 4 out of its "5 Digital Technology Trends for 2020" -- from Multiexperience Across Devices to Interfaceless Machines to Agent Interfaces to Inclusive Design -- hinge their success on voice interaction. So, are you ready to help implement the Spoken Revolution? In this talk, Scott Davis (Web Architect and Developer Advocate, ThoughtWorks) will give you a gentle introduction to the basics (Text-to-Speech and Speech-to-Text), complete with some simple standards-based examples that you can run in any modern browser. You'll also learn how command-driven interfaces work ("Alexa, play some Bob Marley") and how continuous speech recognition can bring live closed captioning to video conferencing.
+
+https://www.youtube.com/watch?v=EP9gfNTiSS0
+|It’s Spelled, "Accessibility", not "Disability"
+|Nov 12, 2020
+|Thoughtworks
+|If your mobile phone is in silent/vibrate mode right now, would you say that you’re using an accessibility feature, or just a feature of your phone? If you’ve ever adjusted the size of onscreen content by pinching or stretching, do you feel like you have a disability, or are you simply using your phone as it was meant to be used? In this keynote, Scott Davis (Principal Engineer and Web Architect, ThoughtWorks) discusses Universal Design, in which we design features for everyone to use, not just an arbitrary subset of our users. Granted, over 1 billion people across the world have some form of disability – that’s between 15% and 20% of the planet. And the top 1 million websites average over 60 accessibility errors per page – that’s one error for every 13 elements on the page. So yes, we as an industry have quite a bit of work to do to support the 20% of our users that need our accessibility efforts the most. But if you have plans to add a Conversational UI (like Siri, Alexa, or Cortana) to your product, is your plan to limit that interface to only your blind and low-vision users, or is it something that you hope all of your users will enjoy?
+
+
+
+
+
+
+
+
+
+# 2019
+
+https://www.youtube.com/watch?v=w027U_HRj_U
+|Browser automation using Taiko
+|Apr 22, 2019
+|Thoughtworks, Webinar
+|Scott Davis, Principal Consultant at ThoughtWorks, provides a short hands-on demo of Taiko - a free and open source browser automation tool from ThoughtWorks.
+
+https://www.youtube.com/watch?v=FtHJQ9mNrTQ
+|The Framework-Free Web
+|Apr 26, 2019
+|GIDS
+|Netflix saw a 50% performance improvement when they removed React from their landing page. Moving to Google's Accelerated Mobile Pages (AMP) project lead publishers like Gizmodo and the Times of India to see 300% performance improvements. Their secret? Removing client-side JavaScript.
+
+In this talk at #GIDS, Scott Davis demonstrates what framework-free web development looks like by taking you on a guided tour of practical, commonsense examples. Note that this doesn't mean JavaScript-free development; rather, it means a balanced approach that combines HTML, CSS, and JavaScript in a holistic way that leverages the strengths of each. The end result is a solution that is measured in single digit kilobytes, often less than a hundred or two lines of code. Along the way, you'll also learn how to create a measurable web performance budget based on real-world empirical thresholds.
+
+https://www.youtube.com/watch?v=jTxX_Vkyw6Y
+|It's Spelled 'Accessibility', not 'Disability'
+|May 16, 2019
+|Craft Conference, Budapest
+|Over ten years ago -- in the pre-iPhone days -- many companies questioned the need for a mobile-friendly website. Last year, mobile internet traffic surpassed desktop traffic, and many of those same companies are still struggling to catch up.
+
+What does this have to do with Accessibility ("a11y" for short)? The World Wide Web Consortium says, "Accessibility overlaps with other best practices such as mobile web design, device independence, multi-modal interaction, usability, design for older users, and search engine optimization (SEO)." They go on to say, "Users of mobile devices and people with disabilities experience similar barriers when interacting with web content."
+
+What if you could increase your website's SEO, improve your mobile web design, and get a head start on the coming Conversational UI revolution ("Hello Alexa, Siri, Google, and Cortana") through a renewed focus on Accessibility? And what if, while you did it, you increased your user base by 20% by making it more accessible to disabled users (1.1 billion people worldwide; 18% of the US population)?
+
+https://www.youtube.com/watch?v=ZFgLPkcyryk
+|What Scott Davis Loves about Speaking at GIDS
+|Aug 20, 2019
+|GIDS, Interview
+|
+
+https://www.youtube.com/watch?v=ny69TPKDXjM
+|Exploring Vert.x in Java, Groovy, and JavaScript
 |Aug 20, 2019
 |GIDS
-|Google introduced Material Design -- a new "look and feel" design language that is equal parts implementation and manifesto -- in June, 2014. It's based on a decidedly low-tech concept: paper, ink, and shadows. According to designer Matias Duarte, "...unlike real paper, our digital material can expand and reform intelligently. Material has physical surfaces and edges. Seams and shadows provide meaning about what you can touch."
+|If you're a JavaScript developer, you'd be hard pressed to find a more popular platform than NodeJS these days. But what if you're a Java developer looking for something more than the usual JEE or Spring stack? Maybe Vert.x is what you're looking for.
 
-Most of Google's mobile apps -- Gmail, YouTube, Google Maps, etc. -- currently use Material Design. Many of Google web apps -- Google Docs, Google Drive -- use Material Design as well. And that's one thing that makes Material Design markedly different from other popular Responsive Web Design frameworks like Twitter Bootstrap -- Material Design is expressly meant to unify your look and feel across platforms and devices, native and web apps alike.
+Vert.x is written in Java and designed for the JVM, but its development model is anything but Java-centric. Vert.x takes an asynchronous, event-driven view of the world that can be quite a departure for traditional synchronous Java programs. And most interestingly, Vert.x offers polyglot solutions in Java, Groovy, JavaScript, Ruby, Python, and more.
 
-In this talk, Scott Davis (author/presenter of the O'Reilly video series "On the Road to Angular 2") gives you a solid introduction to the concepts behind Material Design, as well as solid implementations using Web Components / Polymer and Material Design Lite.
+Come get a solid introduction to Vert.x from Scott Davis (author of the IBM developerWorks series ""Mastering MEAN""), and see if it's a good fit for your next project.
 
-https://www.youtube.com/watch?v=imcHr2b-_sY
-|Ringo.js: A JavaScript App Server for Java Developers
-|May 23, 2013
+https://www.youtube.com/watch?v=1eQkY0kjaIY
+|If You Won't Test Your Code, Who Will?
+|Aug 20, 2019
 |GIDS
-|JavaScript has been a first class citizen on the JVM since Java 6 was released in 2007. But how many of us have taken advantage of it?
+|"Everyone talks about the weather, but no one ever does anything about it."" - Mark Twain.
 
-In this talk, we'll see how easy it is to call Java from JavaScript, and vice versa. From there, we'll leverage Ringo.js -- a CommonJS compliant App Server -- that runs on top of Java.
+Do you feel that way about testing? Is testing a job for someone else? Would you write more tests if you had the right tools?
 
-Use Hibernate in JavaScript? Sure! Write Servlets in JavaScript? Why not? If you're intrigued by the idea of Node.js, but would like to leverage your existing Java codebase, then come on by and see if Ringo.js is your cup of tea.
+In this keynote, Scott Davis (author of the IBM developerWorks series ""Mastering MEAN"") talks about how software testing is a crucial part of the development process. But it is more than a drudgery or a chore -- with the right tools in place, you can gain incredible insight into how your application ACTUALLY works (as opposed to how you THINK it works).
 
-https://www.youtube.com/watch?v=eDUT-BNiGi8
-|MEAN 2.0 Architecture
-|Aug 20, 2015
+If you think that testing is just for finding bugs after the fact, come see how modern software developers use these testing tools to drive the design and fuel the development process.
+
+https://www.youtube.com/watch?v=IGXyVxqmEt4
+|Testing the MEAN Stack
+|Aug 20, 2019
 |GIDS
-|2015 was a watershed year -- new versions of HTML (HTML5), JavaScript (ECMAScript 6), and HTTP (HTTP/2) were all officially released. Frameworks, platforms, and libraries were quick to follow -- Node 4.x, Polymer 1.x, Material Design, Web Components, and (of course) Angular 2 went into beta.
+|With apologies to Dr. Martin Luther King, Jr., I look to a day when new web frameworks will not be judged by how easy they make development, but by how easy they make testing. Our industry has proven beyond the shadow of a doubt that you can slap together a Todo list (or a Twitter client, or or or...) in 60 minutes or less using the latest framework de jour. But who would really want to put that slapdash, hacked-together, un-tested mess into production without a solid testing infrastructure backing it up?
 
-All of these new versions add up the most significant, coordinated changes to the web platform since the AJAX revolution of 2005.
+In this talk, Scott Davis (author of the IBM developerWorks series ""Mastering MEAN"") will demonstrate a comprehensive testing stack for the MEAN stack. We'll start with a couple of testing libraries -- JasmineJS and MochaJS -- that support both TDD (Test-Driven Development) and BDD (Behavior-Driven Development). Next we'll explore KarmaJS -- a test runner that runs your tests across an array of browsers (including headless browsers like PhantomJS and SlimerJS), operating systems, and mobile devices. We'll discuss the value of the code-coverage reports provided by IstanbulJS, and the power of driving your browser programmatically (filling in form fields, clicking links, etc.) using the functional testing library ProtractorJS.
 
-In this talk, Scott Davis (author/presenter of the O'Reilly video series "On the Road to Angular 2") talks about all of the core browser technologies you'll need to be familiar with in order to be successful with the new MEAN 2.0 technology stack.
-
-https://www.youtube.com/watch?v=52ZZrbi4ON0
-|What's New in JavaScript (ECMAScript 6)
-|Aug 20, 2015
-|GIDS
-|JavaScript turned 20 years old in 2015, and the latest version (ECMAScript 6, or officially "ECMAScript 2015, 6th Edition") offers the most new language features in recent memory. Many of these new language features will be especially interesting to Java developers who have been hesitant to use JavaScript -- language features like classes and inheritance (you heard me!), as well as modules and imports.
-
-In this talk, Scott Davis (author/presenter of the O'Reilly video series "On the Road to Angular 2") walks you through many of the new features of ECMAScript 6 -- from syntactic sugar like arrow functions and multi-line Strings, to important new language features like constants, classes/inheritance, and importing/exporting modules. We get new collections like Maps and Sets, and native Promises are a welcome addition to a language that is more than a little asynchronous in nature.
-
-This most recent release offers some deep semantic shifts to the core language that will truly change the way you write JavaScript.
-
-https://www.youtube.com/watch?v=hQPZjU-2w_I
-|Groovy XML Ninja Skills
-|May 23, 2013
-|GIDS
-|"XML is like violence: if it doesn't solve your problem, you aren't using enough of it." (Anonymous)
-
-XML is everywhere. Whether you are dealing with local configuration files (web.xml, struts-config.xml) or remote web services (SOAP, REST, RSS, Atom), the modern software developer needs to be able to request, slice, and dice XML with ease. That requires a set of razor-sharp tools that reduce the inherent complexity of the problem, not multiply it. Once you see XML tremble in fear at the awesome power of Groovy, you'll wonder what you ever did without it.
-
-In this talk, we look at various Groovy tools to create, parse, and export XML. To read in XML, we'll explore the XmlSlurper and the XmlParser. To write out XML, we'll use the MarkupBuilder, StreamingMarkupBuilder, and the XmlNodePrinter.
-
-Oh, and as a bonus, we'll do the same thing with JSON...
-
-https://www.youtube.com/watch?v=bU6L6vu7i1w
-|Require.js: Using Client-side JavaScript Modules
-|May 20, 2013
-|GIDS
-|Modules are all the rage in the JavaScript community these days. They are going to be first-class citizens in ECMAScript 6, but you shouldn't wait for them to get baked into the language -- through CommonJS and AMD (Asynchronous Module Definition), JavaScript developers are using them in production right now.
-
-In this talk, you'll learn how modules break the pathological global nature of JavaScript and replace it with the idea of encapsulation and a more mature approach to dependency management. You'll learn about package.json and SemVer (Semantic Versioning). And finally, you'll learn how to share a common codebase with server-side JavaScript (via Node.js and CommonJS) and client-side browsers (via Require.js and AMD).
-
-
-
-
-
-https://www.youtube.com/watch?v=p6bZ_dXI9oY
-|Real World JSON
-|Jan 28, 2013
-|GIDS
-|This class will spike your JavaScript skill sets. Asynchronous JavaScript and XML (AJAX) and JavaScript Object Notation (JSON) will quickly become valuable tools in your web development toolkit. This class is targeted at developers who are more comfortable writing back-end services than browser-based front-ends. You will learn about JavaScript -- both its strengths and its weaknesses. From there, you'll see how JavaScript mixes with Cascading Style Sheets (CSS), the Document Object Model (DOM), and the XmlHttpRequest (XHR) object to give you the suite of technologies known informally as AJAX. We'll also see how JSON is quickly replacing XML and SOAP for web services tailored for browser consumption.
-
-https://www.youtube.com/watch?v=nUYw8t0GRHE
-|The Amazing Groovy Weight-loss Plan
-|Jan 24, 2013
-|GIDS
-|"The central enemy of reliability is complexity." (Dr. Daniel Geer)
-
-Java is a powerful programming language. A smart developer can do nearly anything with Java. So the next question is, "How quickly can it be done? How many lines of code does it take to do common tasks?" Groovy greases the wheels of Java by decreasing the complexity of the language while preserving the raw power. At first glance, you might think that this talk is simply about how Groovy drastically reduces the lines of code you need to write. What this talk is really about is bringing simplicity, clarity, readability, and yes, beauty to your source code. In this talk, you'll see common problems presented in Java and the corresponding solutions in Groovy. From something as simple as defining a JavaBean up through File I/O, XML, networking, and database interaction, Groovy offers identical capabilities in a fraction of the lines of code.
-
-https://www.youtube.com/watch?v=BdWZ2nlOch0
-|Dim Sum Grails - A Sampler of Practical Non Database-Driven Grails Applications
-|Jan 24, 2013
-|GIDS
-|"The proof of the pudding is in the eating. By a small sample we may judge of the whole piece." (Miguel de Cervantes Saavedra)
-
-Most Grails tutorials demonstrate how easy it is to build simple CRUD (Create/Retrieve/Update/Delete) applications. While skinning a database with a web front-end is undeniably one beneficial aspect of Grails, it isn't the only thing Grails is good for. As you'll see here, Grails can be used to build a wide variety of web applications. You won't see a single HTML table with "edit" and "delete" links, I promise. In this talk, we look at a variety of Grails applications that go beyond the simple CRUD metaphor -- blogs, wikis, maps, portals, and more.
-
-https://www.youtube.com/watch?v=Xdf7mQD2id4
-|Lizard Brain Web Design
-|Jan 23, 2013
-|GIDS
-|"There's an old story about the person who wished his computer were as easy to use as his telephone. That wish has come true, since I no longer know how to use my telephone." (Bjarne Stroustrup)
-
-The "lizard brain" is the oldest part of the human brain -- the part responsible for autonomic functions like breathing, heart rate, and navigating websites. OK, maybe not that last part, but your website should be easy to use. Stupid easy. Lizard brain easy. Any time your user spends figuring out how to do something -- even for a split second -- is wasted time due to poor design. Inspired by Steve Krug's book "Don't Make Me Think", this talk answers the question, "Why is that website so hard to use?" In this talk, we look at what make a "good" website "good". Simple changes in the layout or sort order can yield drastic improvements. We'll get inside the heads of typical users and see how their view of our website is drastically different than what we painstakingly planned out. You'll learn how to cater to "Browsers" and "Searchers" -- the human kind, not the software kind. "Lizard Brain Web Design" answers these questions and more in a funny and informative way.
-
-https://www.youtube.com/watch?v=PMpWYcloeEM
-|Web 2.0 Checklist - Deconstructing Modern Websites
-|Jan 23, 2013
-|GIDS
-|"The challenge of modernity is to live without illusions and without becoming disillusioned." (Antonio Gramsci)
-
-There are plenty of sarcastic "Web 2.0" checklists out there -- be perpetually in BETA, when in doubt add rounded corners, etc. While we can all laugh at the superficial aspects of the Web 2.0 revolution, there are plenty of serious aspects to it as well. Is your website mash-up friendly or hostile? Do you tell your visitors when things change (via RSS or Atom syndication), or do you expect them to check in daily for updates? Is your website a silo or a part of a larger ecosystem? In this talk, we discuss what makes a "modern shiny Web 2.0" website look the way it does. But we go beyond simple look and feel as we catalog the common features in modern websites and show you how to implement them yourself.
-
-https://www.youtube.com/watch?v=iKGQ9rEHFyA
-|Tomorrow's Tech Today: HTML 5
-|Jan 18, 2013
-|GIDS
-|As software engineers, we take comfort in the idea of concrete specifications. As web developers, our hearts are either broken (frequently!), or we recognize the W3C's role is a delicate balance of leading the browser developers in new and exciting directions while, in their own words, "paving over the cow paths" of existing, de facto standards.
-
-HTML 5 offers dramatic new improvements for page organization, offering out-of-the-box support for elements like header, footer, nav, section, and article. HTML 5 adds native support for form features such as placeholder text, autocomplete, autofocus, and validation. Additionally, there are a host of new form elements available (email, url, number, range, date, and search) that gracefully degrade in "classic" web browsers -- IE, I'm looking at you!
-
-In this talk, you won't be subjected to discussions about the features that will appear in some distant future release of a web browser. Instead, you'll see the HTML 5 features that are already being used by Google, Apple, and others. You'll see the features that are supported by today's browsers, ready for you to use right now.
-
-https://www.youtube.com/watch?v=b76-M7pooSA
-|Hidden Web Services: Microformats and the Semantic Web
-|Jan 19, 2013
-|GIDS
-|The hard line between web pages (pure presentation) and web services (pure data) is finally beginning to blur. Companies as varied as Best Buy, Twitter, Facebook, LinkedIn, Flickr, TripIt, O'Reilly, and even People magazine have decorated their web pages with hidden, semantic metadata. The results are impressive: a 30% increase in traffic for Best Buy, a 15% increase in click-through rate reported by Yahoo!, and dramatic Google PageRank improvements.
-
-In this talk, we'll explore popular microformats such as hCard (the HTML equivalent of vCard) for contact information, hCalendar (the equivalent of iCalendar) for events, hAtom for syndication, and much more. We'll use Java and Groovy to tease out the hidden data in plain old HTML pages for use in everyday applications. You'll also see how Firefox and Safari plug-ins integrate the browser with your address book and your calendar in unprecedented ways.
-
-This is not yet another staid, academic discussion of the future of the semantic web -- this is a pragmatic discussion of how the technology is being used right now to deliver real web services AND web pages at the same time.
-
-https://www.youtube.com/watch?v=ceODU6z4-yc
-|HTML5 in Your Pocket: Application Cache And Local Storage
-|Dec 7, 2012
-|GIDS
-|Two major new features of HTML5 - application cache and local storage - allow you to bring the web experience to your users, even when the web isn't there. Application cache allows you to write fully functional web applications that work offline as well as online. Local storage allows you to store megabytes of data locally without having to install a separate database. Combine these two features, and you can begin writing web applications for mobile devices (iPhone, iPad, and Android) that behave like native applications - right down to the icon on the desktop.
-
-But don't think that these features only work for mobile web development. They are available on PC-based web browsers as well - yes, even Internet Explorer.
-
-https://www.youtube.com/watch?v=IkXlTwLAVro
-|Understanding Single-Page Web Apps (using Backbone.js)
-|Dec 7, 2012
-|GIDS
-|I have been working with server-side, page-centric MVC web frameworks for so long that it's hard to imagine anything else. But imagine there's no server. (It's easy if you try...)
-
-In this talk, we'll look at the emerging wave of client-side, component-oriented single page web frameworks like Backbone.js. They'll turn many long-held "best practices" on their ear, requiring a significant change to the way you architect your applications and look at web development in general.
-
-There's nothing wrong with the traditional, server-side approach to web development, but if you are interested in making sure that your website works well in tablets and smart phones -- especially in "Airplane-mode" -- single page web apps are something that should be on your radar.
-
-https://www.youtube.com/watch?v=EaMnPtO_TVc
-|CSS3 for Programmers
-|Dec 7, 2012
-|GIDS
-|Do you consider yourself a "web programmer" or a "web designer"? The answer to that question provides a strong correlation to the next question: "How well do you understand CSS?"
-
-Web programmers can't be blamed for reaching for JavaScript whenever they want to customize the user experience -- after all, JavaScript has long been the "golden hammer" of client-side development. But if you haven't been keeping up with the latest capabilities offered by CSS3, you might very well be using the wrong tool for the job. Modern-day CSS goes far beyond colors and fonts -- there are entire browser-based games that use nothing but HTML and CSS.
-
-In this talk, you'll learn many of the new CSS3 features, including media queries (for a responsive web design that lets your website look as good on a smart phone as it does in a desktop browser) vendor prefixes, new selectors (like :first-child, :last-child, and :nth-child), form validation, rounded corners, drop shadows, opacity, and more. But more importantly, the practical hands-on demonstrations will show you how to program less and let CSS3 do the heavy lifting for you.
-
-https://www.youtube.com/watch?v=0YxMVl0b76k
-|Runtime and Compile-time Metaprogramming in Groovy
-|Dec 19, 2012
-|GIDS
-|Groovy is a dynamic language that runs on the JVM. But what does "dynamic" really mean? In this talk, we'll explore what is it means to be a dynamic programming language. We'll see how Groovy adds new methods to existing Java classes -- even final classes like java.lang.String.
-
-Like any powerful language feature, there is more than one way to metaprogram new methods and fields onto existing classes. You might decide to do it in a transient fashion at runtime, or in a more permanent way by transforming the bytecode of the compiled class. We'll discuss the pros and cons of both approaches, with lots of live coding examples.
-
-https://www.youtube.com/watch?v=EKpGTvTLiag
-|JavaScript for Java Developers
-|Dec 19, 2012
-|GIDS
-|OK, admit it -- you are a Java developer who hates JavaScript. How can a language that looks so similar to Java behave so differently? How come when I copy and paste it from the Internet, it no longer works?
-
-JavaScript is not a perfect language -- no language written in 10 days by one person could be. But it is a lot better than you think it is. In this talk, I invite you to leave your biases at the door and learn -- maybe for the first time -- the good parts of JavaScript. There is real power in JavaScript once you understand it. Oh, and it couldn't be more different than Java.
-
-https://www.youtube.com/watch?v=vmgKFZy9V-w
-|jQuery Mobile
-|Jan 1, 2013
-|MODS
-|jQuery.js is literally the most popular JavaScript library of all time - it is used in more than 50% of the top 10,000 websites. But don't get tricked into thinking that jQuery Mobile is simply a smartphone and tablet-optimized version of the library. It isn't. (That's Zepto.js, by the way...) jQuery Mobile is a web framework targeted at developing client-side MVC applications, much like Grails, Rails, Struts, and SpringMVC are web frameworks targeted at developing server-side MVC applications.
-
-In this session, you'll learn how jQuery Mobile makes it easy to define pages, forms, lists, buttons, and all sorts of finger-friendly widgets.But more importantly, you'll see how jQuery enables you to write a single HTML5 app that runs equally well on iPhones, Android phones,Kindle Fires, iPads, and all manner of other tablets and smartphones.
-
-https://www.youtube.com/watch?v=e3Yuz30G-tI
-|Backbone.js on Mobile
-|Jan 1, 2013
-|MODS
-|There is an emerging wave of client-side,component-oriented single page web frameworks like Backbone.js,Batman.js, and others. Writing a single-page app is a big conceptual (and architectural!) leap from the traditional server-side,page-centric MVC web frameworks that you may be used to working with.
-
-While Backbone isn't specifically targeted at mobile developers, it is a nearly perfect fit none-the-less. Come learn how to write a component-oriented single-page app for smartphones and tablets using Backbone.js.
-
-https://www.youtube.com/watch?v=i0XIY6sz1ww
-|Mobile HTML 5 Video
-|Jan 1, 2013
-|MODS
-|No HTML5 feature has generated as much excitement and controversy as the new native video element. In this talk, we'll cut through the hype and the skepticism and get to the real details. Which browsers support the video element? (Here's a hint: all of 'em...) Which codecs and containers should I use -- h.264 and MP4? Flash? Ogg Theora? WebM? And how is HTTP Live Streaming -- an Apple specification that is now going through the IETF standardization process -- dramatically changing the landscape of web video, especially for smartphones and tablets?
-
-Once you understand all of that, getting your video into a mobile browser is easy. In a plain-spoken, easy to understand style, Scott Davis will help you cut through the hype and add video to your mobile website.
-
-https://www.youtube.com/watch?v=_Q5qWa0N1oM
-|The Web is Wider than You Think
-|Dec 31, 2012
-|MODS
-|You've probably heard the old adage, "When all you have is a hammer, everything looks like a nail."For web developers, this can be a dangerously narrow mindset.Chances are good that your end users visit your website on devices that bear precious little resemblance to the computer that you used to write it in the first place.
-
-We are living in an era where the web is truly wide; it encompasses a diverse set of devices from smartphones, tablets, laptops, and desktops, all the way up to smart TVs and DVD players. The modern web developer can no longer assume a 1024x768 browser window size, let alone a keyboard or mouse.
-
-In this talk, you'll see what it takes to support multiple input methods -- mouse-based hovers,finger-based pinching and stretching, and TV remote control-based button presses. You'll learn how Responsive Web Design allows your website to flow like water from a 3-inch smartphone screen to a 60-inch TV.But most importantly, you'll learn how easy it is to build your website with the flexibility to support the end user's device of choice -- perhaps even one that hasn't been invented yet.
-
-https://www.youtube.com/watch?v=V7NmY_vpIlM
-|Keynote: We are not Scientists; We are not Engineers; We are Storytellers.
-|Sep 16, 2016
-|GIDS
-| Phil Karlton ("Principle Curmudgeon" at Netscape Communications) famously said, "There are only two hard things in Computer Science: cache invalidation and naming things." In this talk, Scott Davis (author/presenter of the O'Reilly video "Exploring the Architecture of the MEAN Stack") focuses on the "naming things" part of our profession -- specifically, what we call ourselves and what we do.
-
-"Computer Scientist" and "Software Engineer" are two popular euphemisms for what we do, but neither is a perfect metaphor. "Software Craftsmanship" -- an extension of the Agile Manifesto -- comes closer, but it's still not a perfect fit.
-
-We typically self-identify based on our programming language of choice. And our programming language of choice, in turn, colors our view of the world. Come learn about the "stories" you tell based on the language you use to tell them, and more importantly -- how to become a Master Storyteller.
-
-
+Come see how easy it is to do professional, world-class software development -- and by that, of course, I mean how easy it is to test your codebase end-to-end.
 
 https://www.youtube.com/watch?v=41cHxZOaJHA
 |Exploring the MEAN Stack: MongoDB, ExpressJS, AngularJS, NodeJS
@@ -311,47 +304,103 @@ If you treat NoSQL solutions as a drop-in replacement for your current relationa
 
 Join Scott to see if a NoSQL solution is appropriate for your application.
 
-https://www.youtube.com/watch?v=IGXyVxqmEt4
-|Testing the MEAN Stack
-|Aug 20, 2019
+
+https://www.youtube.com/watch?v=gXK-0lGGNSQ
+|User Journey Testing with Gauge and Taiko
+|Oct 29, 2019
+|Thoughtworks, Webinar
+|In this session, Scott Davis, Principal Consultant at ThoughtWorks covers: 
+The importance of User Journey Testing
+Introduction to Gauge - an OSS test automation framework
+Introduction to Taiko - an OSS browser automation tool
+
+https://www.youtube.com/watch?v=_OjN_IoKNgo
+|Scott Davis on UI Architecture
+|Nov 16, 2019
+|UI Arch Conf, Interview
+|Scott Davis, Principal UX Architect from Thoughtworks describes the role of the UX Architect and how he/she is responsible for presenting information and an organized structure on a website from the perspective of the user. Making sure a website is both user-friendly while also providing the information the website owner deems important and necessary. They will typically do a lot of research on new and innovative methods of improving usability.
+
+A website’s usability is affected by the work of the UX architect, and usability is arguably the most important element of gaining traffic, regular users, and improving search engine optimization.
+
+https://www.youtube.com/watch?v=RxASYh94JOs
+|User Journey Testing With Gauge And Taiko
+|Nov 25, 2019
+|QCON SF
+|In this session, Scott Davis, Principal Consultant at ThoughtWorks covers: 
+The importance of User Journey Testing
+Introduction to Gauge - an OSS test automation framework
+Introduction to Taiko - an OSS browser automation tool
+
+https://www.youtube.com/watch?v=pE2O-zAXa7w
+|Fire-side Chat with John Bruce: The Future of the Web is SOLID and PODS 
+|Nov 27, 2019
 |GIDS
-|With apologies to Dr. Martin Luther King, Jr., I look to a day when new web frameworks will not be judged by how easy they make development, but by how easy they make testing. Our industry has proven beyond the shadow of a doubt that you can slap together a Todo list (or a Twitter client, or or or...) in 60 minutes or less using the latest framework de jour. But who would really want to put that slapdash, hacked-together, un-tested mess into production without a solid testing infrastructure backing it up?
+|John Bruce has partnered with Sir Tim Berners-Lee to power the movement to design the next 30 years of the web. A design that will offer everyday web users new choices about how they store and share data and the apps they use. The iconic Scott Davis is capping his tenth consecutive appearance at GIDS this year and has spoken extensively on varied aspects of the Web -- standards, architecture, framework, apps, components, accessibility, its past, present and future. Watch these two brilliant minds in a free-wheeling conversation at GIDS 2019 as they discuss and debate the future of the Web.
 
-In this talk, Scott Davis (author of the IBM developerWorks series ""Mastering MEAN"") will demonstrate a comprehensive testing stack for the MEAN stack. We'll start with a couple of testing libraries -- JasmineJS and MochaJS -- that support both TDD (Test-Driven Development) and BDD (Behavior-Driven Development). Next we'll explore KarmaJS -- a test runner that runs your tests across an array of browsers (including headless browsers like PhantomJS and SlimerJS), operating systems, and mobile devices. We'll discuss the value of the code-coverage reports provided by IstanbulJS, and the power of driving your browser programmatically (filling in form fields, clicking links, etc.) using the functional testing library ProtractorJS.
 
-Come see how easy it is to do professional, world-class software development -- and by that, of course, I mean how easy it is to test your codebase end-to-end.
 
-https://www.youtube.com/watch?v=1eQkY0kjaIY
-|If You Won't Test Your Code, Who Will?
-|Aug 20, 2019
-|GIDS
-|"Everyone talks about the weather, but no one ever does anything about it."" - Mark Twain.
 
-Do you feel that way about testing? Is testing a job for someone else? Would you write more tests if you had the right tools?
 
-In this keynote, Scott Davis (author of the IBM developerWorks series ""Mastering MEAN"") talks about how software testing is a crucial part of the development process. But it is more than a drudgery or a chore -- with the right tools in place, you can gain incredible insight into how your application ACTUALLY works (as opposed to how you THINK it works).
 
-If you think that testing is just for finding bugs after the fact, come see how modern software developers use these testing tools to drive the design and fuel the development process.
 
-https://www.youtube.com/watch?v=ny69TPKDXjM
-|Exploring Vert.x in Java, Groovy, and JavaScript
-|Aug 20, 2019
-|GIDS
-|If you're a JavaScript developer, you'd be hard pressed to find a more popular platform than NodeJS these days. But what if you're a Java developer looking for something more than the usual JEE or Spring stack? Maybe Vert.x is what you're looking for.
 
-Vert.x is written in Java and designed for the JVM, but its development model is anything but Java-centric. Vert.x takes an asynchronous, event-driven view of the world that can be quite a departure for traditional synchronous Java programs. And most interestingly, Vert.x offers polyglot solutions in Java, Groovy, JavaScript, Ruby, Python, and more.
 
-Come get a solid introduction to Vert.x from Scott Davis (author of the IBM developerWorks series ""Mastering MEAN""), and see if it's a good fit for your next project.
 
-https://www.youtube.com/watch?v=IB8JI-Z2CVg
-|Practical Examples of Serverless Architecture
-|April 27, 2017
+
+
+
+# 2018
+
+https://www.youtube.com/watch?v=pJSYP8Fxh3k
+|The Ship of Theseus: Building the 1,000 Year Web
+|Apr 24, 2018
+|GIDS, Keynote
+|
+
+https://www.youtube.com/watch?v=eAlIPFdOJnU
+|Town Hall Panel Discussion
+|Jun 19, 2018
 |GIDS
 |
 
-https://www.youtube.com/watch?v=Uvy_eW7DhPA
-|JavaScript for Java Developers
-|April 26, 2017
+
+
+https://www.youtube.com/watch?v=dp_h2VfW0sc
+|It's Spelled 'Accessibility', not 'Disability'
+|Dec 5, 2018
+|O'Reilly Fluent, Keynote
+|Ten years ago, back in the pre-iPhone days, many companies questioned the need for a mobile-friendly website. Last year, mobile internet traffic surpassed desktop traffic, and many of those same companies are still struggling to catch up.
+
+What does this have to do with accessibility (“a11y” for short)? As the World Wide Web Consortium puts it, “Accessibility overlaps with other best practices such as mobile web design, device independence, multimodal interaction, usability, design for older users, and search engine optimization (SEO).” Further, "users of mobile devices and people with disabilities experience similar barriers when interacting with web content.”
+
+What if you could increase your website’s SEO, improve your mobile web design, and get a head start on the coming conversational UI revolution through a renewed focus on accessibility? And what if you increased your user base (potentially as much as 10–20%) by making it more accessible to disabled users (1.1 billion people worldwide; 18% of the US population)? Scott Davis explains why accessibility should be just as important to you as a mobile design strategy was 10 years ago.
+
+
+
+
+
+
+
+
+
+
+# 2017
+
+https://www.youtube.com/watch?v=oF3xErSS-x8
+|Do You Prefer Jazz or Classical? Enough Already!
+|April 25, 2017
+|GIDS, Keynote
+|
+
+https://www.youtube.com/watch?v=s-nRD5EPq2k
+|It's Time for Web Components
+|April 25, 2017
+|GIDS
+|
+
+https://www.youtube.com/watch?v=-C6rjlR6Bks
+|Conversational UIs: Talking to Siri, Alexa, and Your Web Browser
+|April 25, 2017
 |GIDS
 |
 
@@ -361,8 +410,20 @@ https://www.youtube.com/watch?v=dwWVFvbqZpk
 |GIDS
 |
 
+https://www.youtube.com/watch?v=Uvy_eW7DhPA
+|JavaScript for Java Developers
+|April 26, 2017
+|GIDS
+|
+
 https://www.youtube.com/watch?v=1owtUo2-Z58
 |The Littlest Cloud: IoT, UPnP, and Mesh Networks
+|April 27, 2017
+|GIDS
+|
+
+https://www.youtube.com/watch?v=IB8JI-Z2CVg
+|Practical Examples of Serverless Architecture
 |April 27, 2017
 |GIDS
 |
@@ -379,153 +440,346 @@ https://www.youtube.com/watch?v=NE9cBBM-M3E
 |GIDS
 |
 
-https://www.youtube.com/watch?v=-C6rjlR6Bks
-|Conversational UIs: Talking to Siri, Alexa, and Your Web Browser
-|April 25, 2017
+
+
+
+
+
+
+
+
+
+
+
+# 2016
+
+https://www.youtube.com/watch?v=V7NmY_vpIlM
+|Keynote: We are not Scientists; We are not Engineers; We are Storytellers.
+|Sep 16, 2016
+|MODS
+| Phil Karlton ("Principle Curmudgeon" at Netscape Communications) famously said, "There are only two hard things in Computer Science: cache invalidation and naming things." In this talk, Scott Davis (author/presenter of the O'Reilly video "Exploring the Architecture of the MEAN Stack") focuses on the "naming things" part of our profession -- specifically, what we call ourselves and what we do.
+
+"Computer Scientist" and "Software Engineer" are two popular euphemisms for what we do, but neither is a perfect metaphor. "Software Craftsmanship" -- an extension of the Agile Manifesto -- comes closer, but it's still not a perfect fit.
+
+We typically self-identify based on our programming language of choice. And our programming language of choice, in turn, colors our view of the world. Come learn about the "stories" you tell based on the language you use to tell them, and more importantly -- how to become a Master Storyteller.
+
+https://www.youtube.com/watch?v=XNul1SXLXMU
+|Hands on with Material Design
+|Sep 16, 2016
+|MODS
+|Google introduced Material Design -- a new "look and feel" design language that is equal parts implementation and manifesto -- in June, 2014. It's based on a decidedly low-tech concept: paper, ink, and shadows. According to designer Matias Duarte, "...unlike real paper, our digital material can expand and reform intelligently. Material has physical surfaces and edges. Seams and shadows provide meaning about what you can touch."
+
+Most of Google's mobile apps -- Gmail, YouTube, Google Maps, etc. -- currently use Material Design. Many of Google web apps -- Google Docs, Google Drive -- use Material Design as well. And that's one thing that makes Material Design markedly different from other popular Responsive Web Design frameworks like Twitter Bootstrap -- Material Design is expressly meant to unify your look and feel across platforms and devices, native and web apps alike.
+
+In this talk, Scott Davis (author/presenter of the O'Reilly video series "On the Road to Angular 2") gives you a solid introduction to the concepts behind Material Design, as well as solid implementations using Web Components / Polymer and Material Design Lite.
+
+
+
+
+
+
+
+# 2015
+
+https://www.youtube.com/watch?v=eDUT-BNiGi8
+|MEAN 2.0 Architecture
+|Aug 20, 2015
 |GIDS
+|2015 was a watershed year -- new versions of HTML (HTML5), JavaScript (ECMAScript 6), and HTTP (HTTP/2) were all officially released. Frameworks, platforms, and libraries were quick to follow -- Node 4.x, Polymer 1.x, Material Design, Web Components, and (of course) Angular 2 went into beta.
+
+All of these new versions add up the most significant, coordinated changes to the web platform since the AJAX revolution of 2005.
+
+In this talk, Scott Davis (author/presenter of the O'Reilly video series "On the Road to Angular 2") talks about all of the core browser technologies you'll need to be familiar with in order to be successful with the new MEAN 2.0 technology stack.
+
+https://www.youtube.com/watch?v=52ZZrbi4ON0
+|What's New in JavaScript (ECMAScript 6)
+|Aug 20, 2015
+|GIDS
+|JavaScript turned 20 years old in 2015, and the latest version (ECMAScript 6, or officially "ECMAScript 2015, 6th Edition") offers the most new language features in recent memory. Many of these new language features will be especially interesting to Java developers who have been hesitant to use JavaScript -- language features like classes and inheritance (you heard me!), as well as modules and imports.
+
+In this talk, Scott Davis (author/presenter of the O'Reilly video series "On the Road to Angular 2") walks you through many of the new features of ECMAScript 6 -- from syntactic sugar like arrow functions and multi-line Strings, to important new language features like constants, classes/inheritance, and importing/exporting modules. We get new collections like Maps and Sets, and native Promises are a welcome addition to a language that is more than a little asynchronous in nature.
+
+This most recent release offers some deep semantic shifts to the core language that will truly change the way you write JavaScript.
+
+https://www.youtube.com/watch?v=OqJYCrlOKGM
+|From Relational Databases to NoSQL
+|Apr 21, 2015
+|GIDS
+|The term "NoSQL" (either "No SQL" or "Not Only SQL" dependending on how upset you are with traditional relational databases) has been around for over 15 years. NoSQL solutions are no more of a "golden hammer" than relational databases -- it's important to recognize circumstances when one is more appropriate than the other.
+
+In this talk, Scott Davis (author of the IBM developerWorks series "Mastering MEAN") will give you a pragmatic overview of the strengths and weaknesses of current popular NoSQL solutions like CouchDB and MongoDB. Persistence stores such as these do a better job of mirroring Agile software practices like emergent design.
+
+If you treat NoSQL solutions as a drop-in replacement for your current relational database, you're going to have a bad day. We'll talk about document-orientation vs. rows and columns, composition vs. joins, and eventual consistency vs. transactions.
+
+Join Scott to see if a NoSQL solution is appropriate for your application.
+
+
+
+
+
+
+
+
+# 2013
+
+https://www.youtube.com/watch?v=A8GZW79sM-w
+|Node.js: More Than Just Another Web Server
+|May 17, 2013
+|GIDS
+|Every conference talk you see about Node.js, every book that you read about Node.js, every example you see always rushes straight to writing a web app. While Node.js certainly excels at web apps, there is so much more to explore in this exciting new platform that allows you to run JavaScript outside of the browser.
+
+In this talk, we'll give you a solid understanding of what Node.js is. We'll explore the built-in packages that give you access to the file system and to command-line input. We'll learn about the vibrant ecosystem of plug-ins and supporting libraries available to you via CommonJS and NPM (the Node Package Manager). And, yes, we might even write the obligatory web app.
+
+https://www.youtube.com/watch?v=0iATa0S879w
+|Responsive Web Design
+|May 17, 2013
+|GIDS
+|The web is fast becoming a mobile experience -- Google got over 1 billion mobile hits on their web properties in 2012. What many web developers don't realize is how easy it is to move from a desktop-centric web experience to a multi-screen web experience -- one that responds to the end user's device and adapts itself accordingly.
+
+In this talk, we'll start with a website design that is "hardcoded" to cater to desktop devices, and progressively, iteratively, create a Responsive Web Design that works equally well across all devices -- from Smartphones to tablets to desktops to SmartTVs and beyond.
+
+https://www.youtube.com/watch?v=AjcbOW_NAVs
+|Video is the Future of the Web
+|May 21, 2013
+|GIDS
+|This super cutting-edge keynote will show you why HTML5 video is the future of the web. We'll start by playing movies using the (video) element, but quickly move towards emerging APIs like WebRTC (Real Time Communication) that allow you to video conference (FaceTime, Skype, etc.) natively in the browser -- no plug-ins! Watch out for some amazing demos that will turn your browser + webcam into an XBox Kinect - complete with motion detection. You can wave your hands in front of your browser and play a virtual xylophone. Super cutting edge stuff, you don't want to miss this.
+
+https://www.youtube.com/watch?v=xVZMXO-Pw9I
+|The Modern Web Developer's Toolkit
+|May 21, 2013
+|GIDS
+|Many (most?) conference talks address web DEVELOPMENT. This talk is aimed squarely at the web DEVELOPER. It is all about getting your tools installed and working together in concert -- setting up your "mise en place" as a modern web developer.
+
+We'll discuss build scripts, unit and functional tests, dealing with dependency management, linting your JavaScript during development, concatenating and minifying your JavaScript for deployment, and much more.
+
+At the end of this workshop, you'll have Node.js installed for running command line scripts, volo.js for installing new packages, grunt.js for build scripts, mocha.js for testing, JSHint for linting, and uglify.js for minification.
+
+https://www.youtube.com/watch?v=bU6L6vu7i1w
+|Require.js: Using Client-side JavaScript Modules
+|May 21, 2013
+|GIDS
+|Modules are all the rage in the JavaScript community these days. They are going to be first-class citizens in ECMAScript 6, but you shouldn't wait for them to get baked into the language -- through CommonJS and AMD (Asynchronous Module Definition), JavaScript developers are using them in production right now.
+
+In this talk, you'll learn how modules break the pathological global nature of JavaScript and replace it with the idea of encapsulation and a more mature approach to dependency management. You'll learn about package.json and SemVer (Semantic Versioning). And finally, you'll learn how to share a common codebase with server-side JavaScript (via Node.js and CommonJS) and client-side browsers (via Require.js and AMD).
+
+
+https://www.youtube.com/watch?v=hQPZjU-2w_I
+|Groovy XML Ninja Skills
+|May 23, 2013
+|GIDS
+|"XML is like violence: if it doesn't solve your problem, you aren't using enough of it." (Anonymous)
+
+XML is everywhere. Whether you are dealing with local configuration files (web.xml, struts-config.xml) or remote web services (SOAP, REST, RSS, Atom), the modern software developer needs to be able to request, slice, and dice XML with ease. That requires a set of razor-sharp tools that reduce the inherent complexity of the problem, not multiply it. Once you see XML tremble in fear at the awesome power of Groovy, you'll wonder what you ever did without it.
+
+In this talk, we look at various Groovy tools to create, parse, and export XML. To read in XML, we'll explore the XmlSlurper and the XmlParser. To write out XML, we'll use the MarkupBuilder, StreamingMarkupBuilder, and the XmlNodePrinter.
+
+Oh, and as a bonus, we'll do the same thing with JSON...
+
+
+https://www.youtube.com/watch?v=p6bZ_dXI9oY
+|Real World JSON
+|May 23, 2013
+|GIDS
+|This class will spike your JavaScript skill sets. Asynchronous JavaScript and XML (AJAX) and JavaScript Object Notation (JSON) will quickly become valuable tools in your web development toolkit. This class is targeted at developers who are more comfortable writing back-end services than browser-based front-ends. You will learn about JavaScript -- both its strengths and its weaknesses. From there, you'll see how JavaScript mixes with Cascading Style Sheets (CSS), the Document Object Model (DOM), and the XmlHttpRequest (XHR) object to give you the suite of technologies known informally as AJAX. We'll also see how JSON is quickly replacing XML and SOAP for web services tailored for browser consumption.
+
+https://www.youtube.com/watch?v=nUYw8t0GRHE
+|The Amazing Groovy Weight-loss Plan
+|May 23, 2013
+|GIDS
+|"The central enemy of reliability is complexity." (Dr. Daniel Geer)
+
+Java is a powerful programming language. A smart developer can do nearly anything with Java. So the next question is, "How quickly can it be done? How many lines of code does it take to do common tasks?" Groovy greases the wheels of Java by decreasing the complexity of the language while preserving the raw power. At first glance, you might think that this talk is simply about how Groovy drastically reduces the lines of code you need to write. What this talk is really about is bringing simplicity, clarity, readability, and yes, beauty to your source code. In this talk, you'll see common problems presented in Java and the corresponding solutions in Groovy. From something as simple as defining a JavaBean up through File I/O, XML, networking, and database interaction, Groovy offers identical capabilities in a fraction of the lines of code.
+
+https://www.youtube.com/watch?v=BdWZ2nlOch0
+|Dim Sum Grails - A Sampler of Practical Non Database-Driven Grails Applications
+|May 23, 2013
+|GIDS
+|"The proof of the pudding is in the eating. By a small sample we may judge of the whole piece." (Miguel de Cervantes Saavedra)
+
+Most Grails tutorials demonstrate how easy it is to build simple CRUD (Create/Retrieve/Update/Delete) applications. While skinning a database with a web front-end is undeniably one beneficial aspect of Grails, it isn't the only thing Grails is good for. As you'll see here, Grails can be used to build a wide variety of web applications. You won't see a single HTML table with "edit" and "delete" links, I promise. In this talk, we look at a variety of Grails applications that go beyond the simple CRUD metaphor -- blogs, wikis, maps, portals, and more.
+
+https://www.youtube.com/watch?v=Xdf7mQD2id4
+|Lizard Brain Web Design
+|May 23, 2013
+|GIDS
+|"There's an old story about the person who wished his computer were as easy to use as his telephone. That wish has come true, since I no longer know how to use my telephone." (Bjarne Stroustrup)
+
+The "lizard brain" is the oldest part of the human brain -- the part responsible for autonomic functions like breathing, heart rate, and navigating websites. OK, maybe not that last part, but your website should be easy to use. Stupid easy. Lizard brain easy. Any time your user spends figuring out how to do something -- even for a split second -- is wasted time due to poor design. Inspired by Steve Krug's book "Don't Make Me Think", this talk answers the question, "Why is that website so hard to use?" In this talk, we look at what make a "good" website "good". Simple changes in the layout or sort order can yield drastic improvements. We'll get inside the heads of typical users and see how their view of our website is drastically different than what we painstakingly planned out. You'll learn how to cater to "Browsers" and "Searchers" -- the human kind, not the software kind. "Lizard Brain Web Design" answers these questions and more in a funny and informative way.
+
+https://www.youtube.com/watch?v=PMpWYcloeEM
+|Web 2.0 Checklist - Deconstructing Modern Websites
+|May 23, 2013
+|GIDS
+|"The challenge of modernity is to live without illusions and without becoming disillusioned." (Antonio Gramsci)
+
+There are plenty of sarcastic "Web 2.0" checklists out there -- be perpetually in BETA, when in doubt add rounded corners, etc. While we can all laugh at the superficial aspects of the Web 2.0 revolution, there are plenty of serious aspects to it as well. Is your website mash-up friendly or hostile? Do you tell your visitors when things change (via RSS or Atom syndication), or do you expect them to check in daily for updates? Is your website a silo or a part of a larger ecosystem? In this talk, we discuss what makes a "modern shiny Web 2.0" website look the way it does. But we go beyond simple look and feel as we catalog the common features in modern websites and show you how to implement them yourself.
+
+https://www.youtube.com/watch?v=iKGQ9rEHFyA
+|Tomorrow's Tech Today: HTML 5
+|May 23, 2013
+|GIDS
+|As software engineers, we take comfort in the idea of concrete specifications. As web developers, our hearts are either broken (frequently!), or we recognize the W3C's role is a delicate balance of leading the browser developers in new and exciting directions while, in their own words, "paving over the cow paths" of existing, de facto standards.
+
+HTML 5 offers dramatic new improvements for page organization, offering out-of-the-box support for elements like header, footer, nav, section, and article. HTML 5 adds native support for form features such as placeholder text, autocomplete, autofocus, and validation. Additionally, there are a host of new form elements available (email, url, number, range, date, and search) that gracefully degrade in "classic" web browsers -- IE, I'm looking at you!
+
+In this talk, you won't be subjected to discussions about the features that will appear in some distant future release of a web browser. Instead, you'll see the HTML 5 features that are already being used by Google, Apple, and others. You'll see the features that are supported by today's browsers, ready for you to use right now.
+
+https://www.youtube.com/watch?v=b76-M7pooSA
+|Hidden Web Services: Microformats and the Semantic Web
+|May 23, 2013
+|GIDS
+|The hard line between web pages (pure presentation) and web services (pure data) is finally beginning to blur. Companies as varied as Best Buy, Twitter, Facebook, LinkedIn, Flickr, TripIt, O'Reilly, and even People magazine have decorated their web pages with hidden, semantic metadata. The results are impressive: a 30% increase in traffic for Best Buy, a 15% increase in click-through rate reported by Yahoo!, and dramatic Google PageRank improvements.
+
+In this talk, we'll explore popular microformats such as hCard (the HTML equivalent of vCard) for contact information, hCalendar (the equivalent of iCalendar) for events, hAtom for syndication, and much more. We'll use Java and Groovy to tease out the hidden data in plain old HTML pages for use in everyday applications. You'll also see how Firefox and Safari plug-ins integrate the browser with your address book and your calendar in unprecedented ways.
+
+This is not yet another staid, academic discussion of the future of the semantic web -- this is a pragmatic discussion of how the technology is being used right now to deliver real web services AND web pages at the same time.
+
+
+https://www.youtube.com/watch?v=KMFLYMORmzA
+|Node.js for Java Developers
+|May 23, 2013
+|GIDS
+|Java developers know that installing the JDK gives them access to a number of valuable packages for file I/O, string manipulation, collection management, and more. What they might not realize is Node.js does the same thing for JavaScript developers.
+
+If you have never used JavaScript outside of the browser, you are in for a treat. In this talk, we'll learn how JavaScript (via Node.js) can be used for administrative scripts that you run from the command line. How JavaScript can be used to access both NoSQL databases like CouchDB and SQL databases like MySQL. And how your JavaScript code can be organized into modules just like your Java code can be organized into packages and JARs.
+
+If you thought that Node.js was just good for web development, you're only half-wrong. It IS good for web development, but it is good for so much more than that as well...
+
+https://www.youtube.com/watch?v=imcHr2b-_sY
+|Ringo.js: A JavaScript App Server for Java Developers
+|May 23, 2013
+|GIDS
+|JavaScript has been a first class citizen on the JVM since Java 6 was released in 2007. But how many of us have taken advantage of it?
+
+In this talk, we'll see how easy it is to call Java from JavaScript, and vice versa. From there, we'll leverage Ringo.js -- a CommonJS compliant App Server -- that runs on top of Java.
+
+Use Hibernate in JavaScript? Sure! Write Servlets in JavaScript? Why not? If you're intrigued by the idea of Node.js, but would like to leverage your existing Java codebase, then come on by and see if Ringo.js is your cup of tea.
+
+
+
+
+
+
+
+
+
+
+# 2012
+
+https://www.youtube.com/watch?v=ceODU6z4-yc
+|HTML5 in Your Pocket: Application Cache And Local Storage
+|Apr 17, 2012
+|GIDS
+|Two major new features of HTML5 - application cache and local storage - allow you to bring the web experience to your users, even when the web isn't there. Application cache allows you to write fully functional web applications that work offline as well as online. Local storage allows you to store megabytes of data locally without having to install a separate database. Combine these two features, and you can begin writing web applications for mobile devices (iPhone, iPad, and Android) that behave like native applications - right down to the icon on the desktop.
+
+But don't think that these features only work for mobile web development. They are available on PC-based web browsers as well - yes, even Internet Explorer.
+
+https://www.youtube.com/watch?v=IkXlTwLAVro
+|Understanding Single-Page Web Apps (using Backbone.js)
+|Apr 17, 2012
+|GIDS
+|I have been working with server-side, page-centric MVC web frameworks for so long that it's hard to imagine anything else. But imagine there's no server. (It's easy if you try...)
+
+In this talk, we'll look at the emerging wave of client-side, component-oriented single page web frameworks like Backbone.js. They'll turn many long-held "best practices" on their ear, requiring a significant change to the way you architect your applications and look at web development in general.
+
+There's nothing wrong with the traditional, server-side approach to web development, but if you are interested in making sure that your website works well in tablets and smart phones -- especially in "Airplane-mode" -- single page web apps are something that should be on your radar.
+
+https://www.youtube.com/watch?v=EaMnPtO_TVc
+|CSS3 for Programmers
+|Apr 17, 2012
+|GIDS
+|Do you consider yourself a "web programmer" or a "web designer"? The answer to that question provides a strong correlation to the next question: "How well do you understand CSS?"
+
+Web programmers can't be blamed for reaching for JavaScript whenever they want to customize the user experience -- after all, JavaScript has long been the "golden hammer" of client-side development. But if you haven't been keeping up with the latest capabilities offered by CSS3, you might very well be using the wrong tool for the job. Modern-day CSS goes far beyond colors and fonts -- there are entire browser-based games that use nothing but HTML and CSS.
+
+In this talk, you'll learn many of the new CSS3 features, including media queries (for a responsive web design that lets your website look as good on a smart phone as it does in a desktop browser) vendor prefixes, new selectors (like :first-child, :last-child, and :nth-child), form validation, rounded corners, drop shadows, opacity, and more. But more importantly, the practical hands-on demonstrations will show you how to program less and let CSS3 do the heavy lifting for you.
+
+https://www.youtube.com/watch?v=0YxMVl0b76k
+|Runtime and Compile-time Metaprogramming in Groovy
+|Apr 19, 2012
+|GIDS
+|Groovy is a dynamic language that runs on the JVM. But what does "dynamic" really mean? In this talk, we'll explore what is it means to be a dynamic programming language. We'll see how Groovy adds new methods to existing Java classes -- even final classes like java.lang.String.
+
+Like any powerful language feature, there is more than one way to metaprogram new methods and fields onto existing classes. You might decide to do it in a transient fashion at runtime, or in a more permanent way by transforming the bytecode of the compiled class. We'll discuss the pros and cons of both approaches, with lots of live coding examples.
+
+https://www.youtube.com/watch?v=EKpGTvTLiag
+|JavaScript for Java Developers
+|Apr 19, 2012
+|GIDS
+|OK, admit it -- you are a Java developer who hates JavaScript. How can a language that looks so similar to Java behave so differently? How come when I copy and paste it from the Internet, it no longer works?
+
+JavaScript is not a perfect language -- no language written in 10 days by one person could be. But it is a lot better than you think it is. In this talk, I invite you to leave your biases at the door and learn -- maybe for the first time -- the good parts of JavaScript. There is real power in JavaScript once you understand it. Oh, and it couldn't be more different than Java.
+
+
+https://www.youtube.com/watch?v=i0XIY6sz1ww
+|Mobile HTML 5 Video
+|Oct 9, 2012
+|MODS
+|No HTML5 feature has generated as much excitement and controversy as the new native video element. In this talk, we'll cut through the hype and the skepticism and get to the real details. Which browsers support the video element? (Here's a hint: all of 'em...) Which codecs and containers should I use -- h.264 and MP4? Flash? Ogg Theora? WebM? And how is HTTP Live Streaming -- an Apple specification that is now going through the IETF standardization process -- dramatically changing the landscape of web video, especially for smartphones and tablets?
+
+Once you understand all of that, getting your video into a mobile browser is easy. In a plain-spoken, easy to understand style, Scott Davis will help you cut through the hype and add video to your mobile website.
+
+https://www.youtube.com/watch?v=vmgKFZy9V-w
+|jQuery Mobile
+|Oct 9, 2012
+|MODS
+|jQuery.js is literally the most popular JavaScript library of all time - it is used in more than 50% of the top 10,000 websites. But don't get tricked into thinking that jQuery Mobile is simply a smartphone and tablet-optimized version of the library. It isn't. (That's Zepto.js, by the way...) jQuery Mobile is a web framework targeted at developing client-side MVC applications, much like Grails, Rails, Struts, and SpringMVC are web frameworks targeted at developing server-side MVC applications.
+
+In this session, you'll learn how jQuery Mobile makes it easy to define pages, forms, lists, buttons, and all sorts of finger-friendly widgets.But more importantly, you'll see how jQuery enables you to write a single HTML5 app that runs equally well on iPhones, Android phones,Kindle Fires, iPads, and all manner of other tablets and smartphones.
+
+https://www.youtube.com/watch?v=e3Yuz30G-tI
+|Backbone.js on Mobile
+|Oct 9, 2012
+|MODS
+|There is an emerging wave of client-side,component-oriented single page web frameworks like Backbone.js,Batman.js, and others. Writing a single-page app is a big conceptual (and architectural!) leap from the traditional server-side,page-centric MVC web frameworks that you may be used to working with.
+
+While Backbone isn't specifically targeted at mobile developers, it is a nearly perfect fit none-the-less. Come learn how to write a component-oriented single-page app for smartphones and tablets using Backbone.js.
+
+https://www.youtube.com/watch?v=_Q5qWa0N1oM
+|The Web is Wider than You Think
+|Oct 9, 2012
+|MODS
+|You've probably heard the old adage, "When all you have is a hammer, everything looks like a nail."For web developers, this can be a dangerously narrow mindset.Chances are good that your end users visit your website on devices that bear precious little resemblance to the computer that you used to write it in the first place.
+
+We are living in an era where the web is truly wide; it encompasses a diverse set of devices from smartphones, tablets, laptops, and desktops, all the way up to smart TVs and DVD players. The modern web developer can no longer assume a 1024x768 browser window size, let alone a keyboard or mouse.
+
+In this talk, you'll see what it takes to support multiple input methods -- mouse-based hovers,finger-based pinching and stretching, and TV remote control-based button presses. You'll learn how Responsive Web Design allows your website to flow like water from a 3-inch smartphone screen to a 60-inch TV.But most importantly, you'll learn how easy it is to build your website with the flexibility to support the end user's device of choice -- perhaps even one that hasn't been invented yet.
+
+
+
+
+
+
+
+
+
+
+# 2009
+
+https://www.youtube.com/watch?v=VHSQYhn_c9A
+|JavaOne Minute with Scott Davis
+|Jun 5, 2009
+|JavaOne
+|Danno Ferrin talks with Scott Davis about Service Oriented Architecture and a rhyming rest REST service.
+
+
+- Part 1
+- https://www.youtube.com/watch?v=nPvx16UtYrY
+- Part 2
+- https://www.youtube.com/watch?v=dJVTbupJatI
+- Part 3
+- https://www.youtube.com/watch?v=7U0xWkcwXrs
+- Part 4
+- https://www.youtube.com/watch?v=jOCOSFkKROg
+- Part 5
+- https://www.youtube.com/watch?v=8Zqh75lmETg
+- Part 6
+- https://www.youtube.com/watch?v=8k3C9HFjeaE
+|Resource-Oriented Architecture (ROA) and REST
+|Dec 3, 2009
+|JDD, Krakow, Poland 
 |
 
-https://www.youtube.com/watch?v=kEw249KqLP4
-|Do You Prefer Jazz or Classical? Enough Already! by Scott Davis
-|April 25, 2017
-|GIDS
-|
-
-https://www.youtube.com/watch?v=oF3xErSS-x8
-|It's Time for Web Components
-|April 25, 2017
-|GIDS
-|
-
-https://www.youtube.com/watch?v=eAlIPFdOJnU
-|Town Hall Panel Discussion
-|Jun 19, 2018
-|GIDS
-|
-
-https://www.youtube.com/watch?v=pJSYP8Fxh3k
-|The Ship of Theseus: Building the 1,000 Year Web
-|Jun 19, 2018
-|GIDS
-|
-
-https://www.youtube.com/watch?v=pE2O-zAXa7w
-|Fire-side Chat with John Bruce: The Future of the Web is SOLID and PODS 
-|Nov 27, 2019
-|GIDS
-|John Bruce has partnered with Sir Tim Berners-Lee to power the movement to design the next 30 years of the web. A design that will offer everyday web users new choices about how they store and share data and the apps they use. The iconic Scott Davis is capping his tenth consecutive appearance at GIDS this year and has spoken extensively on varied aspects of the Web -- standards, architecture, framework, apps, components, accessibility, its past, present and future. Watch these two brilliant minds in a free-wheeling conversation at GIDS 2019 as they discuss and debate the future of the Web.
-
-https://www.youtube.com/watch?v=FtHJQ9mNrTQ
-|The Framework-Free Web
-|Jan 15, 2020
-|GIDS
-|Netflix saw a 50% performance improvement when they removed React from their landing page. Moving to Google's Accelerated Mobile Pages (AMP) project lead publishers like Gizmodo and the Times of India to see 300% performance improvements. Their secret? Removing client-side JavaScript.
-
-In this talk at #GIDS, Scott Davis demonstrates what framework-free web development looks like by taking you on a guided tour of practical, commonsense examples. Note that this doesn't mean JavaScript-free development; rather, it means a balanced approach that combines HTML, CSS, and JavaScript in a holistic way that leverages the strengths of each. The end result is a solution that is measured in single digit kilobytes, often less than a hundred or two lines of code. Along the way, you'll also learn how to create a measurable web performance budget based on real-world empirical thresholds.
-
-https://www.youtube.com/watch?v=i0aiAMiL3WE
-|Its Spelled Accessibility not Disability
-|Sep 3, 2020
-|GIDS
-|What if you could increase your website's SEO, improve your mobile web design, and get a head start on the coming Conversational UI revolution ("Hello Alexa, Siri, Google, and Cortana") through a renewed focus on Accessibility? And what if, while you did it, you increased your user base by 20% by making it more accessible to disabled users (1.1 billion people worldwide; 18% of the US population)? Scott Davis (Principal Engineer at ThoughtWorks) explains how accessibility today should be just as important to you as a mobile design strategy was ten years ago.
-
-https://www.youtube.com/watch?v=1AY2oXC3lp0
-|Adding Speech to your Web App
-|Sep 3, 2020
-|GIDS
-|Conversational UI architecture, not only helps to improve your SEO, but it also helps you tap into an underserved market (one in five people, over 1.5 billion people worldwide) with an estimated market value of over $7 trillion dollars in discretionary spending. Scott Davis (Web Architect and Principal Engineer at ThoughtWorks) explores W3C specifications like the Web Speech API (for speech synthesis and speech recognition), Speech Synthesis Markup Language (SSML), and WebVTT (for closed captioning). These technologies not only power smart speakers from Amazon, Google, Microsoft, and Apple; they power smartphones and desktop browsers as well.
-
-https://www.youtube.com/watch?v=LEsti2VFRmg
-|The Wrong Kind of Fast: Embracing Evidence-Based Architecture
-|Sep 2, 2020
-|GIDS
-|Scott Davis (Web Architect and Developer Advocate at ThoughtWorks) debunks common software tropes with empirical, quantifiable, measurable facts -- what he calls "Evidence-Based Architecture".We look at making your web app fast by creating measurable performance budgets. We explore your development process through the prism of the book "Accelerate: The Science of Lean Software and DevOps: Building and Scaling High Performing Technology Organizations". And we create "objective integrity assessments" through measurable Fitness Functions, as discussed in the book "Building Evolutionary Architectures: Support Constant Change".
-
-https://www.youtube.com/watch?v=WzzPMPd5kTw
-|Design Thinking: Putting the Design Back in Architectural Design
-|Sep 2, 2020
-|GIDS
-|Design Thinking is about taking a solution-focused approach rather than a problem-focused one (like in Agile methodology). Scott Davis (Principal Engineer at ThoughtWorks) offers a hands-on, user-centric flow of understanding, exploring, and materializing to arrive at solutions to a problem. Companies as diverse as Apple, IBM, and SAP successfully use this creative way of problem solving — perhaps you can as well.
-
-https://www.youtube.com/watch?v=pGMvxwhtyao
-|Continuous Accessibility: Adding Lighthouse to Your CI/CD Pipeline
-|May 10, 2024
-|GIDS
-|In the age of digital transformation, accessibility can't be an afterthought; it has to be continuous and integrated into your development pipeline. In this enlightening session, Scott Davis will guide you through the process of incorporating Google Lighthouse into your CI/CD pipeline to ensure accessibility checks become a seamless part of your development cycle. This talk will empower developers, DevOps engineers, and accessibility advocates to make web accessibility a standard practice, not a checkbox.
-
-https://www.youtube.com/watch?v=KZstxGPYO1o
-|Browser Native Web Development: No Frameworks, Just the Browser
-|May 10, 2024
-|GIDS
-|In an era where JavaScript frameworks come and go like fashion trends, Scott Davis advocates for a timeless approach: relying on the power and sophistication of modern browsers themselves. In this session, Scott will delve into how you can build robust, maintainable web applications using just native browser capabilities, sidestepping the need for external libraries and frameworks. From DOM manipulation to Web APIs, you'll learn how to leverage what the browser already offers to create fast, efficient, and future-proof web applications.
-
-
-https://www.youtube.com/watch?v=bEBVsqhRBF0
-|Digital Modernization Through Accessibility
-|May 7, 2024
-|GIDS
-|Did you know that half of the US uses their voice, daily, for web searches? Did you know that 3 out of 4  Gen Zers (people 27 years old or younger) watch videos with closed captions on all the time? These accessibility features, long associated with people with disabilities, have broken through to mainstream success and are used by nearly everybody. Are you prepared to support these features in your app or website today?  
-
-In this talk, Scott Davis (founder of Simple Access, author and international speaker on digital accessibility) shows you how to incorporate accessibility into your software development practices by “shifting accessibility left” in the process.  We’ll explore accessibility trends and demonstrate simple techniques and free tools that you can start using immediately.
-
-https://www.youtube.com/watch?v=8pOLk8Dyncs
-|Accessibility in the Smart Home: Matter and Thread
-|May 7, 2024
-|GIDS
-|In the age of IoT and smart homes, how can we ensure that technology is inclusive and accessible to all? Scott Davis explores the intersection of smart home technology with accessibility, focusing on two groundbreaking protocols: Matter and Thread. This session aims to shed light on the current state of smart home technology and how we can pave the way for more accessible, user-friendly experiences.
-
-https://www.youtube.com/watch?v=AkHgJXjqWw4
-|Will AI Replace My Job? A Town Hall for Software Developers
-|May 27, 2025
-|GIDS
-|Will AI replace my job? What happens to my role as a developer, architect, or engineering leader in the next 1–2 years — or 5–7? These are the questions we’re hearing from software professionals everywhere.
-
-In this special closing session at GIDS 2025, join Venkat Subramaniam and a panel of industry voices (including Birgitta Boeckeler and James Ward) for a candid, high-energy town hall on how AI is transforming the work of software teams — now and in the years to come.
-
-We will explore:
-
-    Which roles and tasks are changing fastest, and which are here to stay
-    What developers and engineering leads can do to stay relevant
-    How AI will reshape teams, workflows, and expectations
-    And what a future-ready career might look like in the age of AI
-
-You’ll hear fresh perspectives, bold predictions, and honest takes — with time for live audience Q&A. Real concerns from the community will also guide the discussion.
-
-No slides. No sugar-coating. Just an open conversation about what’s coming — and how to get ready for it.
-
-https://www.youtube.com/watch?v=AiRVOt3wEeM
-|AI and Ethics: Navigating the Future of Responsible Technology
-|May 27, 2025
-|GIDS
-|As artificial intelligence becomes woven into the fabric of daily life, its ethical implications demand serious attention. In "AI and Ethics: Navigating the Future of Responsible Technology," we’ll examine the crucial intersection of AI and ethical decision-making, exploring how developers and organizations can build responsible technology.
-
-This session will address pressing concerns, such as:
-
-    Bias in AI models: Understanding its sources and impacts, and strategies to mitigate it.
-    Algorithmic transparency: Ensuring that AI decisions are explainable and accountable.
-    Data privacy: Balancing the utility of AI with the responsibility to safeguard user data.
-
-Through real-world scenarios, such as whether a smart lightbulb vendor should track when it’s used, we’ll discuss the broader implications of data collection and corporate accountability. Attendees will leave with actionable insights into the ethical responsibilities that come with integrating AI into systems, equipping them to make informed decisions in their work.
-
-Target Audience: This session is ideal for AI Developers, Software Engineers, and Product Managers who are building or managing AI-driven systems. Ethics Advocates, Policymakers, and Tech Leaders will also gain valuable perspectives on fostering responsible AI practices in their organizations.
-
-https://www.youtube.com/watch?v=0Bfq-or-BmE
-|Bridging the Digital Divide: Empowering Accessibility Through AI Innovations
-|May 26, 2025
-|GIDS
-|As digital spaces become integral to our lives, ensuring their inclusivity is more important than ever. "Bridging the Digital Divide: Empowering Accessibility Through AI Innovations" explores the transformative role of Artificial Intelligence (AI) in making technology more accessible for all. This session highlights how cutting-edge AI technologies, such as natural language processing, computer vision, and machine learning, are driving solutions to bridge accessibility gaps.
-
-From AI-powered screen readers and voice-controlled interfaces to real-time translation tools and personalized learning systems, we will delve into practical examples and inspiring case studies showcasing how AI empowers individuals with diverse needs. Attendees will learn how AI innovations are enabling greater independence, improving user experience, and creating opportunities for meaningful digital engagement.
-
-By the end of this talk, you’ll gain a deeper understanding of how AI can be leveraged to design inclusive technologies, creating digital environments that truly work for everyone.
-
-Target Audience: This session is for Accessibility Advocates, AI and ML Practitioners, UX Designers, and Software Engineers interested in leveraging technology to create inclusive solutions. Product Managers and Policy Makers focused on digital equity and accessibility initiatives will also find valuable insights into the potential of AI-driven accessibility tools.
-
-https://www.youtube.com/watch?v=1mTUsyN2wEs
-|Everyday AI: Practical Applications Beyond the Chatbot
-|May 27, 2025
-|GIDS
-|
 
 
 
@@ -535,7 +789,15 @@ https://www.youtube.com/watch?v=1mTUsyN2wEs
 
 
 
-
+# 2007
+- Part 1
+- https://www.youtube.com/watch?v=RqHwwAWXcbE
+- Part 2
+- https://www.youtube.com/watch?v=gkaaOXGomzg
+|Groovy and Grails Intro
+|Jun 12, 2007
+|OKC Java User Group
+|Groovy and Grails Intro by Scott Davis from nofluffjuststuff.com
 
 
 
